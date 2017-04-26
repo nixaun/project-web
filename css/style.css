@@ -65,6 +65,11 @@ ul {
     overflow: hidden;
 }
 
+#login a:hover, nav a:hover, .bars + a:hover, .bars + a + a:hover, .univlist a:hover {
+    background-color: #0093ff;
+    transition: 0.1s;
+}
+
 
 
 header h1 {
@@ -79,11 +84,6 @@ header img {
 
 #login p {
     display: inline;
-}
-
-#login a:hover {
-    background-color: #0093ff;
-    transition: 0.1s;
 }
 
 #login a {
@@ -215,10 +215,6 @@ nav a {
     padding: 20px 0;
 }
 
-nav a:hover {
-    background-color: #0093ff;
-    transition: 0.1s;
-}
 
 .bars {
     position: absolute;
@@ -251,10 +247,6 @@ nav a:hover {
     display: none;
 }
 
-.bars + a:hover, .bars + a + a:hover {
-    background-color: #0093ff;
-    transition: 0.1s;
-}
 
 
 
@@ -368,10 +360,33 @@ div[class="news clearfix"] > h1 {
     transition: 0.1s;
 }
 
-.univlist li {
+
+
+.univlist a {
+    width: 40%;
+    float: left;
+    background-color: #007ad3;
+    color: #fff;
     font-size: 150%;
-    text-decoration: underline;
+    padding: 15px;
+    margin-bottom: 10px;
+    margin-right: 50%;
 }
+
+.univlist a:hover i {
+    margin-right: 0px;
+    transition: 0.2s;
+}
+
+.univlist i {
+    float: right;
+    margin-right: 10px;
+    transition: 0.2s;
+}
+
+
+
+
 
 .register form {
     margin-left: 60px;
@@ -384,9 +399,11 @@ div[class="news clearfix"] > h1 {
 
 .register input {
     float: left;
+    font-family: inherit;
+    font-size: 100%;
     margin-bottom: 20px;
     width: 30%;
-    padding: 5px;
+    padding: 7px;
     margin-right: 70%;
 }
 
