@@ -1,0 +1,25 @@
+main img {
+    width: 100%;
+}
+
+main h1 {
+    font-size: 300%;
+    color: #CF0039;
+}
+
+main h2 {
+    font-size: 100%;
+    color: #7C7070;
+}
+
+.backbutton {
+    background-color: #007ad3;
+    color: #fff;
+    padding: 20px;
+    font-size: 120%;
+    float: left;
+}
+
+.backbutton i {
+    padding-right: 10px;
+}

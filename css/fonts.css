@@ -1,0 +1,49 @@
+/* ANTWERP FONT*/
+@font-face {
+    font-family: Antwerpen-regular;
+    src: url(../fonts/Antwerpen-Regular.woff);
+}
+
+@font-face {
+    font-family: Antwerpen-small;
+    src: url(../fonts/AntwerpenSmallCaps-regular.woff);
+}
+
+@font-face {
+    font-family: Antwerpen-tall;
+    src: url(../fonts/AntwerpenTall-Tall.woff);
+}
+
+
+/* SUNANTWERP FONT*/
+@font-face {
+    font-family: SunAntwerpen-light;
+    src: url(../fonts/SunAntwerpen_300.woff);
+}
+
+@font-face {
+    font-family: SunAntwerpen-regular;
+    src: url(../fonts/SunAntwerpen_500.woff);
+}
+
+@font-face {
+    font-family: SunAntwerpen-bold;
+    src: url(../fonts/SunAntwerpen_800.woff);
+}
+
+
+/* SUNANTWERP CONDENSED FONT */
+@font-face {
+    font-family: SunAntwerpenCD-light;
+    src: url(../fonts/SunAntwerpenCD_300.woff);
+}
+
+@font-face {
+    font-family: SunAntwerpenCD-regular;
+    src: url(../fonts/SunAntwerpenCD_500.woff);
+}
+
+@font-face {
+    font-family: SunAntwerpenCD-bold;
+    src: url(../fonts/SunAntwerpenCD_800.woff);
+}

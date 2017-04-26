@@ -1,0 +1,402 @@
+/*  FONTS:
+    Antwerpen-regular
+    Antwerpen-small
+    Antwerpen-tall
+
+    SunAntwerpen-light
+    SunAntwerpen-regular
+    SunAntwerpen-bold
+
+    SunAntwerpenCD-light
+    SunAntwerpenCD-regular
+    SunAntwerpenCD-bold
+
+
+    COLORS:
+    blue #0064B4
+    red #CF0039
+    green #4AA32C
+    yellow #F9B01E
+
+    black #282020
+    grey #7C7070
+    white #FFFFFF
+
+    background #E5E5E6
+    background light #F3F3F5
+    border #BABABA
+*/
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F3F3F5;
+    color: #282020;
+    font-family: SunAntwerpen-regular;
+}
+
+.wrapper {
+    max-width: 1200px;
+    min-width: 360px;
+    margin: auto;
+    
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 160%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+
+header h1 {
+    float: left;
+    font-size: 300%;
+    margin: 35px;
+}
+
+header img {
+    float: left;
+}
+
+#login p {
+    display: inline;
+}
+
+#login a:hover {
+    background-color: #0093ff;
+    transition: 0.1s;
+}
+
+#login a {
+    background-color: #007ad3;
+    color: #fff;
+    padding: 20px 21.5px;
+    position: absolute;
+    top: 35px;
+    right: 0;
+}
+
+#login i, .news i {
+    margin-right: 10px;
+}
+
+
+
+.loginform {
+    background-color: #F3F3F5;
+    position: absolute;
+    width: 40%;
+    min-height: 100px;
+    top: 100px;
+    left: 30%;
+    z-index: 1;
+    padding: 30px;
+    border-radius: 10px;
+    
+    display: none;
+}
+
+.loginform.active {
+    display: block;
+    animation: loginpopup 0.4s ease-out both;
+}
+
+@keyframes loginpopup {
+    0% { transform: translate(0, -50px); opacity: 0;}
+    100% { transform: translate(0, 0,); opacity: 100;}
+}
+
+.loginform form {
+    margin-left: 20px;
+}
+
+.loginform h1 {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 150%;
+}
+
+.loginform input[type="email"], .loginform input[type="password"] {
+    font-family: inherit;
+    font-size: 100%;
+    float: left;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: 10%;
+}
+
+.loginform input[type="checkbox"] {
+    float: left;
+    margin-right: 5px;
+}
+
+.loginform label {
+    float: left;
+    width: 90%;
+}
+
+.loginform button {
+    float: left;
+    font-size: 100%;
+    border: none;
+    padding: 10px;
+    margin: 20px 50% 0 -25px;
+    font-family: inherit;
+    background-color: #007ad3;
+    color: #fff;
+}
+
+.loginform form+a {
+    float: left;
+    margin-top: 50px;
+    color: #007ad3;
+}
+
+.loginform form+a:hover {
+    text-decoration: underline;
+}
+
+#blackscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    
+    display: none;
+}
+
+#blackscreen.active {
+    display: block;
+}
+
+
+
+
+nav {
+    margin: 30px 0;
+}
+
+nav li {
+    float: left;
+    text-align: center;
+    
+    width: 16.6%;
+}
+
+nav a {
+    background-color: #007ad3;
+    color: #fff;
+    display: block;
+    font-size: 120%;
+    padding: 20px 0;
+}
+
+nav a:hover {
+    background-color: #0093ff;
+    transition: 0.1s;
+}
+
+.bars {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 16px 20px;
+    
+    visibility: hidden;
+}
+
+.bars + a {
+    position: absolute;
+    top: 0;
+    right: 67px;
+    padding: 16px 20px;
+    background-color: #007ad3;
+    color: #fff;
+    
+    display: none;
+}
+
+.bars + a + a {
+    position: absolute;
+    top: 0;
+    right: 130px;
+    padding: 16px 20px;
+    background-color: #007ad3;
+    color: #fff;
+    
+    display: none;
+}
+
+.bars + a:hover, .bars + a + a:hover {
+    background-color: #0093ff;
+    transition: 0.1s;
+}
+
+
+
+main > h1 {
+    font-size: 250%;
+}
+
+
+.main_img {
+    position: relative;
+}
+
+.main_img img {
+    width: 100%;
+    height: auto;
+}
+
+.searchbar {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    width: 60%;
+}
+
+.searchbar input {
+    font-family: SunAntwerpen-regular;
+    font-size: 17px;
+    padding: 15px;
+    margin: 0;
+    width: 100%;
+    
+    border: 3px solid #e5e5e5;
+}
+
+.searchbar input:focus {
+    outline: none;
+}
+
+.searchbar button {
+    border: none;
+    background: #007ad3;
+    padding: 14px;
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.searchbar button i {
+    color: #fff;
+}
+
+
+
+
+.news {
+    margin-bottom: 20px;
+}
+
+div[class="news clearfix"] > h1 {
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #007ad3;
+    color: #fff;
+}
+
+.news div {
+    width: 30%;
+    margin: 0 1.5% 50px 1.5%;
+    float: left;
+    background-color: #E5E5E6;
+    border: 1px solid #d3d3d3;
+    padding-bottom: 20px;
+}
+
+.news img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.news div h1 {
+    margin: 10px;
+    font-family: Antwerpen-regular;
+    font-weight: 100;
+}
+
+.news div h1:hover {
+    color: #0064B4;
+    transition: 0.1s;
+}
+
+.news div h2 {
+    margin: 10px;
+    color: #888888;
+    font-size: 100%;
+}
+
+.news div p {
+    margin: 10px;
+}
+
+.news div a+h2+p+a {
+    margin: 10px;
+    color: #007ad3;
+    font-weight: bold;
+}
+
+.news div a+h2+p+a:hover {
+    color: #004074;
+    transition: 0.1s;
+}
+
+.univlist li {
+    font-size: 150%;
+    text-decoration: underline;
+}
+
+
+
+footer {
+    background-color: #282020;
+    color: #fff;
+}
+
+footer div {
+    float: left;
+    margin: 0 20px 20px 20px;
+}
+
+footer div li {
+    text-decoration: underline;
+}
+
+footer div li:hover {
+    text-decoration: none;
+}
+
+footer img {
+    width: 100px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    
+}
