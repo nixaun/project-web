@@ -4,6 +4,9 @@ eerste indruk -> studenten
 searchbalk minder centraal/zichtbaar
 foto home -> dynamischer/videos....
 
+mogelijke aanpassingen
+	- unifpage checkboxes filters op richting
+
 mobile
 	- unif colleges, dropdown
 	- search in menu
