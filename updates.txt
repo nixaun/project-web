@@ -1,0 +1,10 @@
+layout/stijl
+eerste indruk -> studenten
+	- te serieus
+searchbalk minder centraal/zichtbaar
+foto home -> dynamischer/videos....
+
+mobile
+	- unif colleges, dropdown
+	- search in menu
+
