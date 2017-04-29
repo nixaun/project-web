@@ -4,7 +4,7 @@ window.onload=function() {
         nav.addEventListener("click", onMenuToggle);
     }
     
-    var login = document.querySelector(".loginbutton");
+    var login = document.querySelector(".loginbutton a");
     if (login) {
         login.addEventListener("click", onLoginClick);
     }

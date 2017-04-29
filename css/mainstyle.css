@@ -1,0 +1,238 @@
+/*  FONTS:
+    Antwerpen-regular
+    Antwerpen-small
+    Antwerpen-tall
+
+    SunAntwerpen-light
+    SunAntwerpen-regular
+    SunAntwerpen-bold
+
+    SunAntwerpenCD-light
+    SunAntwerpenCD-regular
+    SunAntwerpenCD-bold
+
+
+    COLORS:
+    blue #007ad3
+    red #CF0039
+    green #4AA32C
+    yellow #F9B01E
+
+    black #282020
+    grey #7C7070
+    white #FFFFFF
+
+    background #E5E5E6
+    background light #F3F3F5
+    border #BABABA
+*/
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #282020;
+    font-family: SunAntwerpen-regular;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h1 {
+    font-family: Antwerpen-regular;
+}
+
+
+
+header {
+    position: relative;
+}
+
+.heroimage {
+    width: 100%;
+}
+
+header a img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100px;
+}
+
+header h1 {
+    position: absolute;
+    top: 25px;
+    left: 125px;
+    
+    color: #fff;
+    font-size: 300%;
+    margin: 0;
+}
+
+header h2 {
+    position: absolute;
+    top: 50%;
+    
+    color: #fff;
+    font-size: 200%;
+    width: 100%;
+    text-align: center;
+}
+
+header p {
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    
+    color: #fff;
+    font-size: 120%;
+    padding: 20px 30px;
+    border: 1px solid #fff;
+    transition: 0.2s;
+}
+
+header p:hover {
+    background-color: #fff;
+    color: #000;
+    
+    transition: 0.2s;
+}
+
+
+
+nav {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+nav li {
+    float: left;
+}
+
+nav a, nav i {
+    padding: 10px 15px;
+    color: #fff;
+}
+
+nav i {
+    margin-top: -10px;
+    padding: 0;
+}
+
+nav a:hover {
+    border-bottom: 3px #CF0039 solid;
+}
+
+nav .fa-bars {
+    margin: 10px 20px;
+    display: none;
+    
+}
+
+
+
+main, .wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.news  i {
+    margin-right: 20px;
+}
+
+.news > h1 {
+    background-color: #007ad3;
+    color: #fff;
+    padding: 15px;
+    margin: 0 0 20px 0;
+}
+
+.news div {
+    width: 30%;
+    margin: 0 1.5% 50px 1.5%;
+    float: left;
+    background-color: #E5E5E6;
+    border: 1px solid #d3d3d3;
+    padding-bottom: 20px;
+}
+
+.news img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.news div h1 {
+    margin: 10px;
+    font-family: Antwerpen-regular;
+    font-weight: 100;
+}
+
+.news div h1:hover {
+    color: #0064B4;
+    transition: 0.1s;
+}
+
+.news div h2 {
+    margin: 10px;
+    color: #888888;
+    font-size: 100%;
+}
+
+.news div p {
+    margin: 10px;
+}
+
+.news div a+h2+p+a {
+    margin: 10px;
+    color: #007ad3;
+    font-weight: bold;
+}
+
+.news div a+h2+p+a:hover {
+    color: #004074;
+    transition: 0.1s;
+}
+
+
+
+footer {
+    background-color: #282020;
+    color: #fff;
+}
+
+footer div > div {
+    float: left;
+    margin: 0 40px;
+}
+
+footer li a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+footer div li:hover {
+    text-decoration: none;
+}
+
+footer img {
+    width: 100px;
+    
+    float: right;
+    margin-top: 80px;
+    padding: 20px;
+}
