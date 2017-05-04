@@ -159,40 +159,8 @@ footer div a:hover {
 }
 
 footer img {
-    width: 200px;
-    
+    width: 10%;    
     float: right;
-    margin-top: 40px;
-    margin-right: 50px;
-    padding: 20px;
-}
-/*
-footer {
-    background-color: #282020;
-    color: #fff;
-    position: relative;
-}
-
-footer div > div {
-    float: left;
-    margin: 0 40px;
-}
-
-
-footer li a {
-    text-decoration: underline;
-    color: #fff;
-}
-
-footer div li:hover {
-    text-decoration: none;
-}
-
-footer img {
-    width: 100px;
-    
-    float: right;
-    margin-top: 10px;
-    margin-right: 10px;
-    padding: 20px;
+    margin-top: 5%;
+    margin-right: 5%;
 }
