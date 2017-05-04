@@ -120,8 +120,7 @@ nav .activenav {
 
 .heroimage > h1 {
     position: absolute;
-    top: 80px;
-    
+    top: 35%;
     width: 100%;
     text-align: center;
     color: #fff;
