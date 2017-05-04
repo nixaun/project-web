@@ -17,3 +17,15 @@ main h1 {
 main p {
     font-size: 110%;
 }
+
+main div:first-child{
+	margin-bottom: 200px;
+}
+
+main a{
+	color: #0190f8;
+}
+
+main a:hover{
+	color: #6aa8d4;
+}
