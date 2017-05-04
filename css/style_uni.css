@@ -67,8 +67,8 @@ ul {
     width: 50%;
     float: left;
     margin: 50px 0 50px 31px;
-    padding: 0 20px;
-    min-height: 470px;
+    padding: 0 20px 20px 20px;
+    min-height: 450px;
 }
 
 .uniinfo div {
