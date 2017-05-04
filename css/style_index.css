@@ -47,7 +47,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #282020;
 }
 
 h1 {
@@ -118,7 +118,6 @@ nav {
     position: absolute;
     top: 20px;
     right: 10px;
-    border: 1px #000 solid;
 }
 
 nav li {
@@ -143,43 +142,6 @@ nav .fa-bars {
     margin: 10px 20px;
     display: none;   
 }
-
-
-nav ul li:nth-child(6).active{
-    display: none;
-}
-
-nav ul li:last-child {
-    width: 0;
-    overflow: hidden;
-}
-
-nav ul li:last-child.active {
-    width: 200px;
-    transition: 0.2s;
-}
-
-nav ul li:last-child input {
-    font-family: SunAntwerpen-regular;
-    font-size: 100%;
-    padding: 5px;
-    width: 200px;
-    
-    position: relative;
-}
-
-nav ul li:last-child i {
-    position: absolute;
-    top: 25px;
-    right: 10px;
-    
-    color: #7C7070;
-}
-
-nav ul li:last-child input::-webkit-search-decoration,
-nav ul li:last-child input::-webkit-search-cancel-button,
-nav ul li:last-child input::-webkit-search-results-button,
-nav ul li:last-child input::-webkit-search-results-decoration { display: none; }
 
 
 
