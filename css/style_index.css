@@ -86,6 +86,7 @@ header h2 {
     position: absolute;
     top: 50%;
     
+    font-family: Antwerpen-regular;
     color: #fff;
     font-size: 200%;
     width: 100%;
@@ -117,6 +118,7 @@ nav {
     position: absolute;
     top: 20px;
     right: 10px;
+    border: 1px #000 solid;
 }
 
 nav li {
@@ -139,9 +141,47 @@ nav a:hover {
 
 nav .fa-bars {
     margin: 10px 20px;
-    display: none;
-    
+    display: none;   
 }
+
+
+nav ul li:nth-child(6).active{
+    display: none;
+}
+
+nav ul li:last-child {
+    width: 0;
+    overflow: hidden;
+}
+
+nav ul li:last-child.active {
+    width: 200px;
+    transition: 0.2s;
+}
+
+nav ul li:last-child input {
+    font-family: SunAntwerpen-regular;
+    font-size: 100%;
+    padding: 5px;
+    width: 200px;
+    
+    position: relative;
+}
+
+nav ul li:last-child i {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    
+    color: #7C7070;
+}
+
+nav ul li:last-child input::-webkit-search-decoration,
+nav ul li:last-child input::-webkit-search-cancel-button,
+nav ul li:last-child input::-webkit-search-results-button,
+nav ul li:last-child input::-webkit-search-results-decoration { display: none; }
+
+
 
 
 
@@ -155,10 +195,8 @@ main, .wrapper {
 }
 
 .news > h1 {
-    background-color: #007ad3;
-    color: #fff;
-    padding: 15px;
-    margin: 0 0 20px 0;
+    color: #007ad3;
+    margin: 30px 20px;
 }
 
 .news div {

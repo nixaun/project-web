@@ -40,11 +40,6 @@ body {
     font-family: SunAntwerpen-regular;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
-
 a {
     text-decoration: none;
     color: #000;
@@ -79,6 +74,7 @@ nav {
 
 nav li {
     float: left;
+    list-style-type: none;
 }
 
 nav a, nav i {
@@ -133,6 +129,7 @@ main, .wrapper {
     max-width: 1200px;
     margin: auto;
 }
+
 
 
 footer {
