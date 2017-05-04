@@ -16,13 +16,21 @@
     width: 100%;
     padding: 15px;
     border: 1px #d9d9d9 solid;
+    
+    color: #9f9f9f;
 }
 
-.unilist ul li:first-child a {
+.unilist a:hover {
+    color: #282020;
+    transition: 0.1s;
+}
+
+.unilist a.active {
+    color: #282020;
     border-right: none;
 }
 
-.unilist a:hover i {
+.unilist a:hover i, .unilist a.active i {
     margin-right: 0px;
     transition: 0.2s;
 }
@@ -46,8 +54,20 @@ ul {
     border-left: none;
     width: 50%;
     float: left;
-    margin: 50px 0 50px 32px;
+    margin: 50px 0 50px 31px;
     padding: 0 20px;
     min-height: 470px;
+}
+
+.uniinfo div {
+    display: none;
+}
+
+.uniinfo div.active {
+    display: block;
+}
+
+.uniinfo h1 {
+    text-align: center;
 }
 
