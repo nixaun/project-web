@@ -1,0 +1,60 @@
+main, .wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.news  i {
+    margin-right: 20px;
+}
+
+.news > h1 {
+    color: #007ad3;
+    margin: 30px 20px;
+}
+
+.news div {
+    width: 30%;
+    margin: 0 1.5% 50px 1.5%;
+    float: left;
+    background-color: #E5E5E6;
+    border: 1px solid #d3d3d3;
+    padding-bottom: 20px;
+}
+
+.news img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.news div h1 {
+    margin: 10px;
+    font-family: Antwerpen-regular;
+    font-weight: 100;
+}
+
+.news div h1:hover {
+    color: #0064B4;
+    transition: 0.1s;
+}
+
+.news div h2 {
+    margin: 10px;
+    color: #888888;
+    font-size: 100%;
+}
+
+.news div p {
+    margin: 10px;
+}
+
+.news div a+h2+p+a {
+    margin: 10px;
+    color: #007ad3;
+    font-weight: bold;
+}
+
+.news div a+h2+p+a:hover {
+    color: #004074;
+    transition: 0.1s;
+}
