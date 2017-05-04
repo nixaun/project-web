@@ -1,3 +1,10 @@
+@media only screen and (max-width: 1500px){
+    footer img{
+        display: none;
+    }
+
+}
+
 @media only screen and (max-width: 1300px) {
     nav ul {
         display: none;
@@ -5,6 +12,9 @@
     
     nav .fa-bars {
         display: block;
+    }
+    footer div a{
+        position: relative;
     }
 }
 
@@ -15,5 +25,12 @@
     
     .news div {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 697px){
+
+    .heroimage > h1{
+        top: 0%;
     }
 }

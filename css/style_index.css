@@ -217,7 +217,8 @@ footer {
 footer div > div {
     float: left;
     padding: 0;
-    margin: 0 60px 50px 20px;
+    margin: 0 4% 2% 2%;
+    min-height: 185px;
 }
 
 footer div a{
@@ -232,10 +233,8 @@ footer div a:hover {
 }
 
 footer img {
-    width: 200px;
-    
+    width: 10%;
     float: right;
-    margin-top: 40px;
-    margin-right: 50px;
-    padding: 20px;
+    margin-top: 3%;
+    margin-right: 3%;
 }
