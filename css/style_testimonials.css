@@ -14,7 +14,7 @@ main, .wrapper {
 
 .news div {
     width: 30%;
-    margin: 0 1.5% 50px 1.5%;
+    margin: 2% 1.5% 1.5% 1.5%;
     float: left;
     background-color: #E5E5E6;
     border: 1px solid #d3d3d3;
@@ -57,4 +57,25 @@ main, .wrapper {
 .news div a+h2+p+a:hover {
     color: #004074;
     transition: 0.1s;
+}
+
+.numNav{
+    text-align: center;
+    margin: 2% 0;
+    font-size: 150%;
+    color: #007ad3;
+    
+    font-family: Antwerpen-regular;
+}
+
+.numNav a{
+    padding: 0 1%;
+}
+
+.numNav a:hover{
+    color: #0064B4;
+    transition: 0.1s;
+}
+.numNavActive{
+    color: #598bb5;
 }
