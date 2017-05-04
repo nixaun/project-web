@@ -45,6 +45,11 @@ a {
     color: #282020;
 }
 
+ul{
+    list-style: none;
+    padding: 0;
+}
+
 h1 {
     font-family: Antwerpen-regular;
 }
@@ -130,17 +135,49 @@ main, .wrapper {
     margin: auto;
 }
 
+footer {
+    background-color: #282020;
+    color: #cdcdcd;
+    position: relative;
+}
 
+footer div > div {
+    float: left;
+    padding: 0;
+    margin: 0 60px 50px 20px;
+}
 
+footer div a{
+    color: #cdcdcd;
+    text-decoration: underline;
+    position: absolute;
+    bottom: 20px;
+}
+
+footer div a:hover {
+    color: #fff ;
+}
+
+footer img {
+    width: 200px;
+    
+    float: right;
+    margin-top: 40px;
+    margin-right: 50px;
+    padding: 20px;
+}
+/*
 footer {
     background-color: #282020;
     color: #fff;
+    position: relative;
 }
 
 footer div > div {
     float: left;
     margin: 0 40px;
 }
+
 
 footer li a {
     text-decoration: underline;
@@ -155,6 +192,7 @@ footer img {
     width: 100px;
     
     float: right;
-    margin-top: 80px;
+    margin-top: 10px;
+    margin-right: 10px;
     padding: 20px;
 }

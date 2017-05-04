@@ -246,31 +246,34 @@ main, .wrapper {
     transition: 0.1s;
 }
 
-
-
 footer {
     background-color: #282020;
-    color: #fff;
+    color: #cdcdcd;
+    position: relative;
 }
 
 footer div > div {
     float: left;
-    margin: 0 40px;
+    padding: 0;
+    margin: 0 60px 50px 20px;
 }
 
-footer li a {
+footer div a{
+    color: #cdcdcd;
     text-decoration: underline;
-    color: #fff;
+    position: absolute;
+    bottom: 20px;
 }
 
-footer div li:hover {
-    text-decoration: none;
+footer div a:hover {
+    color: #fff ;
 }
 
 footer img {
-    width: 100px;
+    width: 200px;
     
     float: right;
-    margin-top: 80px;
+    margin-top: 40px;
+    margin-right: 50px;
     padding: 20px;
 }
