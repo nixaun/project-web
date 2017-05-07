@@ -2,35 +2,128 @@
     footer img{
         display: none;
     }
-
+    
+    nav {
+        display: none;
+        overflow: hidden;
+        position: absolute;
+        top: 70px;
+        right: 0px;
+        width: 300px;
+    }
+    
+    nav ul {
+        margin: 0;
+    }
+    
+    nav.active {
+        display: block;
+    }
+    
+    nav li {
+        float: none;
+    }
+    
+    nav li a {
+        display: block;
+        width: 100%;
+        padding: 20px 10px;
+        text-align: center;
+        background-color: #282020;
+    }
+    
+    nav li a:hover {
+        border: none;
+        background-color: #CF0039;
+        transition: 0.2s;
+    }
+    
+    .bars {
+        display: block;
+    }
+    
+    .bars.active {
+        background-color: #282020;
+    }
 }
 
 @media only screen and (max-width: 1300px) {
-    nav ul {
-        display: none;
-    }
-    
-    nav .fa-bars {
-        display: block;
-    }
     footer div a{
         position: relative;
     }
 }
 
 @media only screen and (max-width: 800px) {
-    header a > h1 {
+    .heroimage img {
+        display: none;
+    }
+    
+    .fa-bars {
+        color: #282020;
+    }
+    
+    header img {
+        width: 13%;
+        position: static;
+        float: left;
+    }
+    
+    header h1 {
         font-size: 200%;
+        position: static;
+        float: left;
+        color: inherit;
+        margin: 4%;
+    }
+    
+    .heroimage h2 {
+        font-size: 150%;
+        position: static;
+        color: inherit;
+        display: block;
+    }
+    
+    .heroimage p {
+        position: static;
+        display: block;
+        margin: auto;
+        width: 80px;
+        background-color: #cf0339;
+        color: #fff;
     }
     
     .news div {
+        width: 95%;
+    }
+    
+    nav {
+        height: 0;
+        display: block;
+        position: static;
+        float: right;
         width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    nav.active {
+        height: auto;
     }
 }
 
-@media only screen and (max-width: 697px){
-
-    .heroimage > h1{
-        top: 0%;
+@media only screen and (max-width: 500px){
+    header h1 {
+        font-size: 130%;
+    }
+    
+    header img {
+        width: 50px;
+    }
+    
+    .bars i {
+        font-size: 150%;
+    }
+    
+    main h1 {
+        font-size: 150%;
     }
 }

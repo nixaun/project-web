@@ -55,19 +55,15 @@ h1 {
 }
 
 
-
 header {
     position: relative;
 }
 
-.heroimage {
-    width: 100%;
-}
-
-header a img {
+header img {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
     
     width: 100px;
 }
@@ -76,13 +72,22 @@ header h1 {
     position: absolute;
     top: 25px;
     left: 125px;
+    z-index: 1;
     
     color: #fff;
     font-size: 300%;
     margin: 0;
 }
 
-header h2 {
+.heroimage {
+    position: relative;
+}
+
+.heroimage img {
+    width: 100%;
+}
+
+.heroimage h2 {
     position: absolute;
     top: 50%;
     
@@ -93,29 +98,29 @@ header h2 {
     text-align: center;
 }
 
-header p {
+.heroimage p {
     position: absolute;
     top: 70%;
     left: 45%;
     
-    color: #fff;
+    background-color: #fff;
     font-size: 120%;
-    padding: 20px 30px;
-    border: 1px solid #fff;
-    transition: 0.2s;
+    padding: 15px 20px;
+    transition: 0.4s;
 }
 
-header p:hover {
-    background-color: #fff;
-    color: #000;
+.heroimage p:hover {
+    background-color: #cf0339;
+    color: #fff;
     
-    transition: 0.2s;
+    transition: 0.4s;
 }
 
 
 
 nav {
     position: absolute;
+    z-index: 1;
     top: 20px;
     right: 10px;
 }
@@ -138,10 +143,17 @@ nav a:hover {
     border-bottom: 3px #CF0039 solid;
 }
 
-nav .fa-bars {
-    margin: 10px 20px;
-    display: none;   
+
+.bars {
+    display: none;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    right: 0;
+    color: #fff;
 }
+
+
 main, .wrapper {
     max-width: 1200px;
     margin: auto;
@@ -154,6 +166,10 @@ main, .wrapper {
 .news > h1 {
     color: #007ad3;
     margin: 30px 20px;
+}
+
+.news > h1 > a {
+    color: #007ad3;
 }
 
 .news div {
