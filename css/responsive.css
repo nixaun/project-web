@@ -127,17 +127,9 @@
         margin: 0;
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    .logindiv {
+        width: 95%;
+    }
 }
 
 @media only screen and (max-width: 500px){
@@ -171,5 +163,9 @@
     
     .uniinfo h1, .uniinfo h2 {
         font-size: 120%;
+    }
+    
+    form input[type="email"], form input[type="password"], form input[type="text"] {
+        width: 100%;
     }
 }

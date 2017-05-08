@@ -211,7 +211,7 @@ main, .wrapper {
 }
 
 .news div h1:hover {
-    color: #0064B4;
+    color: #007ad3;
     transition: 0.1s;
 }
 
@@ -232,7 +232,7 @@ main, .wrapper {
 }
 
 .news div a+h2+p+a:hover {
-    color: #004074;
+    color: #0093ff;
     transition: 0.1s;
 }
 

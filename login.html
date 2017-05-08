@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Studeren In Antwerpen - Atypisch Antwerpen</title>
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/style_atypisch.css">
+        <link rel="stylesheet" href="css/style_login.css">
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -22,8 +22,8 @@
                 <li><a href="uni.html">Hogescholen en Universiteiten</a></li>
                 <li><a href="news.html">News</a></li>
                 <li><a href="">Events</a></li>
-                <li><a href="testimonials1.html" class="activenav">Testimonials</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="testimonials1.html">Testimonials</a></li>
+                <li><a href="login.html" class="activenav">Log in</a></li>
             </ul>
         </nav>
             
@@ -31,13 +31,46 @@
         
         <div class="heroimage">
             <img src="images/testimonials.png" alt="">
-            <h1>Login</h1>
+            <h1>Log in</h1>
         </div>
         
-        <h1>Login</h1>
+        <h1>Log in</h1>
         
         <main class="clearfix">
+            <div class="logindiv">
+                <h1>Log in met bestaand account</h1>
+                <form action="">
+                    <label for="loginmail">E-Mail</label>
+                    <input type="email" name="loginemail" id="loginname">
+                    
+                    <label for="loginpass">Password</label>
+                    <input type="password" name="loginpass" id="loginpass">
+                    
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember">Onthoudt mij</label>
+                    <button type="submit">Log in</button>
+                </form>
+            </div>
+            <div class="logindiv">
+                <h1>Geen account? Registreer nu!</h1>
+                <form action="">
+                    <label for="registername">Naam</label>
+                    <input type="text" name="registername" id="registername">
+                    
+                    <label for="registermail">E-Mail</label>
+                    <input type="email" name="registermail" id="registermail">
+                    
+                    <label for="registerpass">Password</label>
+                    <input type="password" name="registerpass" id="registerpass">
+                    
+                    <label for="registerpass2">Herhaal password</label>
+                    <input type="password" name="registerpass2" id="registerpass2">
+                    
+                    <button type="submit">Registreer</button>
+                </form>
+            </div>
         </main>
+        
         <footer class="clearfix">
             <div class="wrapper">
                 <div>
