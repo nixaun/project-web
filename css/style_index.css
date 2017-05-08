@@ -116,11 +116,28 @@ header h1 {
     transition: 0.4s;
 }
 
+.heroimage + h2 {
+    display: none;
+    font-family: Antwerpen-regular;
+    color: #fff;
+    font-size: 200%;
+    width: 100%;
+    text-align: center;
+}
+
+.heroimage + h2 + a > p {
+    display: none;
+    background-color: #fff;
+    font-size: 120%;
+    padding: 15px 20px;
+    transition: 0.4s;
+}
+
 
 
 nav {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     top: 20px;
     right: 10px;
 }

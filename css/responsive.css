@@ -30,6 +30,7 @@
         padding: 20px 10px;
         text-align: center;
         background-color: #282020;
+        color: #fff;
     }
     
     nav li a:hover {
@@ -40,10 +41,16 @@
     
     .bars {
         display: block;
+        color: #282020;
+    }
+    
+    .indexbars {
+        color: #fff;
     }
     
     .bars.active {
         background-color: #282020;
+        color: #fff;
     }
 }
 
@@ -54,7 +61,7 @@
 }
 
 @media only screen and (max-width: 800px) {
-    .heroimage img {
+    .heroimage {
         display: none;
     }
     
@@ -62,13 +69,13 @@
         color: #282020;
     }
     
-    header img {
+    header a img {
         width: 13%;
         position: static;
         float: left;
     }
     
-    header h1 {
+    header a h1 {
         font-size: 200%;
         position: static;
         float: left;
@@ -76,14 +83,21 @@
         margin: 4%;
     }
     
-    .heroimage h2 {
+    .heroimage + h1 {
+        display: block;
+        text-align: center;
+    }
+    
+    .heroimage + h2 {
+        display: block;
         font-size: 150%;
         position: static;
         color: inherit;
         display: block;
     }
     
-    .heroimage p {
+    .heroimage + h2 + a > p {
+        display: block;
         position: static;
         display: block;
         margin: auto;
@@ -97,25 +111,41 @@
     }
     
     nav {
-        height: 0;
-        display: block;
         position: static;
         float: right;
         width: 100%;
         margin-bottom: 20px;
     }
     
-    nav.active {
-        height: auto;
+    
+    .unilist {
+        width: 90%;
     }
+    
+    .uniinfo {
+        width: 88%;
+        margin: 0;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 @media only screen and (max-width: 500px){
-    header h1 {
-        font-size: 130%;
+    header a h1 {
+        font-size: 120%;
     }
     
-    header img {
+    header a img {
         width: 50px;
     }
     
@@ -125,5 +155,21 @@
     
     main h1 {
         font-size: 150%;
+    }
+    
+    nav li a {
+        padding: 15px;
+    }
+    
+    .heroimage + h1 {
+        font-size: 130%;
+    }
+    
+    .unilist {
+        font-size: 100%;
+    }
+    
+    .uniinfo h1, .uniinfo h2 {
+        font-size: 120%;
     }
 }
