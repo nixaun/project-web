@@ -148,6 +148,10 @@ main, .wrapper {
     margin: auto;
 }
 
+main {
+    min-height: 70vh;
+}
+
 footer {
     background-color: #282020;
     color: #cdcdcd;
