@@ -75,6 +75,7 @@ nav {
     position: absolute;
     top: 15px;
     right: 10px;
+    z-index: 1;
 }
 
 nav li {
@@ -104,6 +105,15 @@ nav .activenav {
     color: #CF0039;
 }
 
+.bars {
+    display: none;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    right: 0;
+    color: #fff;
+}
+
 
 
 .heroimage {
@@ -127,11 +137,19 @@ nav .activenav {
     font-size: 300%;
 }
 
+.heroimage + h1 {
+    display: none;
+}
+
 
 
 main, .wrapper {
     max-width: 1200px;
     margin: auto;
+}
+
+main {
+    min-height: 70vh;
 }
 
 footer {

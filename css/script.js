@@ -1,9 +1,9 @@
 window.onload=function() {
     var i;
     
-    var search = document.querySelector("nav ul li:nth-child(6)");
-    if (search) {
-        search.addEventListener("click", onSearchToggle);
+    var menu = document.querySelector(".bars");
+    if (menu) {
+        menu.addEventListener("click", onMenuToggle);
     }
     
     var unilist = document.querySelectorAll(".unilist a");
@@ -15,14 +15,18 @@ window.onload=function() {
     }
 }
 
-function onSearchToggle(e) {
+function onMenuToggle(e) {
     e.preventDefault();
     
-    var searchButton = document.querySelector("nav ul li:nth-child(6)");
-    var searchBar = document.querySelector("nav ul li:last-child");
+    var nav = document.querySelector("nav");
+    nav.classList.toggle("active");
     
-    searchButton.classList.toggle("active");
-    searchBar.classList.toggle("active");
+    var button = document.querySelector(".bars");
+    button.classList.toggle("active");
+    
+    var bars = document.querySelector(".bars i");
+    bars.classList.toggle("fa-bars");
+    bars.classList.toggle("fa-times");
 }
 
 function onUnilistClick(event) {

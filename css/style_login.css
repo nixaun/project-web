@@ -1,0 +1,39 @@
+main div {
+    display: block;
+    width: 46%;
+    float: left;
+    margin: 20px 10px 100px 10px;
+    overflow: hidden;
+}
+
+form label {
+    display: block;
+    margin: 8px 0;
+}
+
+form input[type="email"], form input[type="password"], form input[type="text"] {
+    font-family: SunAntwerpen-regular;
+    font-size: 100%;
+    width: 80%;
+    padding: 5px;
+    display: block;
+}
+
+form input[type="checkbox"] {
+    float: left;
+    margin: 10px;
+}
+
+form button {
+    border: none;
+    font-family: SunAntwerpen-regular;
+    font-size: 100%;
+    background-color: #007ad3;
+    color: #fff;
+    padding: 15px 20px;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #0093ff;
+}

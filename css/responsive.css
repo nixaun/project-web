@@ -2,35 +2,170 @@
     footer img{
         display: none;
     }
-
+    
+    nav {
+        display: none;
+        overflow: hidden;
+        position: absolute;
+        top: 70px;
+        right: 0px;
+        width: 300px;
+    }
+    
+    nav ul {
+        margin: 0;
+    }
+    
+    nav.active {
+        display: block;
+    }
+    
+    nav li {
+        float: none;
+    }
+    
+    nav li a {
+        display: block;
+        width: 100%;
+        padding: 20px 10px;
+        text-align: center;
+        background-color: #282020;
+        color: #fff;
+    }
+    
+    nav li a:hover {
+        border: none;
+        background-color: #CF0039;
+        transition: 0.2s;
+    }
+    
+    .bars {
+        display: block;
+        color: #282020;
+    }
+    
+    .indexbars {
+        color: #fff;
+    }
+    
+    .bars.active {
+        background-color: #282020;
+        color: #fff;
+    }
 }
 
 @media only screen and (max-width: 1300px) {
-    nav ul {
-        display: none;
-    }
-    
-    nav .fa-bars {
-        display: block;
-    }
     footer div a{
         position: relative;
     }
 }
 
 @media only screen and (max-width: 800px) {
-    header a > h1 {
+    .heroimage {
+        display: none;
+    }
+    
+    .fa-bars {
+        color: #282020;
+    }
+    
+    header a img {
+        width: 13%;
+        position: static;
+        float: left;
+    }
+    
+    header a h1 {
         font-size: 200%;
+        position: static;
+        float: left;
+        color: inherit;
+        margin: 4%;
+    }
+    
+    .heroimage + h1 {
+        display: block;
+        text-align: center;
+    }
+    
+    .heroimage + h2 {
+        display: block;
+        font-size: 150%;
+        position: static;
+        color: inherit;
+        display: block;
+    }
+    
+    .heroimage + h2 + a > p {
+        display: block;
+        position: static;
+        display: block;
+        margin: auto;
+        width: 80px;
+        background-color: #cf0339;
+        color: #fff;
     }
     
     .news div {
+        width: 95%;
+    }
+    
+    nav {
+        position: static;
+        float: right;
         width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    
+    .unilist {
+        width: 90%;
+    }
+    
+    .uniinfo {
+        width: 88%;
+        margin: 0;
+    }
+    
+    .logindiv {
+        width: 95%;
     }
 }
 
-@media only screen and (max-width: 697px){
-
-    .heroimage > h1{
-        top: 0%;
+@media only screen and (max-width: 500px){
+    header a h1 {
+        font-size: 120%;
+    }
+    
+    header a img {
+        width: 50px;
+    }
+    
+    .bars i {
+        font-size: 150%;
+    }
+    
+    main h1 {
+        font-size: 150%;
+    }
+    
+    nav li a {
+        padding: 15px;
+    }
+    
+    .heroimage + h1 {
+        font-size: 130%;
+    }
+    
+    .unilist {
+        font-size: 100%;
+    }
+    
+    .uniinfo h1, .uniinfo h2 {
+        font-size: 120%;
+    }
+    
+    form input[type="email"], form input[type="password"], form input[type="text"] {
+        width: 100%;
     }
 }
