@@ -10,7 +10,7 @@ main img {
 }
 
 main h1 {
-    color: #007ad3;
+    color: #282020;
     margin: 2% 0 0 2%;
 }
 main h3 {
@@ -25,13 +25,15 @@ main p {
     margin-left: 2%;
 }
 main div:first-child{
+    margin-top: 2%;
     padding-bottom: 12%;
 }
 
 main div{
-    margin-top: 2%;
+    margin-bottom: 2%;
     background-color: #E5E5E6;
     border: 1px solid #d3d3d3;
+   /* box-shadow: 4px 4px 2px #5a5a5a; */
 } 
 
 
