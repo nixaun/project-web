@@ -16,8 +16,15 @@ p {
 
 .downloadbuttons {
     display: block;
-    width: 620px;
-    margin: auto;
+    width: 40%;
+    margin-left: 37.3%;
+    margin-top: 5%;
+}
+.downloadbuttons2{
+    display: block;
+    width: 40%;
+    margin-left: 37%;
+    margin-top: 5%;
 }
 
 .downloadbuttons a {
@@ -25,8 +32,8 @@ p {
     color: #fff;
     padding: 15px;
     background-color: #007ad3;
-    text-align: center;
     margin: 0 10px;
+    width: ;
 }
 
 .downloadbuttons a:hover {
@@ -36,6 +43,24 @@ p {
 .downloadbuttons i {
     padding-right: 10px;
 }
+
+.downloadbuttons2 a {
+    font-size: 150%;
+    color: #fff;
+    padding: 15px;
+    background-color: #007ad3;
+    margin: 0 10px;
+    width: ;
+}
+
+.downloadbuttons2 a:hover {
+    background-color: #0093ff;
+}
+
+.downloadbuttons2 i {
+    padding-right: 10px;
+}
+
 
 img {
     width: 100%;

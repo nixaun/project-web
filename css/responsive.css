@@ -136,6 +136,23 @@
     .gameBannerSmall{
         display: block;
     }
+    .downloadbuttons {
+        width: 300px;
+        margin-left: 35.5%;
+        margin-top: 7%;
+    }
+    .downloadbuttons2{
+        width: 300px;
+        margin-left: 35%;
+        margin-top: 7%;
+    }
+
+    .downloadbuttons a{
+        font-size: 100%;
+    }
+    .downloadbuttons2 a{
+        font-size: 100%;
+    }
 
 }
 
@@ -174,5 +191,15 @@
     
     form input[type="email"], form input[type="password"], form input[type="text"] {
         width: 100%;
+    }
+    .downloadbuttons {
+        width: 300px;
+        margin-left: 16%;
+        margin-top: 11%;
+    }
+    .downloadbuttons2{
+        width: 300px;
+        margin-left: 15%;
+        margin-top: 11%;
     }
 }
