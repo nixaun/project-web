@@ -153,6 +153,10 @@
     .downloadbuttons2 a{
         font-size: 100%;
     }
+    iframe{
+        width: 420px;
+        height: 236.25px;
+    }
 
 }
 
@@ -202,4 +206,7 @@
         margin-left: 15%;
         margin-top: 11%;
     }
-}
+    iframe{
+        width: 280px;
+        height: 157.5px;
+    }
