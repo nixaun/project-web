@@ -17,6 +17,11 @@ main p {
     
 }
 
+main ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
 main div{        
     background-color: #E5E5E6;
     border: 1px solid #d3d3d3;
