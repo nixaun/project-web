@@ -1,0 +1,17 @@
+p {
+    margin-bottom: 50px;
+}
+
+.downloadbutton {
+    color: #fff;
+    padding: 15px;
+    background-color: #007ad3;
+}
+
+.downloadbutton:hover {
+    background-color: #0093ff;
+}
+
+.downloadbutton i {
+    padding-right: 10px;
+}
