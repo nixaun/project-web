@@ -236,6 +236,32 @@ main, .wrapper {
     transition: 0.1s;
 }
 
+.gameBanner{
+    position: relative;
+}
+.gameBanner img{
+    width: 100%;
+}
+.gameBanner a{
+    width: 10%;
+    position: absolute;
+    top: 70%;
+    left: 48.5%;
+}
+.gameBannerSmall{
+    position: relative;
+    display: none;
+}
+.gameBannerSmall img{
+    width: 100%;
+}
+.gameBannerSmall a{
+    width: 20%;
+    position: absolute;
+    top: 70%;
+    left: 54%;
+}
+
 footer {
     background-color: #282020;
     color: #cdcdcd;

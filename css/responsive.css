@@ -130,6 +130,13 @@
     .logindiv {
         width: 95%;
     }
+    .gameBanner{
+        display: none;
+    }
+    .gameBannerSmall{
+        display: block;
+    }
+
 }
 
 @media only screen and (max-width: 500px){
