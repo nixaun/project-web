@@ -18,6 +18,11 @@ main div h1 {
     font-family: Antwerpen-regular;
     font-weight: 500;
 }
+main div h1:hover{
+    color: #007ad3;
+    transition: 0.1s;
+
+}
 
 main div h2 {
     color: #888888;
