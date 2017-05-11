@@ -14,7 +14,6 @@ main h2 {
     float: left;
     width: 40%;
     font-size: 150%;
-    margin: 50px 0;
 }
 
 .unilist ul {
@@ -66,7 +65,7 @@ ul {
     border-left: none;
     width: 50%;
     float: left;
-    margin: 50px 0 50px 31px;
+    margin: 0 0 50px 31px;
     padding: 0 20px 20px 20px;
     min-height: 450px;
 }

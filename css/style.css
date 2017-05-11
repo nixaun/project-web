@@ -121,6 +121,7 @@ nav .activenav {
     min-height: 200px;
     max-height: 400px;
     overflow: hidden;
+    margin-bottom: 20px;
    /* box-shadow: 4px 4px 2px #5a5a5a; */
 }
 
