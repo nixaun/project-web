@@ -14,22 +14,26 @@ p {
     text-align: center;
 }
 
-.downloadbutton {
+.downloadbuttons {
+    display: block;
+    width: 620px;
+    margin: auto;
+}
+
+.downloadbuttons a {
     font-size: 150%;
     color: #fff;
     padding: 15px;
     background-color: #007ad3;
-    display: block;
-    width: 135px;
-    margin: auto;
     text-align: center;
+    margin: 0 10px;
 }
 
-.downloadbutton:hover {
+.downloadbuttons a:hover {
     background-color: #0093ff;
 }
 
-.downloadbutton i {
+.downloadbuttons i {
     padding-right: 10px;
 }
 
