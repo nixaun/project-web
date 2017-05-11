@@ -1,11 +1,27 @@
+main {
+    min-height: 0.5vh;
+    margin-bottom: 100px;
+}
+
+h1 {
+    font-size: 300%;
+    margin-top: 100px;
+    text-align: center;
+}
+
 p {
+    font-size: 150%;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .downloadbutton {
     color: #fff;
     padding: 15px;
     background-color: #007ad3;
+    display: block;
+    width: 95px;
+    margin: auto;
 }
 
 .downloadbutton:hover {
@@ -14,4 +30,8 @@ p {
 
 .downloadbutton i {
     padding-right: 10px;
+}
+
+img {
+    width: 100%;
 }
