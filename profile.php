@@ -1,10 +1,28 @@
+<?php 
+    session_start();
+    $username = "";
+    $userurl = "";
+
+    if (isset($_SESSION['name']))
+    {
+        $username = $_SESSION['name'];
+        $userurl = "profile.php";
+    }
+    else
+    {
+        $username = "Log In";
+        $userurl = "login.php";
+    }
+
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Studeren In Antwerpen - Atypisch Antwerpen</title>
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/style_login.css">
+        <link rel="stylesheet" href="css/style_profile.css">
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -12,47 +30,36 @@
     </head>
     <body>
         <header class="clearfix">
-            <a href="index.html"><img src="images/logo.jpg" alt=""></a>
-            <a href="index.html"><h1>Studeren in Antwerpen</h1></a>
+            <a href="index.php"><img src="images/logo.jpg" alt=""></a>
+            <a href="index.php"><h1>Studeren in Antwerpen</h1></a>
         </header>        
         <nav>
-            <ul>
-                <li><a href="atypisch.html">Atypisch Antwerpen</a></li>
-                <li><a href="uni.html">Hogescholen en Universiteiten</a></li>
-                <li><a href="nieuws.html">Nieuws</a></li>
-                <li><a href="evenementen.html">Evenementen</a></li>
-                <li><a href="testimonials1.html">Testimonials</a></li>
-                <li><a href="login.html" class="activenav">Login</a></li>
+            <ul class="clearfix">
+                <li><a href="atypisch.php">Atypisch Antwerpen</a></li>
+                <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
+                <li><a href="nieuws.php">News</a></li>
+                <li><a href="evenementen.php">Evenementen</a></li>
+                <li><a href="testimonials1.php">Testimonials</a></li>
+                <li><a href=" <?php echo $userurl ?>" class="activenav"><?php echo $username ?></a></li>
             </ul>
         </nav>            
         <div class="bars"><i class="fa fa-bars fa-2x"></i></div>
         <main class="clearfix">
-            <div class="logindiv">
-                <h1>Log in met bestaand account</h1>
-                <form action="">
-                    <label for="loginmail">E-Mail</label>
-                    <input type="email" name="loginemail" id="loginname">                    
-                    <label for="loginpass">Password</label>
-                    <input type="password" name="loginpass" id="loginpass">                    
-                    <input type="checkbox" name="remember" id="remember">
-                    <label for="remember">Onthoudt mij</label>
-                    <button type="submit">Log in</button>
-                </form>
-            </div>
-            <div class="logindiv">
-                <h1>Geen account? Registreer nu!</h1>
-                <form action="">
-                    <label for="registername">Naam</label>
-                    <input type="text" name="registername" id="registername">                    
-                    <label for="registermail">E-Mail</label>
-                    <input type="email" name="registermail" id="registermail">                    
-                    <label for="registerpass">Password</label>
-                    <input type="password" name="registerpass" id="registerpass">                    
-                    <label for="registerpass2">Herhaal password</label>
-                    <input type="password" name="registerpass2" id="registerpass2">                    
-                    <button type="submit">Registreer</button>
-                </form>
-            </div>
+            <h1>Mijn Profiel - Jens Van Assche</h1>            
+            <h2>Voeg informatie toe</h2>
+            <form action="">
+                <label for="title">Titel</label>
+                <input type="text" name="title" id="title">
+                <label for="date">Datum en tijd</label>
+                <input type="text" name="date" id="date">
+                <label for="maintext">Tekst</label>
+                <textarea name="maintext" id="maintext" cols="40" rows="10"></textarea>
+                <button type="submit">Versturen</button>
+            </form>
+        
+            <form action="php/logout.php">
+                <button >Uitloggen</button>
+            </form>
         </main>        
         <footer class="clearfix">
             <div class="wrapper">

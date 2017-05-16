@@ -1,9 +1,28 @@
+<?php 
+    session_start();
+    $username = "";
+    $userurl = "";
+
+    if (isset($_SESSION['name']))
+    {
+        $username = $_SESSION['name'];
+        $userurl = "profile.php";
+    }
+    else
+    {
+        $username = "Log In";
+        $userurl = "login.php";
+    }
+
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Studeren In Antwerpen</title>
-        <link rel="stylesheet" href="css/style_index.css">
+        <title>Studeren In Antwerpen - Nieuws</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style_news.css">
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -11,30 +30,29 @@
     </head>
     <body>
         <header class="clearfix">
-            <a href="index.html"><img src="images/logo.jpg" alt=""></a>
-            <a href="index.html"><h1>Studeren in Antwerpen</h1></a>
-        </header>        
+            <a href="index.php"><img src="images/logo.jpg" alt=""></a>
+            <a href="index.php"><h1>Studeren in Antwerpen</h1></a>
+        </header>
         <nav>
-            <ul class="clearfix">
-                <li><a href="atypisch.html">Atypisch Antwerpen</a></li>
-                <li><a href="uni.html">Hogescholen en Universiteiten</a></li>
-                <li><a href="nieuws.html">Nieuws</a></li>
-                <li><a href="evenementen.html">Evenementen</a></li>
-                <li><a href="testimonials1.html">Testimonials</a></li>
-                <li><a href="login.html">Log in</a></li>
+            <ul>
+                <li><a href="atypisch.php">Atypisch Antwerpen</a></li>
+                <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
+                <li><a href="nieuws.php" class="activenav">Nieuws</a></li>
+                <li><a href="evenementen.php">Evenementen</a></li>
+                <li><a href="testimonials1.php">Testimonials</a></li>
+                <li><a href="<?php echo $userurl ?>"><?php echo $username ?></a></li>
             </ul>
-        </nav>           
+        </nav>
+            
+        <div class="bars"><i class="fa fa-bars fa-2x"></i></div>
+        
         <div class="heroimage">
-            <img src="images/hero.png" alt="">
-            <h2>Welkom in Antwerpen, de Atypische studentenstad!</h2>
-            <a href="atypisch.html"><p>Leer meer</p></a>
-        </div>           
-        <h2>Welkom in Antwerpen, de Atypische studentenstad!</h2>
-        <a href="atypisch.html"><p>Leer meer</p></a>            
-        <div class="bars indexbars"><i class="fa fa-bars fa-2x"></i></div>             
+            <img src="images/news.png" alt="">
+            <h1>Nieuws</h1>
+        </div>        
+        <h1>Nieuws</h1>            
         <main>
-            <div class="news clearfix">
-                <a href="nieuws.html"><h1><i class="fa fa-bullhorn"></i>Nieuws</h1></a>                
+            <div class="news clearfix">                
                 <div>
                     <a href=""><img src="images/news1.png" alt=""></a>
                     <a href=""><h1>The Ten Miles are best accessible by foot or by bike</h1></a>
@@ -56,9 +74,8 @@
                     <p>Gate 15 will be closed on the 16th of april. Tomorrow we'll be back.</p>
                     <a href="">read more</a>
                 </div>
-            </div>            
-            <div class="news clearfix">
-                <a href="evenementen.html"><h1><i class="fa fa-calendar"></i>Evenementen</h1></a>                
+            </div>
+            <div class="news clearfix">                
                 <div>
                     <a href=""><img src="images/event1.png" alt=""></a>
                     <a href=""><h1>Colin Stetson Solo</h1></a>
@@ -82,16 +99,8 @@
                     <p>De kiesweek zit erop, tijd om vooruit te blikken. Hoe verloopt zo'n subsidie- of evenementenaanvraag? Wat als er iets verkeerd gaat? Hoe zet je social media optimaal in om een event te promoten? Zak op donderdag 11 mei met je hele presidium af naar het Zuiderpershuis en start volgend academiejaar volledig voorbereid.</p>
                     <a href="https://www.gate15.be/nl/events/kick-off-voor-antwerpse-presidia-6" target="_blank">read more</a>
                 </div>
-            </div>            
+            </div>
         </main>
-        <div class="gameBanner">
-            <a href="game.html"><img src="images/gameButton.png"></a>
-            <img src="images/gamePromo.png" alt="">
-        </div>
-        <div class="gameBannerSmall">
-            <a href="game.html"><img src="images/gameButton.png"></a>
-            <img src="images/gameBannerSmall.png" alt="">
-        </div>
         <footer class="clearfix">
             <div class="wrapper">
                 <div>

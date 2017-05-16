@@ -1,3 +1,21 @@
+<?php 
+    session_start();
+    $username = "";
+    $userurl = "";
+
+    if (isset($_SESSION['name']))
+    {
+        $username = $_SESSION['name'];
+        $userurl = "profile.php";
+    }
+    else
+    {
+        $username = "Log In";
+        $userurl = "login.php";
+    }
+
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -12,36 +30,36 @@
     </head>
     <body>
         <header class="clearfix">
-            <a href="index.html"><img src="images/logo.jpg" alt=""></a>
-            <a href="index.html"><h1>Studeren in Antwerpen</h1></a>
-        </header>        
+            <a href="index.php"><img src="images/logo.jpg" alt=""></a>
+            <a href="index.php"><h1>Studeren in Antwerpen</h1></a>
+        </header>
         <nav>
             <ul>
-                <li><a href="atypisch.html">Atypisch Antwerpen</a></li>
-                <li><a href="uni.html">Hogescholen en Universiteiten</a></li>
-                <li><a href="nieuws.html">Nieuws</a></li>
-                <li><a href="evenementen.html">Evenementen</a></li>
-                <li><a href="testimonials1.html" class="activenav">Testimonials</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="atypisch.php">Atypisch Antwerpen</a></li>
+                <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
+                <li><a href="nieuws.php">Nieuws</a></li>
+                <li><a href="evenementen.php">Evenementen</a></li>
+                <li><a href="testimonials1.php" class="activenav">Testimonials</a></li>
+                <li><a href="<?php echo $userurl ?>"><?php echo $username ?></a></li>
             </ul>
-        </nav>            
-        <div class="bars"><i class="fa fa-bars fa-2x"></i></div>
+        </nav>
+        <div class="bars"><i class="fa fa-bars fa-2x"></i></div>        
         <div class="heroimage">
             <img src="images/testimonials.png" alt="">
             <h1>Testimonials</h1>
         </div>        
         <h1>Testimonials</h1>        
-        <main class="clearfix">
+        <main class="clearfix">               
             <div>
                 <a href=""><img src="images/testim1.jpg" alt=""></a>
                 <a href=""><h1>Lennert Peeters</h1></a>
-                <h2>15:03 20/04/2017</h2>
+                <h2>2 dagen geleden</h2>
                 <p>Ik kom uit Leuven maar zit op kot in Antwerpen want Antwerpen is gewoon een leukere stad. De richting die ik nu studeer hebben ze ook niet in Leuven.</p>
             </div>
             <div>
                 <a href=""><img src="images/testim2.jpg" alt=""></a>
                 <a href=""><h1>Jens Van Assche</h1></a>
-                <h2>03:15 19/04/2017</h2>
+                <h2>3 dagen geleden</h2>
                 <p>Ik studeer graag in Antwerpen want hier is elke dag wel iets nieuws te beleven. De dynamiek in de stad is uniek, niet zoals eender waar.</p>
             </div>
             <div>
@@ -51,13 +69,13 @@
                 <p>Peter Wellens (29) is een ex-student handelsingenieur (Universiteit Antwerpen) met een passie voor ondernemen. Vanuit deze passie is hij dan ook begonnen aan zijn eigen onderneming; Chestnote. Chestnote is ondertussen een van de populairdere apps onder de jongeren in Antwerpen. Reden genoeg voor redactielid Yana om een langst Chestnote te gaan.</p>
             </div>
             <section class="numNav clearfix">
-                <a href="testimonials1.html"><<</a>
-                <a href="testimonials2.html"><</a>
-                <a href="testimonials1.html">1</a>
-                <a href="testimonials2.html">2</a>
-                <a href="testimonials3.html" class="numNavActive">3</a>
-                <a href="testimonials3.html">></a>
-                <a href="testimonials3.html">>></a>
+                <a href="testimonials1.php"><<</a>
+                <a href="testimonials1.php"><</a>
+                <a href="testimonials1.php" class="numNavActive">1</a>
+                <a href="testimonials2.php">2</a>
+                <a href="testimonials3.php">3</a>
+                <a href="testimonials2.php">></a>
+                <a href="testimonials3.php">>></a>
             </section>
         </main>
         <footer class="clearfix">

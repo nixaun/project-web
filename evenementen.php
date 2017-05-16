@@ -1,3 +1,21 @@
+<?php 
+    session_start();
+    $username = "";
+    $userurl = "";
+
+    if (isset($_SESSION['name']))
+    {
+        $username = $_SESSION['name'];
+        $userurl = "profile.php";
+    }
+    else
+    {
+        $username = "Log In";
+        $userurl = "login.php";
+    }
+
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -12,19 +30,19 @@
     </head>
     <body>
         <header class="clearfix">
-            <a href="index.html"><img src="images/logo.jpg" alt=""></a>
-            <a href="index.html"><h1>Studeren in Antwerpen</h1></a>
+            <a href="index.php"><img src="images/logo.jpg" alt=""></a>
+            <a href="index.php"><h1>Studeren in Antwerpen</h1></a>
         </header>
-            <nav>
-                <ul>
-                    <li><a href="atypisch.html">Atypisch Antwerpen</a></li>
-                    <li><a href="uni.html">Hogescholen en Universiteiten</a></li>
-                    <li><a href="nieuws.html">Nieuws</a></li>
-                    <li><a href="evenementen.html" class="activenav">Evenementen</a></li>
-                    <li><a href="testimonials1.html">Testimonials</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
-            </nav>            
+        <nav>
+            <ul>
+                <li><a href="atypisch.php">Atypisch Antwerpen</a></li>
+                <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
+                <li><a href="nieuws.php">Nieuws</a></li>
+                <li><a href="evenementen.php" class="activenav">Evenementen</a></li>
+                <li><a href="testimonials1.php">Testimonials</a></li>
+                <li><a href="<?php echo $userurl ?>"><?php echo $username ?></a></li>
+            </ul>
+        </nav>            
         <div class="bars"><i class="fa fa-bars fa-2x"></i></div>        
         <div class="heroimage">
             <img src="images/events.png" alt="">
@@ -34,11 +52,11 @@
             <div class="news clearfix">
                 <h1>Evenementen deze week</h1>                
                 <div>
-                    <a href="newsarticle.html"><img src="images/news1.png" alt=""></a>
-                    <a href="newsarticle.html"><h1>The Ten Miles are best accessible by foot or by bike</h1></a>
+                    <a href=""><img src="images/news1.png" alt=""></a>
+                    <a href=""><h1>The Ten Miles are best accessible by foot or by bike</h1></a>
                     <h2>15:03 20/04/2017</h2>
                     <p>Are you coming to the Ten Miles on sunday 23th of april? Or do you have to transport through the city? Better go by foot or take a bike. We'd like to give some tips on how the event is best reached.</p>
-                    <a href="newsarticle.html">read more</a>
+                    <a href="">read more</a>
                 </div>
                 <div>
                     <a href=""><img src="images/news2.jpg" alt=""></a>

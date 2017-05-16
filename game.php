@@ -1,10 +1,28 @@
+<?php 
+    session_start();
+    $username = "";
+    $userurl = "";
+
+    if (isset($_SESSION['name']))
+    {
+        $username = $_SESSION['name'];
+        $userurl = "profile.php";
+    }
+    else
+    {
+        $username = "Log In";
+        $userurl = "login.php";
+    }
+
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Studeren In Antwerpen - Atypisch Antwerpen</title>
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/style_profile.css">
+        <link rel="stylesheet" href="css/style_game.css">
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -12,33 +30,32 @@
     </head>
     <body>
         <header class="clearfix">
-            <a href="index.html"><img src="images/logo.jpg" alt=""></a>
-            <a href="index.html"><h1>Studeren in Antwerpen</h1></a>
-        </header>        
+            <a href="index.php"><img src="images/logo.jpg" alt=""></a>
+            <a href="index.php"><h1>Studeren in Antwerpen</h1></a>
+        </header>
         <nav>
-            <ul class="clearfix">
-                <li><a href="atypisch.html">Atypisch Antwerpen</a></li>
-                <li><a href="uni.html">Hogescholen en Universiteiten</a></li>
-                <li><a href="nieuws.html">News</a></li>
-                <li><a href="evenementen.html">Evenementen</a></li>
-                <li><a href="testimonials1.html">Testimonials</a></li>
-                <li><a href="login.html" class="activenav">Jens Van Assche</a></li>
+            <ul>
+                <li><a href="atypisch.php">Atypisch Antwerpen</a></li>
+                <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
+                <li><a href="nieuws.php">Nieuws</a></li>
+                <li><a href="evenementen.php">Evenementen</a></li>
+                <li><a href="testimonials1.php">Testimonials</a></li>
+                <li><a href="<?php echo $userurl ?>"><?php echo $username ?></a></li>
             </ul>
         </nav>            
-        <div class="bars"><i class="fa fa-bars fa-2x"></i></div>
+        <div class="bars"><i class="fa fa-bars fa-2x"></i></div>      
+        <img src="images/gamePromoTop.png" alt="">        
         <main class="clearfix">
-            <h1>Mijn Profiel - Jens Van Assche</h1>            
-            <h2>Voeg informatie toe</h2>
-            <form action="">
-                <label for="title">Titel</label>
-                <input type="text" name="title" id="title">
-                <label for="date">Datum en tijd</label>
-                <input type="text" name="date" id="date">
-                <label for="maintext">Tekst</label>
-                <textarea name="maintext" id="maintext" cols="40" rows="10"></textarea>
-                <button type="submit">Versturen</button>
-            </form>
+            <h1>PlezAntwerpen de Game</h1>
+            <p>Leer meer over Antwerpen en ontdek de stad met deze nieuwe gratis game</p>            
+            <div class="downloadbuttons">
+                <a href=""><i class="fa fa-apple"></i>Download voor iPhone</a>
+            </div>
+            <div class="downloadbuttons2">
+                <a href=""><i class="fa fa-android"></i>Download voor Android</a>
+            </div>
         </main>        
+        <img src="images/gameBannerZT2.png" alt="">        
         <footer class="clearfix">
             <div class="wrapper">
                 <div>
