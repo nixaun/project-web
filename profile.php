@@ -1,3 +1,21 @@
+<?php 
+    session_start();
+    $username = "";
+    $userurl = "";
+
+    if (isset($_SESSION['name']))
+    {
+        $username = $_SESSION['name'];
+        $userurl = "profile.php";
+    }
+    else
+    {
+        $username = "Log In";
+        $userurl = "login.php";
+    }
+
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -12,17 +30,17 @@
     </head>
     <body>
         <header class="clearfix">
-            <a href="index.html"><img src="images/logo.jpg" alt=""></a>
-            <a href="index.html"><h1>Studeren in Antwerpen</h1></a>
+            <a href="index.php"><img src="images/logo.jpg" alt=""></a>
+            <a href="index.php"><h1>Studeren in Antwerpen</h1></a>
         </header>        
         <nav>
             <ul class="clearfix">
-                <li><a href="atypisch.html">Atypisch Antwerpen</a></li>
-                <li><a href="uni.html">Hogescholen en Universiteiten</a></li>
-                <li><a href="nieuws.html">News</a></li>
-                <li><a href="evenementen.html">Evenementen</a></li>
-                <li><a href="testimonials1.html">Testimonials</a></li>
-                <li><a href="login.html" class="activenav">Jens Van Assche</a></li>
+                <li><a href="atypisch.php">Atypisch Antwerpen</a></li>
+                <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
+                <li><a href="nieuws.php">News</a></li>
+                <li><a href="evenementen.php">Evenementen</a></li>
+                <li><a href="testimonials1.php">Testimonials</a></li>
+                <li><a href=" <?php echo $userurl ?>" class="activenav"><?php echo $username ?></a></li>
             </ul>
         </nav>            
         <div class="bars"><i class="fa fa-bars fa-2x"></i></div>
@@ -37,6 +55,10 @@
                 <label for="maintext">Tekst</label>
                 <textarea name="maintext" id="maintext" cols="40" rows="10"></textarea>
                 <button type="submit">Versturen</button>
+            </form>
+        
+            <form action="php/logout.php">
+                <button >Uitloggen</button>
             </form>
         </main>        
         <footer class="clearfix">

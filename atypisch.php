@@ -1,3 +1,21 @@
+<?php 
+    session_start();
+    $username = "";
+    $userurl = "";
+
+    if (isset($_SESSION['name']))
+    {
+        $username = $_SESSION['name'];
+        $userurl = "profile.php";
+    }
+    else
+    {
+        $username = "Log In";
+        $userurl = "login.php";
+    }
+
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -12,17 +30,17 @@
     </head>
     <body>
         <header class="clearfix">
-            <a href="index.html"><img src="images/logo.jpg" alt=""></a>
-            <a href="index.html"><h1>Studeren in Antwerpen</h1></a>
+            <a href="index.php"><img src="images/logo.jpg" alt=""></a>
+            <a href="index.php"><h1>Studeren in Antwerpen</h1></a>
         </header>
         <nav>
             <ul>
-                <li><a href="atypisch.html" class="activenav">Atypisch Antwerpen</a></li>
-                <li><a href="uni.html">Hogescholen en Universiteiten</a></li>
-                <li><a href="nieuws.html">Nieuws</a></li>
-                <li><a href="evenementen.html">Evenementen</a></li>
-                <li><a href="testimonials1.html">Testimonials</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="atypisch.php" class="activenav">Atypisch Antwerpen</a></li>
+                <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
+                <li><a href="nieuws.php">Nieuws</a></li>
+                <li><a href="evenementen.php">Evenementen</a></li>
+                <li><a href="testimonials1.php">Testimonials</a></li>
+                <li><a href="<?php echo $userurl ?>"><?php echo $username ?></a></li>
             </ul>
         </nav>            
         <div class="bars"><i class="fa fa-bars fa-2x"></i></div>        
@@ -61,21 +79,21 @@
             </ul>
             <h3>Praktische informatie</h3>
             <ul>
-                <li>onze site: <a href="https://www.gate15.be" target="_blank">https://www.gate15.be/nl/home</a></li>
-                <li>ADRES Kleine Kauwenberg 15, Antwerpen</li>
-                <li>TEL +32 3 292 31 70</li>
-                <li>Email info@gate15.be</li>
+                <li>Website: <a href="https://www.gate15.be" target="_blank">https://www.gate15.be/nl/home</a></li>
+                <li>Kleine Kauwenberg 15, Antwerpen</li>
+                <li>+32 3 292 31 70</li>
+                <li>info@gate15.be</li>
             </ul>
         </div>
         <div class="clearfix">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/73wfuYU0gaE" frameborder="0" allowfullscreen></iframe>
             <h1>Testimonials</h1>
-            <h3>Geïnteresseerd in projecten van onze studenten?</h3>
-            <p>Bekijk dan zeker eens onze trots-pagina. Hier vind u de interessantste projecten die onze studenten te bieden hebben.</p>
-            <p><a href="https://www.gate15.be/nl/trots" target="_blank">gate 15 trots</a></p>
+            <h3>Geïnteresseerd in projecten van de Antwerpse studenten?</h3>
+            <p>Bekijk dan zeker eens de GATE15 trots-pagina. Hier vind u de interessantste projecten die Antwerpse studenten te bieden hebben.</p>
+            <p><a href="https://www.gate15.be/nl/trots" target="_blank">GATE15 trots</a></p>
             <h3>Wilt u meer te weten komen over het studentenleven in Antwerpen?</h3>
-            <p>Krijg het dan rechtstreeks te horen van de studenten zelf, op onze blog-pagina.</p>
-            <p><a href="https://www.gate15.be/nl/blog" target="_blank">gate 15 blog</a></p>
+            <p>Krijg het dan rechtstreeks te horen van de studenten zelf, op de GATE15 blog-pagina.</p>
+            <p><a href="https://www.gate15.be/nl/blog" target="_blank">GATE15 blog</a></p>
         </main>
         <footer class="clearfix">
             <div class="wrapper">

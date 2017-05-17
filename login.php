@@ -1,3 +1,33 @@
+<?php 
+    session_start();
+    $username = "";
+    $userurl = "";
+    $loginfailmessage = "";
+    $registerfailmessage = "";
+    $url = "http://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];
+
+    if (isset($_SESSION['name']))
+    {
+        $username = $_SESSION['name'];
+        $userurl = "profile.php";
+    }
+    else
+    {
+        $username = "Log In";
+        $userurl = "login.php";
+    }
+
+    if (strpos($url, "error=loginfail") !== false)
+    {
+        $loginfailmessage = "Uw email of wachtwoord is incorrect";
+    }
+
+    if (strpos($url, "error=email") !== false)
+    {
+        $registerfailmessage = "Deze email bestaat al";
+    }
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -12,28 +42,29 @@
     </head>
     <body>
         <header class="clearfix">
-            <a href="index.html"><img src="images/logo.jpg" alt=""></a>
-            <a href="index.html"><h1>Studeren in Antwerpen</h1></a>
+            <a href="index.php"><img src="images/logo.jpg" alt=""></a>
+            <a href="index.php"><h1>Studeren in Antwerpen</h1></a>
         </header>        
         <nav>
             <ul>
-                <li><a href="atypisch.html">Atypisch Antwerpen</a></li>
-                <li><a href="uni.html">Hogescholen en Universiteiten</a></li>
-                <li><a href="nieuws.html">Nieuws</a></li>
-                <li><a href="evenementen.html">Evenementen</a></li>
-                <li><a href="testimonials1.html">Testimonials</a></li>
-                <li><a href="login.html" class="activenav">Login</a></li>
+                <li><a href="atypisch.php">Atypisch Antwerpen</a></li>
+                <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
+                <li><a href="nieuws.php">Nieuws</a></li>
+                <li><a href="evenementen.php">Evenementen</a></li>
+                <li><a href="testimonials1.php">Testimonials</a></li>
+                <li><a href="<?php echo $userurl ?>" class="activenav"><?php echo $username ?></a></li>
             </ul>
         </nav>            
         <div class="bars"><i class="fa fa-bars fa-2x"></i></div>
         <main class="clearfix">
             <div class="logindiv">
                 <h1>Log in met bestaand account</h1>
-                <form action="">
+                <?php echo $loginfailmessage ?>
+                <form action="php/login.php" method="post">
                     <label for="loginmail">E-Mail</label>
-                    <input type="email" name="loginemail" id="loginname">                    
-                    <label for="loginpass">Password</label>
-                    <input type="password" name="loginpass" id="loginpass">                    
+                    <input type="email" name="loginmail" id="loginmail" required>                    
+                    <label for="loginpass">Wachtwoord</label>
+                    <input type="password" name="loginpass" id="loginpass" required>                    
                     <input type="checkbox" name="remember" id="remember">
                     <label for="remember">Onthoudt mij</label>
                     <button type="submit">Log in</button>
@@ -41,15 +72,16 @@
             </div>
             <div class="logindiv">
                 <h1>Geen account? Registreer nu!</h1>
-                <form action="">
+                <?php echo $registerfailmessage ?>
+                <form action="php/signup.php" method="post">
                     <label for="registername">Naam</label>
-                    <input type="text" name="registername" id="registername">                    
+                    <input type="text" name="registername" id="registername" required>                    
                     <label for="registermail">E-Mail</label>
-                    <input type="email" name="registermail" id="registermail">                    
-                    <label for="registerpass">Password</label>
-                    <input type="password" name="registerpass" id="registerpass">                    
-                    <label for="registerpass2">Herhaal password</label>
-                    <input type="password" name="registerpass2" id="registerpass2">                    
+                    <input type="email" name="registermail" id="registermail" required>                    
+                    <label for="registerpass">Wachtwoord</label>
+                    <input type="password" name="registerpass" id="registerpass" required>
+                    <label for="registerpass">Herhaal Wachtwoord</label>
+                    <input type="password" name="registerpass2" id="registerpass2" required>  
                     <button type="submit">Registreer</button>
                 </form>
             </div>
