@@ -45,11 +45,7 @@
         <div class="heroimage">
             <img src="images/hero.png" alt="">
             <h2>Welkom in Antwerpen, de Atypische studentenstad!</h2>
-<<<<<<< HEAD:index.php
-            <a href="atypisch.php"><p>Leer meer</p></a>
-=======
-            <a href="atypisch.html"><p>LEER MEER</p></a>
->>>>>>> 8b689eadeaea4297764f67e502c7bc734df538ad:index.php
+            <a href="atypisch.php"><p>LEER MEER</p></a>
         </div>           
         <h2>Welkom in Antwerpen, de Atypische studentenstad!</h2>
         <a href="atypisch.php"><p>Leer meer</p></a>            
