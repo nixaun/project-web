@@ -71,6 +71,8 @@
                 <li>Cultuur Cheques</li>
                 <li><a href="https://www.gate15.be/nl/content/over-gate15" target="_blank">en nog meer...</a></li>
             </ul>
+            
+            <p>Voor alle informatie bezoek de site <a href="https://www.gate15.be" target="_blank">GATE15.be</a></p>
             <!--
             <h3>Projecten van GATE15</h3>
             <ul>
@@ -93,7 +95,7 @@
             <h1>Student Life</h1>
             <h3>Geïnteresseerd in projecten van onze studenten?</h3>
             <p>Bekijk dan zeker eens onze trots-pagina. Hier vind u de interessantste projecten die onze studenten te bieden hebben.</p>
-            <p><a href="https://www.gate15.be/nl/trots" target="_blank">gate 15 trots</a></p>
+            <p><a href="https://www.gate15.be/nl/trots" target="_blank">GATE15 trots</a></p>
             <h3>Wilt u meer te weten komen over het studentenleven in Antwerpen?</h3>
             <p>Krijg het dan rechtstreeks te horen van de studenten zelf, op de GATE15 blog-pagina.</p>
             <p><a href="https://www.gate15.be/nl/blog" target="_blank">GATE15 blog</a></p>
