@@ -2,6 +2,9 @@
     session_start();
     $username = "";
     $userurl = "";
+    $confirmmessage = "";
+
+    $url = "http://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];
 
     if (isset($_SESSION['name']))
     {
@@ -12,6 +15,11 @@
     {
         $username = "Log In";
         $userurl = "login.php";
+    }
+
+    if (strpos($url, "confirm=loggedin") !== false)
+    {
+        $confirmmessage = "U bent ingelogd als ".$_SESSION['name'];
     }
 
 ?>
@@ -45,6 +53,7 @@
         </nav>            
         <div class="bars"><i class="fa fa-bars fa-2x"></i></div>
         <main class="clearfix">
+            <p><?php echo $confirmmessage ?></p>
             <h1>Mijn Profiel - Jens Van Assche</h1>            
             <h2>Voeg informatie toe</h2>
             <form action="">

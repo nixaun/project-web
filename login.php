@@ -5,6 +5,7 @@
     $loginfailmessage = "";
     $registerfailmessage = "";
     $passwordfailmessage = "";
+    $confirmmessage = "";
 
     $url = "http://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];
 
@@ -32,6 +33,16 @@
     if (strpos($url, "error=password") !== false)
     {
         $passwordfailmessage = "De wachtwoorden komen niet overeen";
+    }
+
+    if (strpos($url, "confirm=signedup") !== false)
+    {
+        $confirmmessage = "U bent geregistreerd, u kan zich nu inloggen";
+    }
+
+    if (strpos($url, "confirm=loggedout") !== false)
+    {
+        $confirmmessage = "U bent uitgelogd";
     }
 ?>
 
@@ -64,6 +75,7 @@
         </nav>            
         <div class="bars"><i class="fa fa-bars fa-2x"></i></div>
         <main class="clearfix">
+            <p><?php echo $confirmmessage ?></p>
             <div class="logindiv">
                 <h1>Log in met bestaand account</h1>
                 <p><?php echo $loginfailmessage ?></p>

@@ -32,7 +32,7 @@
             $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
             $result = mysqli_query($connect, $sql);
     
-            header("Location: ../index.php");
+            header("Location: ../login.php?confirm=signedup");
         }
     }
 ?>

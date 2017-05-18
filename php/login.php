@@ -21,6 +21,6 @@
     else
     {
         $_SESSION['name'] = $row['name'];
-        header("Location: ../index.php");
+        header("Location: ../profile.php?confirm=loggedin");
     }
 ?>

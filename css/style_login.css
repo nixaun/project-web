@@ -41,3 +41,7 @@ form button:hover {
 h1 + p, h1 + p + p {
     color: #CF0039;
 }
+
+main > p {
+    color: #4AA32C;
+}
