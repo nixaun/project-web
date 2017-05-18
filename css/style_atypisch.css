@@ -1,14 +1,16 @@
 main iframe {
     float: right;
+    padding-left: 5%;
 }
 
 main img {
     float: right;
     width: 50%;
+    padding-left: 5%;
 }
 
 main h1 {
-    color: #282020;
+    color: #41b99d;  /* old #282020 new #41b99d*/
     margin: 5px;
 }
 
@@ -22,7 +24,8 @@ main ul {
     padding-left: 20px;
 }
 
-main div{        
+main div{ 
+    background-image: url("../images/paper.jpg");       
     background-color: #E5E5E6;
     border: 1px solid #d3d3d3;
     padding: 15px;
@@ -31,9 +34,9 @@ main div{
 
 
 main a {
-	color: #0190f8;
+	color: #f2c400;        /* old #0190f8 new #f2c400 */
 }
 
 main a:hover {
-	color: #6aa8d4;
+	color: #8c00c7;        /* old #6aa8d4 new #8c00c7 */
 }
