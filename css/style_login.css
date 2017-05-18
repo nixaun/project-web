@@ -37,3 +37,7 @@ form button {
 form button:hover {
     background-color: #0093ff;
 }
+
+h1 + p, h1 + p + p {
+    color: #CF0039;
+}

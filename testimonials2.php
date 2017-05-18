@@ -1,3 +1,21 @@
+<?php 
+    session_start();
+    $username = "";
+    $userurl = "";
+
+    if (isset($_SESSION['name']))
+    {
+        $username = $_SESSION['name'];
+        $userurl = "profile.php";
+    }
+    else
+    {
+        $username = "Log In";
+        $userurl = "login.php";
+    }
+
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -12,19 +30,19 @@
     </head>
     <body>
         <header class="clearfix">
-            <a href="index.html"><img src="images/logo.jpg" alt=""></a>
-            <a href="index.html"><h1>Studeren in Antwerpen</h1></a>
+            <a href="index.php"><img src="images/logo.jpg" alt=""></a>
+            <a href="index.php"><h1>Studeren in Antwerpen</h1></a>
         </header>
-            <nav>
-                <ul>
-                    <li><a href="atypisch.html">Atypisch Antwerpen</a></li>
-                    <li><a href="uni.html">Hogescholen en Universiteiten</a></li>
-                    <li><a href="nieuws.html">Nieuws</a></li>
-                    <li><a href="evenementen.html">Evenementen</a></li>
-                    <li><a href="testimonials1.html" class="activenav">Testimonials</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
-            </nav>
+        <nav>
+            <ul>
+                <li><a href="atypisch.php">Atypisch Antwerpen</a></li>
+                <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
+                <li><a href="nieuws.php">Nieuws</a></li>
+                <li><a href="evenementen.php">Evenementen</a></li>
+                <li><a href="testimonials1.php" class="activenav">Testimonials</a></li>
+                <li><a href="<?php echo $userurl ?>"><?php echo $username ?></a></li>
+            </ul>
+        </nav>
         <div class="bars"><i class="fa fa-bars fa-2x"></i></div>        
         <div class="heroimage">
             <img src="images/testimonials.png" alt="">
@@ -51,13 +69,13 @@
                 <p>Peter Wellens (29) is een ex-student handelsingenieur (Universiteit Antwerpen) met een passie voor ondernemen. Vanuit deze passie is hij dan ook begonnen aan zijn eigen onderneming; Chestnote. Chestnote is ondertussen een van de populairdere apps onder de jongeren in Antwerpen. Reden genoeg voor redactielid Yana om een langst Chestnote te gaan.</p>
             </div>
             <section class="numNav clearfix">
-                <a href="testimonials1.html"><<</a>
-                <a href="testimonials1.html"><</a>
-                <a href="testimonials1.html">1</a>
-                <a href="testimonials2.html" class="numNavActive">2</a>
-                <a href="testimonials3.html">3</a>
-                <a href="testimonials3.html">></a>
-                <a href="testimonials3.html">>></a>
+                <a href="testimonials1.php"><<</a>
+                <a href="testimonials1.php"><</a>
+                <a href="testimonials1.php">1</a>
+                <a href="testimonials2.php" class="numNavActive">2</a>
+                <a href="testimonials3.php">3</a>
+                <a href="testimonials3.php">></a>
+                <a href="testimonials3.php">>></a>
             </section>
         </main>
         <footer class="clearfix">
