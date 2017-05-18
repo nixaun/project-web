@@ -1,3 +1,30 @@
+.tab a {
+    float: left;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid #d9d9d9;
+    background-color: #fff;
+}
+
+.tab a.active {
+    border-bottom: 1px solid #fff;
+}
+
+.tabcontent form {
+    border: 1px solid #d9d9d9;
+    margin-top: -1px;
+    padding: 20px;
+    width: 800px;
+    display: none;
+}
+
+.tabcontent form.active {
+    display: block;
+}
+
 form label {
     display: block;
     margin: 8px 0;
@@ -5,14 +32,13 @@ form label {
 
 form input {
     font-family: SunAntwerpen-regular;
-    width: 50%;
+    width: 100%;
     font-size: 100%;
     padding: 5px;
 }
 
 form textarea {
-    width: 50%;
-    margin-right: 50%;
+    width: 100%;
 }
 
 form button {

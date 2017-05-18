@@ -45,30 +45,79 @@
             <ul class="clearfix">
                 <li><a href="atypisch.php">Atypisch Antwerpen</a></li>
                 <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
-                <li><a href="nieuws.php">News</a></li>
+                <li><a href="nieuws.php">Nieuws</a></li>
                 <li><a href="evenementen.php">Evenementen</a></li>
                 <li><a href="testimonials1.php">Testimonials</a></li>
-                <li><a href=" <?php echo $userurl ?>" class="activenav"><?php echo $username ?></a></li>
+                <li><a href="<?php echo $userurl ?>" class="activenav"><?php echo $username ?></a></li>
             </ul>
         </nav>            
         <div class="bars"><i class="fa fa-bars fa-2x"></i></div>
         <main class="clearfix">
+            <?php if(!isset($_SESSION['role'])) : ?>
+            
+                <?php header("Location: login.php"); ?>
+                
+            <?php elseif($_SESSION['role'] == 2 || $_SESSION['role'] == 1) : ?>
             <p><?php echo $confirmmessage ?></p>
-            <h1>Mijn Profiel - Jens Van Assche</h1>            
-            <h2>Voeg informatie toe</h2>
-            <form action="">
-                <label for="title">Titel</label>
-                <input type="text" name="title" id="title">
-                <label for="date">Datum en tijd</label>
-                <input type="text" name="date" id="date">
-                <label for="maintext">Tekst</label>
-                <textarea name="maintext" id="maintext" cols="40" rows="10"></textarea>
-                <button type="submit">Versturen</button>
-            </form>
-        
+            <h1>Mijn Profiel - <?php echo $username ?></h1>
+            
+            <div class="tab clearfix">
+                <a href="#" class="active">Voeg nieuwsartikel toe</a>
+                <a href="#">Voeg evenement toe</a>
+                <a href="#">Voeg testimonial toe</a>
+            </div>
+            
+            <div class="tabcontent">
+                <form action="" class="active">
+                    <label for="title">Titel</label>
+                    <input type="text" name="title" id="title">
+                    <label for="date">Datum en tijd</label>
+                    <input type="text" name="date" id="date">
+                    <label for="maintext">Tekst</label>
+                    <textarea name="maintext" id="maintext" cols="40" rows="10"></textarea>
+                    <label for="image">Voeg een foto toe</label>
+                    <input type="file" name="image" id="image">
+                    <button type="submit">Versturen</button>
+                </form>
+            
+                <form action="">
+                    <label for="title">Titel</label>
+                    <input type="text" name="title" id="title">
+                    <label for="date">Datum en tijd</label>
+                    <input type="text" name="date" id="date">
+                    <label for="date">Plaats</label>
+                    <input type="text" name="place" id="place">
+                    <label for="maintext">Tekst</label>
+                    <textarea name="maintext" id="maintext" cols="40" rows="10"></textarea>
+                    <label for="image">Voeg een foto toe</label>
+                    <input type="file" name="image" id="image">
+                    <button type="submit">Versturen</button>
+                </form>
+            
+                <form action="">
+                    <label for="title">Naam/Titel</label>
+                    <input type="text" name="title" id="title">
+                    <label for="date">Datum en tijd</label>
+                    <input type="text" name="date" id="date">
+                    <label for="maintext">Tekst</label>
+                    <textarea name="maintext" id="maintext" cols="40" rows="10"></textarea>
+                    <label for="image">Voeg een foto toe</label>
+                    <input type="file" name="image" id="image">
+                    <button type="submit">Versturen</button>
+                </form>
+            </div>
+            
             <form action="php/logout.php">
                 <button >Uitloggen</button>
             </form>
+            
+            <?php else : ?>
+            
+            <form action="php/logout.php">
+                <button >Uitloggen</button>
+            </form>
+            
+            <?php endif; ?>
         </main>        
         <footer class="clearfix">
             <div class="wrapper">

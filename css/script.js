@@ -13,6 +13,14 @@ window.onload=function() {
             unilist[i].addEventListener("click", onUnilistClick);
         }
     }
+    
+    var profiletabs = document.querySelectorAll(".tab a");
+    if (profiletabs) {
+        for (i = 0; i < profiletabs.length; i++)
+        {
+            profiletabs[i].addEventListener("click", onTabsClick);
+        }
+    }
 }
 
 function onMenuToggle(e) {
@@ -52,6 +60,33 @@ function onUnilistClick(event) {
     }
     
     document.querySelector(".uniinfo div.active").classList.remove("active");
+    
+    tabContents[i].classList.add("active");
+}
+
+function onTabsClick (event) {
+    event.preventDefault();
+    var i;
+    
+    var tabs        = document.querySelectorAll(".tab a");
+    var tabContents = document.querySelectorAll(".tabcontent form");
+    var activeTab   = document.querySelector(".tab a.active");
+    var tabIndex    = 0;
+    
+    activeTab.classList.remove("active");
+    
+    event.currentTarget.classList.add("active");
+    
+    for (i = 0; i < tabs.length; i++)
+    {
+        if (tabs[i] == event.currentTarget)
+        {
+            tabIndex = i;
+            break;
+        }
+    }
+    
+    document.querySelector(".tabcontent form.active").classList.remove("active");
     
     tabContents[i].classList.add("active");
 }

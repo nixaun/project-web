@@ -20,7 +20,20 @@
     }
     else
     {
-        $_SESSION['name'] = $row['name'];
-        header("Location: ../profile.php?confirm=loggedin");
+        if(isset($_POST['checkbox']))
+        {
+            // cookies toevoegen
+            
+            
+            $_SESSION['name'] = $row['name'];
+            $_SESSION['role'] = $row['role'];
+            header("Location: ../profile.php?confirm=loggedin");
+        }
+        else
+        {
+            $_SESSION['name'] = $row['name'];
+            $_SESSION['role'] = $row['role'];
+            header("Location: ../profile.php?confirm=loggedin");
+        }
     }
 ?>

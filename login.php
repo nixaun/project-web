@@ -79,14 +79,13 @@
             <div class="logindiv">
                 <h1>Log in met bestaand account</h1>
                 <p><?php echo $loginfailmessage ?></p>
-                <?php echo $loginfailmessage ?>
                 <form action="php/login.php" method="post">
                     <label for="loginmail">E-Mail</label>
                     <input type="email" name="loginmail" id="loginmail" required>                    
                     <label for="loginpass">Wachtwoord</label>
                     <input type="password" name="loginpass" id="loginpass" required>                    
-                    <input type="checkbox" name="remember" id="remember">
-                    <label for="remember">Onthoudt mij</label>
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <label for="checkbox">Onthoudt mij</label>
                     <button type="submit">Log in</button>
                 </form>
             </div>
@@ -94,7 +93,6 @@
                 <h1>Geen account? Registreer nu!</h1>
                 <p><?php echo $registerfailmessage ?></p>
                 <p><?php echo $passwordfailmessage ?></p>
-                <?php echo $registerfailmessage ?>
                 <form action="php/signup.php" method="post">
                     <label for="registername">Naam</label>
                     <input type="text" name="registername" id="registername" required>                    
