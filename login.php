@@ -1,5 +1,7 @@
 <?php 
     session_start();
+    include "php/session_timeout.php";
+
     $username = "";
     $userurl = "";
     $loginfailmessage = "";

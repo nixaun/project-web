@@ -36,4 +36,3 @@
             header("Location: ../profile.php?confirm=loggedin");
         }
     }
-?>
