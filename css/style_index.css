@@ -38,6 +38,7 @@ body {
     padding: 0;
     color: #282020;
     font-family: SunAntwerpen-regular;
+    background-image: url("paper.jpg");
 }
 
 ul {
@@ -181,14 +182,18 @@ main, .wrapper {
 }
 
 .news > a > h1 {
-    color: #007ad3;
+    color: #41b99d;      /*old  007ad3    ? f37200 gate 15 #41b99d */
     margin: 30px 20px;
 }
+.news > a > h1:hover{
+    color: #8c00c7;
+}
 .news div {
+    background-image: url("../images/paper.jpg");
     width: 30%;
     margin: 0 1.5% 50px 1.5%;
     float: left;
-    background-color: #E5E5E6;
+    background-color: #E5E5E6;   /*old E5E5E6   ?   a2d7c9 ? 1fb58d  */
     border: 1px solid #d3d3d3;
     padding-bottom: 20px;
 }
@@ -203,10 +208,11 @@ main, .wrapper {
     margin: 10px;
     font-family: Antwerpen-regular;
     font-weight: 100;
+    color: #41b99d;
 }
 
 .news div h1:hover {
-    color: #007ad3;
+    color: #8c00c7;         /* old #007ad3 new 8c00c7 */
     transition: 0.1s;
 }
 
@@ -218,16 +224,21 @@ main, .wrapper {
 
 .news div p {
     margin: 10px;
+    color: #585858;
+}
+
+.news div p:hover{
+    color: #000;
 }
 
 .news div a+h2+p+a {
     margin: 10px;
-    color: #007ad3;
+    color: #f2c400;         /*   old #007ad3 new #f2c400   */
     font-weight: bold;
 }
 
 .news div a+h2+p+a:hover {
-    color: #0093ff;
+    color: #8c00c7;         /* old #0093ff new 8c00c7 */
     transition: 0.1s;
 }
 

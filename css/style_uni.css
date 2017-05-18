@@ -1,5 +1,5 @@
 main a {
-    color: #007ad3;
+    color: #007ad3;     /* old #007ad3 new  */
 }
 
 main p, main ul {
@@ -37,7 +37,7 @@ main h2 {
 }
 
 .unilist a.active {
-    color: #007ad3;
+    color: #8c00c7;     /* old #007ad3 new #8c00c7 */
     border-right: none;
 }
 
