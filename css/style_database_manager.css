@@ -1,3 +1,31 @@
 table {
-    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+table tr, table th, table td {
+    border: 1px #d9d9d9 solid;
+    padding: 10px 20px;
+}
+
+table tr > td:last-child {
+    border: 1px #fff solid;
+}
+
+table i[class="fa fa-pencil"] {
+    background-color: #ffd155;
+    padding: 10px 12px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+table i[class="fa fa-times"] {
+    background-color: #ff5555;
+    padding: 10px 12px;
+    border-radius: 5px;
+}
+
+table i[class="fa fa-plus"] {
+    background-color: #7be34d;
+    padding: 10px 12px;
+    border-radius: 5px;
 }

@@ -62,11 +62,14 @@
                                     <td>".$row["name"]."</td>
                                     <td>".$row["email"]."</td>
                                     <td>".$row["role"]."</td>
-                                    <td><a href=''><i class='fa fa-pencil'></i></a></td>
-                                    <td><a href=''><i class='fa fa-times'></i></a></td>
+                                    <td><a href=''><i class='fa fa-pencil'></i></a><a href=''><i class='fa fa-times'></i></a></td>
                                 </tr>";
                     }
                 ?>
+                
+                <tr>
+                    <td><a href=""><i class="fa fa-plus"></i></a></td>
+                </tr>
             </table>
             
             <?php endif; ?>
