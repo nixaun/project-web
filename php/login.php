@@ -1,12 +1,7 @@
 <?php
     session_start();
+    include "connect.php";
 
-    $connect = mysqli_connect("localhost", "jensvana", "powerpoint741", "jensvana_");
-    
-    if(!$connect)
-    {
-        die("connection failed: ".mysqli_connect_error);
-    }
 
     $email = $_POST['loginmail'];
     $password = $_POST['loginpass'];
@@ -22,8 +17,7 @@
     {
         if(isset($_POST['checkbox']))
         {
-            // cookies toevoegen
-            
+            setcookie('id', $row['id'], time() + (86400 * 30), "/");
             
             $_SESSION['name'] = $row['name'];
             $_SESSION['role'] = $row['role'];

@@ -102,11 +102,11 @@ header h1 {
 .heroimage p {
     position: absolute;
     top: 70%;
-    left: 45%;
+    left: 43%;
     
     background-color: #fff;
-    font-size: 120%;
-    padding: 15px 20px;
+    font-size: 140%;
+    padding: 20px 30px;
     transition: 0.4s;
 }
 
@@ -128,10 +128,8 @@ header h1 {
 
 .heroimage + h2 + a > p {
     display: none;
-    background-color: #fff;
-    font-size: 120%;
     padding: 15px 20px;
-    transition: 0.4s;
+    font-size: 110%;
 }
 
 

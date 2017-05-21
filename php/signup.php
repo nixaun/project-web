@@ -1,12 +1,6 @@
 <?php
     session_start();
-
-    $connect = mysqli_connect("localhost", "jensvana", "powerpoint741", "jensvana_");
-    
-    if(!$connect)
-    {
-        die("connection failed: ".mysqli_connect_error);
-    }
+    include "connect.php";
 
     $name = $_POST['registername'];
     $email = $_POST['registermail'];

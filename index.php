@@ -1,6 +1,7 @@
 <?php 
     session_start();
     include "php/session_timeout.php";
+    include "php/cookie_check.php";
 
     $username = "";
     $userurl = "";
@@ -50,7 +51,7 @@
             <a href="atypisch.php"><p>LEER MEER</p></a>
         </div>           
         <h2>Welkom in Antwerpen, de Atypische studentenstad!</h2>
-        <a href="atypisch.php"><p>Leer meer</p></a>            
+        <a href="atypisch.php"><p>LEER MEER</p></a>            
         <div class="bars indexbars"><i class="fa fa-bars fa-2x"></i></div>             
         <main>
             <div class="news clearfix">

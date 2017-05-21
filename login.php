@@ -1,6 +1,7 @@
 <?php 
     session_start();
     include "php/session_timeout.php";
+    include "php/cookie_check.php";
 
     $username = "";
     $userurl = "";
@@ -77,17 +78,23 @@
         </nav>            
         <div class="bars"><i class="fa fa-bars fa-2x"></i></div>
         <main class="clearfix">
+            <?php if(isset($_SESSION['role'])) : ?>
+            
+                <?php header("Location: profile.php"); ?>
+                
+            <?php else : ?>
+            <?php endif ?>
             <p><?php echo $confirmmessage ?></p>
             <div class="logindiv">
                 <h1>Log in met bestaand account</h1>
                 <p><?php echo $loginfailmessage ?></p>
                 <form action="php/login.php" method="post">
-                    <label for="loginmail">E-Mail</label>
+                    <label for="loginmail">E-mail</label>
                     <input type="email" name="loginmail" id="loginmail" required>                    
                     <label for="loginpass">Wachtwoord</label>
                     <input type="password" name="loginpass" id="loginpass" required>                    
                     <input type="checkbox" name="checkbox" id="checkbox">
-                    <label for="checkbox">Onthoudt mij</label>
+                    <label for="checkbox">Onthoud mij</label>
                     <button type="submit">Log in</button>
                 </form>
             </div>
@@ -98,7 +105,7 @@
                 <form action="php/signup.php" method="post">
                     <label for="registername">Naam</label>
                     <input type="text" name="registername" id="registername" required>                    
-                    <label for="registermail">E-Mail</label>
+                    <label for="registermail">E-mail</label>
                     <input type="email" name="registermail" id="registermail" required>                    
                     <label for="registerpass">Wachtwoord</label>
                     <input type="password" name="registerpass" id="registerpass" required>
