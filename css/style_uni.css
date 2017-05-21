@@ -32,12 +32,13 @@ main h2 {
 }
 
 .unilist a:hover {
-    color: #282020;
+    color: #8c00c7;
+    background-color: #f4f4f4;
     transition: 0.1s;
 }
 
 .unilist a.active {
-    color: #8c00c7;     /* old #007ad3 new #8c00c7 */
+    color: #41b99d;     /* old #007ad3 new #8c00c7 */
     border-right: none;
 }
 

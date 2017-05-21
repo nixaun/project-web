@@ -1,27 +1,15 @@
 <?php 
     session_start();
-    include "php/session_timeout.php";
-    include "php/cookie_check.php";
+    include "includes/session_timeout.php";
+    include "includes/cookie_check.php";
+    include "includes/username_handler.php";
 
-    $username = "";
-    $userurl = "";
     $loginfailmessage = "";
     $registerfailmessage = "";
     $passwordfailmessage = "";
     $confirmmessage = "";
 
     $url = "http://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];
-
-    if (isset($_SESSION['name']))
-    {
-        $username = $_SESSION['name'];
-        $userurl = "profile.php";
-    }
-    else
-    {
-        $username = "Log In";
-        $userurl = "login.php";
-    }
 
     if (strpos($url, "error=loginfail") !== false)
     {

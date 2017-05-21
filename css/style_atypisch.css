@@ -4,9 +4,9 @@ main iframe {
 }
 
 main img {
-    float: right;
+    float: left;
     width: 50%;
-    padding-left: 5%;
+    padding-right: 5%;
 }
 
 main h1 {

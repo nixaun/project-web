@@ -41,14 +41,14 @@ form textarea {
     width: 100%;
 }
 
-form button {
+form button, .tabcontent + a {
     border: none;
     font-family: SunAntwerpen-regular;
     font-size: 100%;
     background-color: #007ad3;
     color: #fff;
     padding: 15px 20px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 form button:hover {

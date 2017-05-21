@@ -6,7 +6,7 @@
     $email = $_POST['loginmail'];
     $password = $_POST['loginpass'];
         
-    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+    $sql = "SELECT id, name, email, role FROM users WHERE email='$email' AND password='$password'";
     $result = mysqli_query($connect, $sql);
 
     if(!$row = mysqli_fetch_assoc($result))

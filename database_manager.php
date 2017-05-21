@@ -3,15 +3,10 @@
     include "includes/session_timeout.php";
     include "includes/cookie_check.php";
     include "includes/username_handler.php";
+    include "includes/connect.php";
 
-    $confirmmessage = "";
-
-    $url = "http://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];
-
-    if (strpos($url, "confirm=loggedin") !== false)
-    {
-        $confirmmessage = "U bent ingelogd als ".$_SESSION['name'];
-    }
+    $sql = "SELECT id, name, email, role FROM users";
+    $result = mysqli_query($connect, $sql);
 
 ?>
 
@@ -21,7 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Studeren In Antwerpen - Atypisch Antwerpen</title>
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/style_profile.css">
+        <link rel="stylesheet" href="css/style_database_manager.css">
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -44,72 +39,37 @@
         </nav>            
         <div class="bars"><i class="fa fa-bars fa-2x"></i></div>
         <main class="clearfix">
-            <?php if(!isset($_SESSION['role'])) : ?>
+            <?php if($_SESSION['role'] != 2) : ?>
             
-                <?php header("Location: login.php"); ?>
-            
-            <?php endif ?>
+                <?php header("Location: profile.php"); ?>
                 
-            <?php if($_SESSION['role'] == 2 || $_SESSION['role'] == 1) : ?>
-            <p><?php echo $confirmmessage ?></p>
-            <h1>Mijn Profiel - <?php echo $username ?></h1>
+            <?php else : ?>
+                
+            <h1>Database Manager</h1>
             
-            <div class="tab clearfix">
-                <a href="#" class="active">Voeg nieuwsartikel toe</a>
-                <a href="#">Voeg evenement toe</a>
-                <a href="#">Voeg testimonial toe</a>
-            </div>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>e-mail</th>
+                    <th>Role</th>
+                </tr>
+                
+                <?php
+                    while($row = $result->fetch_assoc()) {
+                        echo "  <tr>
+                                    <td>".$row["id"]."</td>
+                                    <td>".$row["name"]."</td>
+                                    <td>".$row["email"]."</td>
+                                    <td>".$row["role"]."</td>
+                                    <td><a href=''><i class='fa fa-pencil'></i></a></td>
+                                    <td><a href=''><i class='fa fa-times'></i></a></td>
+                                </tr>";
+                    }
+                ?>
+            </table>
             
-            <div class="tabcontent">
-                <form action="" class="active">
-                    <label for="title">Titel</label>
-                    <input type="text" name="title" id="title">
-                    <label for="date">Datum en tijd</label>
-                    <input type="text" name="date" id="date">
-                    <label for="maintext">Tekst</label>
-                    <textarea name="maintext" id="maintext" cols="40" rows="10"></textarea>
-                    <label for="image">Voeg een foto toe</label>
-                    <input type="file" name="image" id="image">
-                    <button type="submit">Versturen</button>
-                </form>
-            
-                <form action="">
-                    <label for="title">Titel</label>
-                    <input type="text" name="title" id="title">
-                    <label for="date">Datum en tijd</label>
-                    <input type="text" name="date" id="date">
-                    <label for="date">Plaats</label>
-                    <input type="text" name="place" id="place">
-                    <label for="maintext">Tekst</label>
-                    <textarea name="maintext" id="maintext" cols="40" rows="10"></textarea>
-                    <label for="image">Voeg een foto toe</label>
-                    <input type="file" name="image" id="image">
-                    <button type="submit">Versturen</button>
-                </form>
-            
-                <form action="">
-                    <label for="title">Naam/Titel</label>
-                    <input type="text" name="title" id="title">
-                    <label for="date">Datum en tijd</label>
-                    <input type="text" name="date" id="date">
-                    <label for="maintext">Tekst</label>
-                    <textarea name="maintext" id="maintext" cols="40" rows="10"></textarea>
-                    <label for="image">Voeg een foto toe</label>
-                    <input type="file" name="image" id="image">
-                    <button type="submit">Versturen</button>
-                </form>
-            </div>
-            
-            <?php endif ?>
-            
-            <?php if($_SESSION['role'] == 2) : ?>
-                <a href="database_manager.php" class="extrabuttons">Database Manager</a>
-            <?php endif ?>
-            
-            <form action="php/logout.php">
-                <button >Uitloggen</button>
-            </form>
-            
+            <?php endif; ?>
         </main>        
         <footer class="clearfix">
             <div class="wrapper">
