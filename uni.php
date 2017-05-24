@@ -52,22 +52,73 @@
         </div>        
         <h1>Hogescholen en Universiteiten</h1>            
         <main class="clearfix">
+            <h2>Filter op studierichting</h2>
+            <form action="php/uni_filter.php" method="post">
+                <select name="studierichtingen" onchange='onDropDownPick(this.value)'>
+                    <option value="default">Kies een studierichting</option>
+                    <option disabled>---------------------</option>
+                    <option value="arch">Architectuur</option>                            <!-- UA/ -->
+                    <option value="auto">Autotechnologie</option>                         <!-- KDG/ -->
+                    <option value="bedrijf">Bedrijfsmanagement</option>                   <!-- AP/KDG/KUL/AMS -->
+                    <option value="bioing">Bio-ingenieur</option>                         <!-- UA/ -->
+                    <option value="biochem">Biochemie</option>                            <!-- UA/KDG -->
+                    <option value="biomed">Biomedische wetenschappen</option>             <!-- UA/AP/KDG -->
+                    <option value="bio">Biologie</option>                                 <!-- UA/ -->
+                    <option value="chem">Chemie</option>                                  <!-- UA/AP/KDG -->
+                    <option value="com">Communicatiewetenschappen</option>                <!-- UA/AP/ -->
+                    <option value="dier">Diergeneeskunde</option>                         <!-- UA/ -->
+                    <option value="elektro">Elektromechanica</option>                     <!-- AP/ -->
+                    <option value="ergo">Ergotherapie</option>                            <!-- AP/ -->
+                    <option value="farma">Farmaceutische wetenschappen</option>           <!-- UA/ -->
+                    <option value="foto">Fotografie</option>                              <!-- KDG/ -->
+                    <option value="fys">Fysica</option>                                   <!-- UA/ -->
+                    <option value="genees">Geneeskunde</option>                           <!-- UA/ -->
+                    <option value="gesch">Geschiedenis</option>                           <!-- UA/ -->
+                    <option value="graf">Grafische en digitale media</option>             <!-- AP/ -->
+                    <option value="indus">Industriële wetenschappen</option>              <!-- UA/ -->
+                    <option value="ict">Informatica</option>                              <!-- UA/AP/KDG -->
+                    <option value="journ">Journalistiek</option>                          <!-- AP -->
+                    <option value="kine">Kinesitherapie</option>                          <!-- UA/ -->
+                    <option value="kleuter">Kleuteronderwijs</option>                     <!-- AP/KDG -->
+                    <option value="lager">Lager onderwijs</option>                        <!-- AP/KDG -->
+                    <option value="logo">Logopedie</option>                               <!-- TM -->
+                    <option value="multi">Multimedia technologie</option>                 <!-- KDG -->
+                    <option value="naut">Nautische wetenschappen</option>                 <!-- HZ -->
+                    <option value="ortho">Orthopedagogie</option>                         <!-- AP/KDG -->
+                    <option value="pol">Politieke wetenschappen</option>                  <!-- UA/ -->
+                    <option value="psy">Psychologie</option>                              <!-- UA/AP/TM -->
+                    <option value="recht">Rechten</option>                                <!-- UA/ -->
+                    <option value="scheep">Scheepswerktuigkunde</option>                  <!-- HZ/ -->
+                    <option value="soceco">Sociaal-Economische wetenschappen</option>     <!-- UA/ -->
+                    <option value="socwerk">Sociaal werk</option>                         <!-- AP/KDG -->
+                    <option value="soc">Sociologie</option>                               <!-- UA/ -->
+                    <option value="taal">Taal- en letterkunde</option>                    <!-- UA/ -->
+                    <option value="toegeco">Toegepaste economische wetenschappen</option> <!-- UA/KUL -->
+                    <option value="toegtaal">Toegepaste taalkunde</option>                <!-- UA/KUL/ -->
+                    <option value="verpl">Verpleegkunde</option>                          <!-- AP/KDG -->
+                    <option value="wijs">Wijsbegeerte</option>                            <!-- UA/ -->
+                    <option value="wisk">Wiskunde</option>                                <!-- UA/ -->
+                </select>
+                <noscript><input type="submit" value="Submit"></noscript>
+            </form>
+            <p id="innertxt"></p>
+            
             <div class="unilist clearfix">
                 <ul class="clearfix">
-                    <li><a href="#" class="active">Antwerp Management School <i class="fa fa-chevron-right"></i></a></li>
+                    <li><a href="#" class="active" id="ams">Antwerp Management School <i class="fa fa-chevron-right"></i></a></li>
                     <li><a href="#">Artesis Plantijn Hogeschool <i class="fa fa-chevron-right"></i></a></li>
                     <li><a href="#">Hogere Zeevaartschool <i class="fa fa-chevron-right"></i></a></li>
                     <li><a href="#">Instituut voor Tropische Geneeskunde <i class="fa fa-chevron-right"></i></a></li>
                     <li><a href="#">Karel de Grote Hogeschool <i class="fa fa-chevron-right"></i></a></li>
                     <li><a href="#">KU Leuven Campus Antwerpen <i class="fa fa-chevron-right"></i></a></li>
                     <li><a href="#">Thomas More Hogeschool <i class="fa fa-chevron-right"></i></a></li>
-                    <li><a href="#">Universiteit Antwerpen <i class="fa fa-chevron-right"></i></a></li>
+                    <li><a href="#" id="ua">Universiteit Antwerpen <i class="fa fa-chevron-right"></i></a></li>
                 </ul>
             </div>                
             <div class="uniinfo">
                 <div class="active">
                     <h1>Antwerp Management School</h1>
-                    <p>Antwerp Management School is een autonome divisie van Universiteit Antwerpen gespecialiseerd in marketing, management en entrepeneurschap.</p>                    
+                    <p>Antwerp Management School is een autonome divisie van Universiteit Antwerpen gespecialiseerd in marketing, management en entrepeneurschap. De school biedt specifieke masters aan en geen bachelors.</p>                    
                     <h2>Campus</h2>
                     <p>Sint-Jacobsmarkt 9-13</p>                    
                     <h2>Wat kan je hier studeren?</h2>
@@ -75,6 +126,7 @@
                     <a href="https://www.antwerpmanagementschool.be/programmas/voltijds/" target="_blank">Bekijk alle studierichtingen</a>                    
                     <h2>Contact</h2>
                     <p><a href="https://www.antwerpmanagementschool.be/" target="_blank">Website</a></p>
+                    <p><a href="https://www.onderwijskiezer.be/v2/hoger/hoger_instellingen_detail.php?instelling=77&var=I" target="_blank">Meer info op onderwijskiezer.be</a></p>
                     <p>+32 (0)3 265 47 58</p>
                     <p>info@antwerpmanagementschool.be</p>
                 </div>                   
@@ -87,16 +139,17 @@
                     <p>Campus Spoor Noord: Ellermanstraat 33</p>
                     <p>Campus Meistraat: Meistraat 5</p>                    
                     <h2>Wat kan je hier studeren?</h2>
-                    <p>Gezondheid en Welzijn, Management en Communicatie, Onderwijs, Wetenschap en Techniek, Schone Kunsten en Grafisch Ontwerp</p>
+                    <p>Artesis Plantijn biedt een totaalpakket van professionele en academische bachelors aan. Ontdek met de filter bovenaan of klik door naar hun volledige lijst.</p>
                     <a href="https://www.ap.be/node/1090" target="_blank">Bekijk alle studierichtingen</a>
                     <h2>Contact</h2>
                     <p><a href="https://www.ap.be/" target="_blank">Website</a></p>
+                    <p><a href="https://www.onderwijskiezer.be/v2/hoger/hoger_instellingen_detail.php?instelling=39&var=I" target="_blank">Meer info op onderwijskiezer.be</a></p>
                     <p>+32 (0)3 220 54 00</p>
                     <p>info@ap.be</p>
                 </div>                   
                 <div>
                     <h1>Hogere Zeevaartschool</h1>
-                    <p>De Hogere Zeevaartschool is de enige hogeschool in België die de academische opleidingen Nautische Wetenschappen en de professionele opleiding Scheepswerktuigkunde aanbiedt. Studeren aan de HZS betekent studeren in een internationale leeromgeving: wij hebben ruim 35% buitenlandse studenten van 20 verschillende nationaliteiten!</p>                    
+                    <p>De Hogere Zeevaartschool is de enige hogeschool in België die de academische opleidingen Nautische Wetenschappen en de professionele opleiding Scheepswerktuigkunde aanbiedt. Studeren aan de HZS betekent studeren in een internationale leeromgeving: zij hebben ruim 35% buitenlandse studenten van 20 verschillende nationaliteiten.</p>                    
                     <h2>Campus</h2>
                     <p>Noordkasteel Oost 6</p>                    
                     <h2>Wat kan je hier studeren?</h2>
@@ -104,12 +157,13 @@
                     <a href="https://www.hzs.be/nl/ontdek-alles-over-hzs/studieaanbod" target="_blank">Bekijk alle studierichtingen</a>
                     <h2>Contact</h2>
                     <p><a href="https://www.hzs.be/">Website</a></p>
+                    <p><a href="https://www.onderwijskiezer.be/v2/hoger/hoger_instellingen_detail.php?instelling=38&var=I" target="_blank">Meer info op onderwijskiezer.be</a></p>
                     <p>+32 (0)3 205 64 30</p>
                     <p>info@hzs.be</p>
                 </div>                   
                 <div>
                     <h1>Instituut voor Tropische Geneeskunde</h1>
-                    <p>Het Instituut voor Tropische Geneeskunde biedt al meer dan een eeuw lang een venster op de wereld.  Studenten uit meer dan 30 landen specialiseren zich hier in Antwerpen in tropische infectieziekten en gezondheidszorg in ontwikkelingslanden. Onze vorsers doen onderzoek in het laboratorium en in het veld, in samenwerking met partners in Afrika, Azië en Latijns-Amerika. Onze artsen en verpleegkundigen bieden reisadvies, vaccinaties en zorg op maat voor importziekten, hiv en soa’s.</p>                    
+                    <p>Het Instituut voor Tropische Geneeskunde biedt al meer dan een eeuw lang een venster op de wereld. Studenten uit meer dan 30 landen specialiseren zich hier in Antwerpen in tropische infectieziekten en gezondheidszorg in ontwikkelingslanden. Hun vorsers doen onderzoek in het laboratorium en in het veld, in samenwerking met partners in Afrika, Azië en Latijns-Amerika. Hun artsen en verpleegkundigen bieden reisadvies, vaccinaties en zorg op maat voor importziekten, hiv en soa’s.</p>                    
                     <h2>Campus</h2>
                     <p>Nationalestraat 155</p>                    
                     <h2>Wat kan je hier studeren?</h2>
@@ -117,6 +171,7 @@
                     <a href="https://edu.itg.be/course" target="_blank">Bekijk alle studierichtingen</a>
                     <h2>Contact</h2>
                     <p><a href="http://www.itg.be/" target="_blank">Website</a></p>
+                    <p><a href="https://www.onderwijskiezer.be/v2/hoger/hoger_instellingen_detail.php?instelling=76&var=I">Meer info op onderwijskiezer.be</a></p>
                     <p>+32 (0)3 247 66 66</p>
                     <p>itmedu@itg.be</p>
                 </div>                    
@@ -137,6 +192,7 @@
                     <a href="https://www.kdg.be/opleidingen" target="_blank">Bekijk alle studierichtingen</a>
                     <h2>Contact</h2>
                     <p><a href="https://www.kdg.be/" target="_blank">Website</a></p>
+                    <p><a href="https://www.onderwijskiezer.be/v2/hoger/hoger_instellingen_detail.php?instelling=40&var=I" target="_blank">Meer info op onderwijskiezer.be</a></p>
                     <p>+32 (0)3 613 13 13</p>
                     <p>info@kdg.be</p>
                 </div>                   
@@ -152,6 +208,7 @@
                     <a href="http://feb.kuleuven.be/antwerpen/home" target="_blank">Bekijk alle studierichtingen op Campus Carolus</a>
                     <h2>Contact</h2>
                     <p><a href="http://www.kuleuven.be/kuleuven/" target="_blank">Website</a></p>
+                    <p><a href="https://www.onderwijskiezer.be/v2/hoger/hoger_instellingen_detail.php?instelling=33&var=I" target="_blank">Meer info op onderwijskiezer.be</a></p>
                     <p>+32 (0)3 206 04 91 / +32 (0)3 201 18 40</p>
                     <p>letteren.antwerpen@kuleuven.be / feb.antwerpen@kuleuven.be</p>
                 </div>                   
@@ -166,6 +223,7 @@
                     <a href="http://www.thomasmore.be/opleidingen" target="_blank">Bekijk alle studierichtingen</a>
                     <h2>Contact</h2>
                     <p><a href="http://www.thomasmore.be/" target="_blank">Website</a></p>
+                    <p><a href="https://www.onderwijskiezer.be/v2/hoger/hoger_instellingen_detail.php?instelling=44&var=I" target="_blank">Meer info op onderwijskiezer.be</a></p>
                     <p>+32 15 36 91 00</p>
                     <p>info@thomasmore.be</p>
                 </div>                   
@@ -182,8 +240,9 @@
                     <a href="https://www.uantwerpen.be/nl/faculteiten/" target="_blank">Bekijk alle studierichtingen</a>
                     <h2>Contact</h2>
                     <p><a href="https://www.uantwerpen.be/" target="_blank">Website</a></p>
+                    <p><a href="https://www.onderwijskiezer.be/v2/hoger/hoger_instellingen_detail.php?instelling=36&var=I" target="_blank">Meer info op onderwijskiezer.be</a></p>
                     <p>+32 (0)3 265 41 11</p>
-                    <p></p>
+                    <p>info@ua.be</p>
                 </div>  
             </div>
         </main>

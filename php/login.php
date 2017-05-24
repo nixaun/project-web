@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include "connect.php";
+    include "../includes/connect.php";
 
 
     $email = $_POST['loginmail'];
@@ -20,12 +20,14 @@
             setcookie('id', $row['id'], time() + (86400 * 30), "/");
             
             $_SESSION['name'] = $row['name'];
+            $_SESSION['email'] = $row['email'];
             $_SESSION['role'] = $row['role'];
             header("Location: ../profile.php?confirm=loggedin");
         }
         else
         {
             $_SESSION['name'] = $row['name'];
+            $_SESSION['email'] = $row['email'];
             $_SESSION['role'] = $row['role'];
             header("Location: ../profile.php?confirm=loggedin");
         }
