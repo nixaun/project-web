@@ -5,6 +5,8 @@
     include "includes/cookie_check.php";
     include "includes/username_handler.php";
 
+    date_default_timezone_set('Europe/Brussels');
+
     $confirmmessage = "";
     $errormessage = "";
 

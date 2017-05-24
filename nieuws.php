@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    include_once "includes/connect.php";
     include "php/session_timeout.php";
 
     $username = "";
@@ -54,10 +55,35 @@
         </div>        
         <h1>Nieuws</h1>            
         <main>
+            <?php
+                $articleCounter = 0;
+                $sql ="SELECT * FROM nieuwsItems";
+                $result = mysqli_query($connect, $sql);
+                if(mysqli_num_rows($result) > 0){
+                    while($row = mysqli_fetch_assoc($result)){
+                        ++$articleCounter;
+                        if($articleCounter === 1 OR $articleCounter%4 === 0){
+                            echo "<div class='news clearfix'>";
+                        }
+                        echo "<div>"
+                        if($row['imgStatus'] == ''){
+                            echo "<img src='images/openAvatar.jpg'";
+                        } else{
+                            echo "<img src='nieuwsImages/nieuwsImage".$nieuwsID.".jpg'>";
+                        }
+                        echo "<a href='".
+                        echo "</div>"
+                        if($articleCounter === 1 OR $articleCounter%4 === 0){
+                            echo "</div>";
+                        }
+                    }
+                }
+            ?>
             <div class="news clearfix">                
                 <div>
                     <a href=""><img src="images/news1.png" alt=""></a>
                     <a href=""><h1>The Ten Miles are best accessible by foot or by bike</h1></a>
+                    <h1>The thin white duke</h1>
                     <h2>15:03 20/04/2017</h2>
                     <p>Are you coming to the Ten Miles on sunday 23th of april? Or do you have to transport through the city? Better go by foot or take a bike. We'd like to give some tips on how the event is best reached.</p>
                     <a href="">read more</a>
