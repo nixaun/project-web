@@ -99,6 +99,10 @@ select {
 
 
 
-#ua.ua {
+#ua.ua, #ua.ua_kdg {
+    color: purple;
+}
+
+#kdg.kdg, #kdg.ua_kdg {
     color: purple;
 }
