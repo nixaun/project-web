@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    include_once "includes/connect.php";
     include "includes/session_timeout.php";
     include "includes/cookie_check.php";
     include "includes/username_handler.php";
@@ -61,23 +62,25 @@
             </div>
             
             <div class="tabcontent">
-                <form action="" class="active">
+                <form action="php/uploadNieuws.php" class="active" method="POST" enctype="multipart/form-data">
                     <label for="title">Titel</label>
                     <input type="text" name="title" id="title">
-                    <label for="date">Datum en tijd</label>
-                    <input type="text" name="date" id="date">
+                    <label for="link">Link</label>
+                    <input type="text" name="link" id="link">
                     <label for="maintext">Tekst</label>
                     <textarea name="maintext" id="maintext" cols="40" rows="10"></textarea>
                     <label for="image">Voeg een foto toe</label>
-                    <input type="file" name="image" id="image">
-                    <button type="submit">Versturen</button>
+                    <input type="file" name="nieuwsImage" id="image">
+                    <button type="submit" name="nieuwsSubmit">Versturen</button>
                 </form>
             
-                <form action="">
+                <form action="" method="POST" enctype="multipart/form-data">
                     <label for="title">Titel</label>
                     <input type="text" name="title" id="title">
                     <label for="date">Datum en tijd</label>
                     <input type="text" name="date" id="date">
+                    <label for="link">Link</label>
+                    <input type="text" name="link" id="link">
                     <label for="date">Plaats</label>
                     <input type="text" name="place" id="place">
                     <label for="maintext">Tekst</label>
@@ -87,11 +90,11 @@
                     <button type="submit">Versturen</button>
                 </form>
             
-                <form action="">
+                <form action="" method="POST" enctype="multipart/form-data">
                     <label for="title">Naam/Titel</label>
                     <input type="text" name="title" id="title">
-                    <label for="date">Datum en tijd</label>
-                    <input type="text" name="date" id="date">
+                    <label for="link">Link</label>
+                    <input type="text" name="link" id="link">
                     <label for="maintext">Tekst</label>
                     <textarea name="maintext" id="maintext" cols="40" rows="10"></textarea>
                     <label for="image">Voeg een foto toe</label>
