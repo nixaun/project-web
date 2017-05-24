@@ -55,7 +55,7 @@
             <h2>Filter op studierichting</h2>
             <form action="php/uni_filter.php" method="post">
                 <select name="studierichtingen" onchange='onDropDownPick(this.value)'>
-                    <option value="default">Kies een studierichting</option>
+                    <option value="default" selected="selected">Kies een studierichting</option>
                     <option disabled>---------------------</option>
                     <option value="arch">Architectuur</option>                            <!-- UA/ -->
                     <option value="auto">Autotechnologie</option>                         <!-- KDG/ -->
