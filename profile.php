@@ -79,9 +79,8 @@
                 <a href="#">Voeg evenement toe</a>
                 <a href="#">Voeg testimonial toe</a>
             </div>
-            
             <div class="tabcontent">
-                <form action="php/uploadNieuws.php" class="active" method="POST" enctype="multipart/form-data">
+                <form action="<?php setNews()?>" class="active" method="POST" enctype="multipart/form-data">
                     <label for="title">Titel</label>
                     <input type="text" name="title" id="title">
                     <label for="link">Link</label>
@@ -90,7 +89,7 @@
                     <textarea name="maintext" id="maintext" cols="40" rows="10"></textarea>
                     <label for="image">Voeg een foto toe</label>
                     <input type="file" name="nieuwsImage" id="image">
-                    <button type="submit" name="nieuwsSubmit">Versturen</button>
+                    <button type="submit" name="newsSubmit">Versturen</button>
                 </form>
             
                 <form action="" method="POST" enctype="multipart/form-data">

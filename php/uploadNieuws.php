@@ -2,7 +2,8 @@
 include "../includes/connect.php";
 session_start();
 
-if(isset($_POST['newsSubmit'])){
+function setNews(){
+	if(isset($_POST['newsSubmit'])){
 	$uid = $_SESSION['name'];
 	$date = date('Y-m-d H:i:s');
 	$title = $_POST['title'];
@@ -28,7 +29,7 @@ if(isset($_POST['newsSubmit'])){
 				$fileNameNew = "nieuwsImage".$nieuwsID.".".$fileActualExt;
 				$fileDestination = 'nieuwsImages/'.$fileNameNew;
 				move_uploaded_file($fileTmpName, $fileDestination);
-				header("Location: profile.php?uploadsucces");
+				//header("Location: profile.php?uploadsucces");
 				$imgStatus = 1;
 			} else {
 				echo "Het bestand dat u probeert te uploaden is te groot.";
@@ -43,4 +44,6 @@ if(isset($_POST['newsSubmit'])){
 	$sql = "INSERT INTO nieuwsItems (uid, title, date, link, bericht, imgStatus) VALUES ('$uid', '$date', '$title', '$link', '$maintext', '$imgStatus')";
 	$result = mysqli_query($connect, $sql);
 }
+}
+
 
