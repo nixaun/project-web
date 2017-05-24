@@ -108,13 +108,16 @@ function onDropDownPick(str) {
             var listitems = document.querySelectorAll(".unilist a");
             for (var i = 0; i < listitems.length; i++)
             {
-                listitems[i].classList.remove("ams");
-                listitems[i].classList.remove("ap");
-                listitems[i].classList.remove("hz");
-                listitems[i].classList.remove("kdg");
-                listitems[i].classList.remove("kul");
-                listitems[i].classList.remove("tm");
-                listitems[i].classList.remove("ua");
+                if(listitems[i].classList.contains("active"))
+                {
+                    listitems[i].classList = "";
+                    listitems[i].classList.add("active");
+                }
+                else
+                {
+                    listitems[i].classList = "";
+                }
+                
                 listitems[i].classList.add(xmlhttp.responseText);
             }
         }

@@ -95,10 +95,52 @@ select {
 
 
 
+/*
+    all tags:
+    ua
+    ua_kdg
+    ua_ap
+    ua_kdg_ap
+    ua_ap_tm
+    ua_kul
 
+    kdg
+    kdg_ap
+    kdg_ap_kul_ams
 
+    ap
+    
+    hz
+*/
 
+#ua.ua, #ua.ua_kdg, #ua.ua_ap, #ua.ua_kdg_ap, #ua.ua_ap_tm, #ua.ua_kul, #ua.default {
+    background-color: #cc7b91;
+}
 
-#ua.ua {
-    color: purple;
+#kdg.kdg, #kdg.ua_kdg, #kdg.ua_kdg_ap, #kdg.kdg_ap, #kdg.kdg_ap_kul_ams, #kdg.default {
+    background-color: #cc7b91;
+}
+
+#ap.ap, #ap.ua_ap, #ap.ua_kdg_ap, #ap.ua_ap_tm, #ap.kdg_ap, #ap.kdg_ap_kul_ams, #ap.default {
+    background-color: #cc7b91;
+}
+
+#hz.hz, #hz.default {
+    background-color: #cc7b91;
+}
+
+#ams.kdg_ap_kul_ams, #ams.default {
+    background-color: #cc7b91;
+}
+
+#kul.ua_kul, #kul.kdg_ap_kul_ams, #kul.default {
+    background-color: #cc7b91;
+}
+
+#tm.tm, #tm.ua_ap_tm, #tm.default {
+    background-color: #cc7b91;
+}
+
+#itg.default {
+    background-color: #cc7b91;
 }
