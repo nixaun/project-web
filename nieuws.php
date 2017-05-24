@@ -56,7 +56,9 @@
         <h1>Nieuws</h1>            
         <main>
             <?php
+                //counter voor clearfix
                 $articleCounter = 0;
+                //selecteerd info van database
                 $sql ="SELECT * FROM nieuwsItems";
                 $result = mysqli_query($connect, $sql);
                 if(mysqli_num_rows($result) > 0){

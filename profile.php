@@ -80,7 +80,7 @@
                 <a href="#">Voeg testimonial toe</a>
             </div>
             <div class="tabcontent">
-                <form action="<?php setNews()?>" class="active" method="POST" enctype="multipart/form-data">
+                <form action="php/uploadNieuws.php" class="active" method="POST" enctype="multipart/form-data">
                     <label for="title">Titel</label>
                     <input type="text" name="title" id="title">
                     <label for="link">Link</label>

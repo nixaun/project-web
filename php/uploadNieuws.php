@@ -2,8 +2,7 @@
 include "../includes/connect.php";
 session_start();
 
-function setNews(){
-	if(isset($_POST['newsSubmit'])){
+if(isset($_POST['newsSubmit'])){
 	$uid = $_SESSION['name'];
 	$date = date('Y-m-d H:i:s');
 	$title = $_POST['title'];
@@ -44,6 +43,6 @@ function setNews(){
 	$sql = "INSERT INTO nieuwsItems (uid, title, date, link, bericht, imgStatus) VALUES ('$uid', '$date', '$title', '$link', '$maintext', '$imgStatus')";
 	$result = mysqli_query($connect, $sql);
 }
-}
+
 
 
