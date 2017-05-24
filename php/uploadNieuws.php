@@ -20,7 +20,7 @@ if(isset($_POST['newsSubmit'])){
 	//allow certain extensions
 	$fileExt = explode('.', $fileName);
 	$fileActualExt = strtolower(end($fileExt));
-	$allowed = array('jpg', 'jpeg', 'png');
+	$allowed = array('jpg', 'jpeg', 'png', '');
 	//errorhandling
 	if(in_array($fileActualExt, $allowed)){
 		if($fileError === 0){
@@ -28,7 +28,6 @@ if(isset($_POST['newsSubmit'])){
 				$fileNameNew = "nieuwsImage_".$title.".".$fileActualExt;
 				$fileDestination = 'nieuwsImages/'.$fileNameNew;
 				move_uploaded_file($fileTmpName, $fileDestination);
-				
 				$imgStatus = 1;
 			} else {
 				echo "Het bestand dat u probeert te uploaden is te groot.";
