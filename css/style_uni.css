@@ -28,17 +28,17 @@ main h2 {
     padding: 15px;
     border: 1px #d9d9d9 solid;
     
-    color: #9f9f9f;
+    color: inherit; /* #9f9f9f */
 }
 
 .unilist a:hover {
-    color: #8c00c7;
+    color: #007ad3;
     background-color: #f4f4f4;
     transition: 0.1s;
 }
 
 .unilist a.active {
-    color: #41b99d;     /* old #007ad3 new #8c00c7 */
+    color: #cf0339;     /* old #007ad3 new #8c00c7 */
     border-right: none;
 }
 
@@ -83,3 +83,22 @@ ul {
     text-align: center;
 }
 
+select {
+    font-family: SunAntwerpen-regular;
+    font-size: 100%;
+    width: 400px;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+#ua.ua {
+    color: purple;
+}

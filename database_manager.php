@@ -7,7 +7,6 @@
 
     $sql = "SELECT id, name, email, role FROM users";
     $result = mysqli_query($connect, $sql);
-
 ?>
 
 <html>
@@ -51,25 +50,24 @@
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>e-mail</th>
+                    <th>E-mail</th>
                     <th>Role</th>
                 </tr>
                 
                 <?php
                     while($row = $result->fetch_assoc()) {
+                        $id = $row["id"];
                         echo "  <tr>
-                                    <td>".$row["id"]."</td>
+                                    <td>".$id."</td>
                                     <td>".$row["name"]."</td>
                                     <td>".$row["email"]."</td>
                                     <td>".$row["role"]."</td>
-                                    <td><a href=''><i class='fa fa-pencil'></i></a><a href=''><i class='fa fa-times'></i></a></td>
+                                    <td><a href='php/db_edit.php?id=".$id."'><i class='fa fa-pencil'></i></a>
+                                        <a href='php/db_remove.php?id=".$id."'><i class='fa fa-times'></i></a></td>
                                 </tr>";
                     }
                 ?>
                 
-                <tr>
-                    <td><a href=""><i class="fa fa-plus"></i></a></td>
-                </tr>
             </table>
             
             <?php endif; ?>

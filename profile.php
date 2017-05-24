@@ -6,12 +6,28 @@
     include "includes/username_handler.php";
 
     $confirmmessage = "";
+    $errormessage = "";
 
     $url = "http://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];
 
     if (strpos($url, "confirm=loggedin") !== false)
     {
         $confirmmessage = "U bent ingelogd als ".$_SESSION['name'];
+    }
+
+    if (strpos($url, "confirm=passupdate") !== false)
+    {
+        $confirmmessage = "Uw wachtwoord is veranderd";
+    }
+
+    if (strpos($url, "error=wrongpass") !== false)
+    {
+        $errormessage = "Wachtwoord is incorrect";
+    }
+
+    if (strpos($url, "error=nomatch") !== false)
+    {
+        $errormessage = "Je nieuwe wachtwoord en bevestiging komen niet overeen";
     }
 
 ?>
@@ -53,6 +69,7 @@
                 
             <?php if($_SESSION['role'] == 2 || $_SESSION['role'] == 1) : ?>
             <p><?php echo $confirmmessage ?></p>
+            
             <h1>Mijn Profiel - <?php echo $username ?></h1>
             
             <div class="tab clearfix">
@@ -103,14 +120,24 @@
                 </form>
             </div>
             
+            
             <?php endif ?>
             
             <?php if($_SESSION['role'] == 2) : ?>
-                <a href="database_manager.php" class="extrabuttons">Database Manager</a>
+                <a href="database_manager.php" class="extrabuttons"><i class="fa fa-database"></i>Database Manager</a>
             <?php endif ?>
             
+            <form action="php/db_editpass.php" method="post" class="editpass">
+                <p><?php echo $errormessage ?></p>
+                <h2>Verander je wachtwoord</h2>
+                <input type="password" name="pass1" placeholder="Huidig wachtwoord" required>
+                <input type="password" name="pass2" placeholder="Nieuw wachtwoord" required>
+                <input type="password" name="pass3" placeholder="Bevestig wachtwoord" required>
+                <button type="submit">Versturen</button>
+            </form>
+            
             <form action="php/logout.php">
-                <button >Uitloggen</button>
+                <button ><i class="fa fa-sign-out"></i>Uitloggen</button>
             </form>
             
         </main>        

@@ -90,3 +90,36 @@ function onTabsClick (event) {
     
     tabContents[i].classList.add("active");
 }
+
+
+
+
+
+
+
+
+function onDropDownPick(str) {
+    var xmlhttp = new XMLHttpRequest();
+    
+    xmlhttp.onreadystatechange = function() {
+        if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+            document.getElementById("innertxt").innerHTML = this.responseText;
+            
+            var listitems = document.querySelectorAll(".unilist a");
+            for (var i = 0; i < listitems.length; i++)
+            {
+                listitems[i].classList.remove("ams");
+                listitems[i].classList.remove("ap");
+                listitems[i].classList.remove("hz");
+                listitems[i].classList.remove("kdg");
+                listitems[i].classList.remove("kul");
+                listitems[i].classList.remove("tm");
+                listitems[i].classList.remove("ua");
+                listitems[i].classList.add(xmlhttp.responseText);
+            }
+        }
+    }
+        
+    xmlhttp.open("GET", "../php/uni_filter.php?q="+str, true);
+    xmlhttp.send();
+}
