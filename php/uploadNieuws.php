@@ -4,8 +4,8 @@ session_start();
 
 if(isset($_POST['newsSubmit'])){
 	$uid = $_SESSION['name'];
-	$date = date('Y-m-d H:i:s');
 	$title = $_POST['title'];
+	$date = date('Y-m-d H:i:s');
 	$link = $_POST['link'];
 	$maintext = $_POST['maintext'];
 	$imgStatus = 0;
@@ -25,10 +25,10 @@ if(isset($_POST['newsSubmit'])){
 	if(in_array($fileActualExt, $allowed)){
 		if($fileError === 0){
 			if($fileSize < 1000000){
-				$fileNameNew = "nieuwsImage".$nieuwsID.".".$fileActualExt;
+				$fileNameNew = "nieuwsImage_".$title.".".$fileActualExt;
 				$fileDestination = 'nieuwsImages/'.$fileNameNew;
 				move_uploaded_file($fileTmpName, $fileDestination);
-				//header("Location: profile.php?uploadsucces");
+				
 				$imgStatus = 1;
 			} else {
 				echo "Het bestand dat u probeert te uploaden is te groot.";
@@ -40,8 +40,9 @@ if(isset($_POST['newsSubmit'])){
 		echo "U kan geen bestand van dit type uploaden.";
 	}
 
-	$sql = "INSERT INTO nieuwsItems (uid, title, date, link, bericht, imgStatus) VALUES ('$uid', '$date', '$title', '$link', '$maintext', '$imgStatus')";
+	$sql = "INSERT INTO nieuwsItems (uid, title, date, link, bericht, imgStatus) VALUES ('$uid', '$title', '$date', '$link', '$maintext', '$imgStatus')";
 	$result = mysqli_query($connect, $sql);
+	header("Location: ../profile.php?uploadsucces");
 }
 
 
