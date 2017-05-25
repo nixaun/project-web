@@ -101,18 +101,17 @@
                 </select>
                 <noscript><input type="submit" value="Submit"></noscript>
             </form>
-            <p id="innertxt"></p>
             
             <div class="unilist clearfix">
                 <ul class="clearfix">
-                    <li><a href="#" id="ams" class="active">Antwerp Management School <i class="fa fa-chevron-right"></i></a></li>
-                    <li><a href="#" id="ap">Artesis Plantijn Hogeschool <i class="fa fa-chevron-right"></i></a></li>
-                    <li><a href="#" id="hz">Hogere Zeevaartschool <i class="fa fa-chevron-right"></i></a></li>
-                    <li><a href="#" id="itg">Instituut voor Tropische Geneeskunde <i class="fa fa-chevron-right"></i></a></li>
-                    <li><a href="#" id="kdg">Karel de Grote Hogeschool <i class="fa fa-chevron-right"></i></a></li>
-                    <li><a href="#" id="kul">KU Leuven Campus Antwerpen <i class="fa fa-chevron-right"></i></a></li>
-                    <li><a href="#" id="tm">Thomas More Hogeschool <i class="fa fa-chevron-right"></i></a></li>
-                    <li><a href="#" id="ua">Universiteit Antwerpen <i class="fa fa-chevron-right"></i></a></li>
+                    <li><a href="#" id="ams" class="active default">Antwerp Management School <i class="fa fa-chevron-right"></i></a></li>
+                    <li><a href="#" id="ap"  class="default">Artesis Plantijn Hogeschool <i class="fa fa-chevron-right"></i></a></li>
+                    <li><a href="#" id="hz"  class="default">Hogere Zeevaartschool <i class="fa fa-chevron-right"></i></a></li>
+                    <li><a href="#" id="itg" class="default">Instituut voor Tropische Geneeskunde <i class="fa fa-chevron-right"></i></a></li>
+                    <li><a href="#" id="kdg" class="default">Karel de Grote Hogeschool <i class="fa fa-chevron-right"></i></a></li>
+                    <li><a href="#" id="kul" class="default">KU Leuven Campus Antwerpen <i class="fa fa-chevron-right"></i></a></li>
+                    <li><a href="#" id="tm"  class="default">Thomas More Hogeschool <i class="fa fa-chevron-right"></i></a></li>
+                    <li><a href="#" id="ua"  class="default">Universiteit Antwerpen <i class="fa fa-chevron-right"></i></a></li>
                 </ul>
             </div>                
             <div class="uniinfo">

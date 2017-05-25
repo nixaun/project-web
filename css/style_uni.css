@@ -28,18 +28,23 @@ main h2 {
     padding: 15px;
     border: 1px #d9d9d9 solid;
     
-    color: inherit; /* #9f9f9f */
+    color: #9f9f9f; /* #9f9f9f */
 }
 
 .unilist a:hover {
-    color: #007ad3;
+    /* color: #007ad3; */
+    color: #585858;
     background-color: #f4f4f4;
     transition: 0.1s;
 }
 
 .unilist a.active {
-    color: #cf0339;     /* old #007ad3 new #8c00c7 */
+        /* old #007ad3 new #8c00c7 */
     border-right: none;
+}
+
+.unilist a.active i {
+    color: #cf0339 !important;
 }
 
 .unilist a:hover i, .unilist a.active i {
@@ -113,34 +118,13 @@ select {
     hz
 */
 
-#ua.ua, #ua.ua_kdg, #ua.ua_ap, #ua.ua_kdg_ap, #ua.ua_ap_tm, #ua.ua_kul, #ua.default {
-    background-color: #cc7b91;
-}
-
-#kdg.kdg, #kdg.ua_kdg, #kdg.ua_kdg_ap, #kdg.kdg_ap, #kdg.kdg_ap_kul_ams, #kdg.default {
-    background-color: #cc7b91;
-}
-
-#ap.ap, #ap.ua_ap, #ap.ua_kdg_ap, #ap.ua_ap_tm, #ap.kdg_ap, #ap.kdg_ap_kul_ams, #ap.default {
-    background-color: #cc7b91;
-}
-
-#hz.hz, #hz.default {
-    background-color: #cc7b91;
-}
-
-#ams.kdg_ap_kul_ams, #ams.default {
-    background-color: #cc7b91;
-}
-
-#kul.ua_kul, #kul.kdg_ap_kul_ams, #kul.default {
-    background-color: #cc7b91;
-}
-
-#tm.tm, #tm.ua_ap_tm, #tm.default {
-    background-color: #cc7b91;
-}
-
+#ua.ua, #ua.ua_kdg, #ua.ua_ap, #ua.ua_kdg_ap, #ua.ua_ap_tm, #ua.ua_kul, #ua.default,
+#kdg.kdg, #kdg.ua_kdg, #kdg.ua_kdg_ap, #kdg.kdg_ap, #kdg.kdg_ap_kul_ams, #kdg.default,
+#ap.ap, #ap.ua_ap, #ap.ua_kdg_ap, #ap.ua_ap_tm, #ap.kdg_ap, #ap.kdg_ap_kul_ams, #ap.default,
+#hz.hz, #hz.default,
+#ams.kdg_ap_kul_ams, #ams.default,
+#kul.ua_kul, #kul.kdg_ap_kul_ams, #kul.default,
+#tm.tm, #tm.ua_ap_tm, #tm.default,
 #itg.default {
-    background-color: #cc7b91;
+    color: inherit;
 }
