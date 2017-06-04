@@ -2,6 +2,15 @@ table {
     border-collapse: collapse;
 }
 
+table button {
+    border: none;
+    background: none;
+}
+
+table input {
+    font-size: 1em;
+}
+
 table tr, table th, table td {
     border: 1px #d9d9d9 solid;
     padding: 10px 20px;
@@ -18,14 +27,16 @@ table i[class="fa fa-pencil"] {
     margin-right: 10px;
 }
 
-table i[class="fa fa-times"] {
+table i[class="fa fa-times"], table a[class="cancel"] {
     background-color: #ff5555;
     padding: 10px 12px;
     border-radius: 5px;
+    font-weight: bold;
 }
 
-table i[class="fa fa-plus"] {
+table i[class="fa fa-check"] {
     background-color: #7be34d;
-    padding: 10px 12px;
+    padding: 11.5px 12px;
     border-radius: 5px;
+    margin-left: -5px;
 }

@@ -2,15 +2,15 @@
     session_start();
     include "../includes/connect.php";
 
-    $id = $_GET['id'];
-
-    $sql = "SELECT name, email, role FROM users WHERE id='$id'";
+    $id    = $_POST['id'];
+    $name  = $_POST['name'];
+    $email = $_POST['email'];
+    $role  = $_POST['role'];
+    
+    $sql = "UPDATE users SET name='$name', email='$email', role='$role' WHERE id='$id'";
     $result = mysqli_query($connect, $sql);
 
-    if(! $result )
-    {
-        echo "fail";
-    }
     
     
-    header("Location: ../database_manager.php?edit");
+    
+    header("Location: ../database_manager.php");

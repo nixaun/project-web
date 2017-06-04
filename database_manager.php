@@ -7,6 +7,10 @@
 
     $sql = "SELECT id, name, email, role FROM users";
     $result = mysqli_query($connect, $sql);
+
+    $url = "http://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];
+    
+    $editid = $_GET['edit'];
 ?>
 
 <html>
@@ -43,10 +47,17 @@
                 <?php header("Location: profile.php"); ?>
                 
             <?php else : ?>
-                
+            
             <h1>Database Manager</h1>
             
-            <table>
+            <?php   if (isset($editid)) {
+                        echo "<form action='php/db_edit.php' method='POST'><table>";
+                    }
+                    else
+                    {
+                        echo "<table>";
+                    }
+            ?>
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
@@ -55,20 +66,61 @@
                 </tr>
                 
                 <?php
-                    while($row = $result->fetch_assoc()) {
-                        $id = $row["id"];
-                        echo "  <tr>
-                                    <td>".$id."</td>
-                                    <td>".$row["name"]."</td>
-                                    <td>".$row["email"]."</td>
-                                    <td>".$row["role"]."</td>
-                                    <td><a href='php/db_edit.php?id=".$id."'><i class='fa fa-pencil'></i></a>
-                                        <a href='php/db_remove.php?id=".$id."'><i class='fa fa-times'></i></a></td>
-                                </tr>";
-                    }
+                        if (isset($editid))
+                        {
+                            while($row = $result->fetch_assoc()) {
+                                if($editid == $row["id"])
+                                {
+                                    echo "  <tr>
+                                        <td>".$row["id"]."<input type='hidden' name='id' value='".$row["id"]."'></td>
+                                        <td><input type='text' name='name' value='".$row["name"]."'></td>
+                                        <td><input type='text' name='email' value='".$row["email"]."'></td>
+                                        <td><input type='text' name='role' value='".$row["role"]."'></td>
+                                        <td><button type='submit'><i class='fa fa-check'></i></button>
+                                            <a href='database_manager.php' class='cancel'>Cancel</a>
+                                        </tr>";
+                                }
+                                else
+                                {
+                                    echo "  <tr>
+                                        <td>".$row["id"]."</td>
+                                        <td>".$row["name"]."</td>
+                                        <td>".$row["email"]."</td>
+                                        <td>".$row["role"]."</td>
+                                        <td><a href='database_manager.php?edit=".$row["id"]."'><i class='fa fa-pencil'></i></a>
+                                            <a href='php/db_remove.php?id=".$row["id"]."'><i class='fa fa-times'></i></a></td>
+                                    </tr>";
+                                }
+                            }
+
+                        
+                            
+                        }
+                        else
+                        {
+                            while($row = $result->fetch_assoc()) {
+
+                            echo "  <tr>
+                                        <td>".$row["id"]."</td>
+                                        <td>".$row["name"]."</td>
+                                        <td>".$row["email"]."</td>
+                                        <td>".$row["role"]."</td>
+                                        <td><a href='database_manager.php?edit=".$row["id"]."'><i class='fa fa-pencil'></i></a>
+                                            <a href='php/db_remove.php?id=".$row["id"]."'><i class='fa fa-times'></i></a></td>
+                                    </tr>";
+                            }
+                        }
+                    
                 ?>
                 
-            </table>
+            <?php   if (isset($editid)) {
+                        echo "</table></form>";
+                    }
+                    else
+                    {
+                        echo "</table>";
+                    }
+            ?>
             
             <?php endif; ?>
         </main>        
