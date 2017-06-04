@@ -103,8 +103,6 @@ function onDropDownPick(str) {
     
     xmlhttp.onreadystatechange = function() {
         if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-            document.getElementById("innertxt").innerHTML = this.responseText;
-            
             var listitems = document.querySelectorAll(".unilist a");
             for (var i = 0; i < listitems.length; i++)
             {

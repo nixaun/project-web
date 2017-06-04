@@ -125,7 +125,7 @@
             <?php endif ?>
             
             <?php if($_SESSION['role'] == 2) : ?>
-                <a href="database_manager.php" class="extrabuttons"><i class="fa fa-database"></i>Database Manager</a>
+                <a href="database_manager.php" class="extrabuttons"><i class="fa fa-server"></i>Database Manager</a>
             <?php endif ?>
             
             <form action="php/db_editpass.php" method="post" class="editpass">
