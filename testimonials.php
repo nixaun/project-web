@@ -1,6 +1,8 @@
 <?php 
     session_start();
+    include "includes/connect.php";
     include "php/session_timeout.php";
+    include "php/getTestimonial.php";
 
     $username = "";
     $userurl = "";
@@ -41,7 +43,7 @@
                 <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
                 <li><a href="nieuws.php">Nieuws</a></li>
                 <li><a href="evenementen.php">Evenementen</a></li>
-                <li><a href="testimonials1.php" class="activenav">Testimonials</a></li>
+                <li><a href="testimonials.php" class="activenav">Testimonials</a></li>
                 <li><a href="<?php echo $userurl ?>"><?php echo $username ?></a></li>
             </ul>
         </nav>
@@ -51,7 +53,11 @@
             <h1>Testimonials</h1>
         </div>        
         <h1>Testimonials</h1>        
-        <main class="clearfix">               
+        <main class="clearfix">
+        <?php
+            getTestimonial($connect);
+        ?>
+        <!--               
             <div>
                 <a href=""><img src="images/testim1.jpg" alt=""></a>
                 <a href=""><h1>Lennert Peeters</h1></a>
@@ -79,6 +85,7 @@
                 <a href="testimonials2.php">></a>
                 <a href="testimonials3.php">>></a>
             </section>
+            -->
         </main>
         <footer class="clearfix">
             <div class="wrapper">

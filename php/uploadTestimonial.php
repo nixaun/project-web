@@ -3,14 +3,14 @@ include "../includes/connect.php";
 session_start();
 
 
-if(isset($_POST['newsSubmit'])){
+if(isset($_POST['testimonialSubmit'])){
 	$uid = $_SESSION['name'];
 	$title = $_POST['title'];
 	$date = date('Y-m-d H:i:s');
 	$link = $_POST['link'];
 	$maintext = $_POST['maintext'];
 
-	$file = $_FILES['nieuwsImage'];
+	$file = $_FILES['testimonialImage'];
 	//get all the fileatributes
 	$fileName = $file['name'];
 	$fileTmpName = $file['tmp_name'];
@@ -25,12 +25,12 @@ if(isset($_POST['newsSubmit'])){
 	if(in_array($fileActualExt, $allowed)){
 		if($fileError === 0){
 			if($fileSize < 1000000){
-				$fileNameNew = "nieuwsImage_".$title.".".$fileActualExt;
-				$fileDestination = '../nieuwsImages/'.$fileNameNew;
+				$fileNameNew = "testimonialImage_".$title.".".$fileActualExt;
+				$fileDestination = '../testimonialImages/'.$fileNameNew;
 				move_uploaded_file($fileTmpName, $fileDestination);
-				$sql = "INSERT INTO nieuwsItems (uid, title, date, link, bericht, fileName) VALUES ('$uid', '$title', '$date', '$link', '$maintext', '$fileNameNew')";
+				$sql = "INSERT INTO testimonialItems (uid, title, date, link, bericht, fileName) VALUES ('$uid', '$title', '$date', '$link', '$maintext', '$fileNameNew')";
 				$result = mysqli_query($connect, $sql);
-					header("Location: ../nieuws.php?upload=succes");
+				header("Location: ../testimonials.php?upload=succes");
 			} else {
 				header("Location: ../profile.php?filesize_too_big");
 			}
@@ -38,9 +38,9 @@ if(isset($_POST['newsSubmit'])){
 			header("Location: ../profile.php?file-error");
 		}
 	}else {
-		$sql = "INSERT INTO nieuwsItems (uid, title, date, link, bericht, fileName) VALUES ('$uid', '$title', '$date', '$link', '$maintext', 'nieuwsImage_default.jpg')";
+		$sql = "INSERT INTO testimonialItems (uid, title, date, link, bericht, fileName) VALUES ('$uid', '$title', '$date', '$link', '$maintext', 'testimonialImage_default.jpg')";
 		$result = mysqli_query($connect, $sql);
-		header("Location: ../nieuws.php?upload=default");
+		header("Location: ../testimonials.php?upload=default");
 	}
 	
 }

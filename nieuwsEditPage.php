@@ -1,7 +1,9 @@
 <?php 
     session_start();
+    include "includes/connect.php";
     include "php/session_timeout.php";
-
+    include "php/getNieuws.php";
+//VZkpV2UmR
     $username = "";
     $userurl = "";
 
@@ -22,9 +24,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Studeren In Antwerpen - Atypisch Antwerpen</title>
+        <title>Studeren In Antwerpen - Nieuws</title>
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/style_game.css">
+        <link rel="stylesheet" href="css/style_news.css">
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -39,25 +41,47 @@
             <ul>
                 <li><a href="atypisch.php">Atypisch Antwerpen</a></li>
                 <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
-                <li><a href="nieuws.php">Nieuws</a></li>
+                <li><a href="nieuws.php" class="activenav">Nieuws</a></li>
                 <li><a href="evenementen.php">Evenementen</a></li>
-                <li><a href="testimonials.php">Testimonials</a></li>
+                <li><a href="testimonials1.php">Testimonials</a></li>
                 <li><a href="<?php echo $userurl ?>"><?php echo $username ?></a></li>
             </ul>
-        </nav>            
-        <div class="bars"><i class="fa fa-bars fa-2x"></i></div>      
-        <img src="images/gamePromoTop.png" alt="">        
-        <main class="clearfix">
-            <h1>PlezAntwerpen de Game</h1>
-            <p>Leer meer over Antwerpen en ontdek de stad met deze nieuwe gratis game</p>            
-            <div class="downloadbuttons">
-                <a href=""><i class="fa fa-apple"></i>Download voor iPhone</a>
-            </div>
-            <div class="downloadbuttons2">
-                <a href=""><i class="fa fa-android"></i>Download voor Android</a>
-            </div>
-        </main>        
-        <img src="images/gameBannerZT2.png" alt="">        
+        </nav>
+            
+        <div class="bars"><i class="fa fa-bars fa-2x"></i></div>
+
+        <div class="heroimage">
+            <img src="images/news.png" alt="">
+            <h1>Nieuws</h1>
+        </div>        
+        <h1>Nieuws</h1>            
+        <main>
+        <?php
+            $nieuwsID = 
+            $uid = $_SESSION['name'];
+            $title = $_POST['title'];
+            $link = $_POST['link'];
+            $maintext = $_POST['maintext'];
+
+            echo "<form action='editNieuws.php' class='active' method='POST' enctype='multipart/form-data'>
+                    <h2>post van ".$uid."</h2>
+                    <label for='title'>Titel</label>
+                    <input type='text' name='title' id='title' value='".$title."'>
+                    <label for='link'>Link</label>
+                    <input type='text' name='link' id='link' value='".$link."'>
+                    <label for='maintext'>Tekst</label>
+                    <textarea name='maintext' id='maintext' cols='40' rows='10' value='>".$maintext."</textarea>
+                    <label for='image'>Voeg een foto toe</label>
+                    <input type='file' name='nieuwsImage' id='image' value=''>
+                    <button type='submit' name='newsSubmit'>Pas aan</button>
+                </form>"
+
+            /*
+                
+            */
+        ?>
+        
+        </main>
         <footer class="clearfix">
             <div class="wrapper">
                 <div>

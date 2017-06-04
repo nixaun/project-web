@@ -28,7 +28,7 @@
                 <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
                 <li><a href="nieuws.php">Nieuws</a></li>
                 <li><a href="evenementen.php">Evenementen</a></li>
-                <li><a href="testimonials1.php">Testimonials</a></li>
+                <li><a href="testimonials.php">Testimonials</a></li>
                 <li><a href="<?php echo $userurl ?>"><?php echo $username ?></a></li>
             </ul>
         </nav>           

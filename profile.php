@@ -57,7 +57,7 @@
                 <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
                 <li><a href="nieuws.php">Nieuws</a></li>
                 <li><a href="evenementen.php">Evenementen</a></li>
-                <li><a href="testimonials1.php">Testimonials</a></li>
+                <li><a href="testimonials.php">Testimonials</a></li>
                 <li><a href="<?php echo $userurl ?>" class="activenav"><?php echo $username ?></a></li>
             </ul>
         </nav>            
@@ -87,37 +87,37 @@
                     <input type="text" name="link" id="link">
                     <label for="maintext">Tekst</label>
                     <textarea name="maintext" id="maintext" cols="40" rows="10"></textarea>
-                    <label for="image">Voeg een foto toe</label>
-                    <input type="file" name="nieuwsImage" id="image">
+                    <label for="nieuwsImage">Voeg een foto toe</label>
+                    <input type="file" name="nieuwsImage" id="nieuwsImage">
                     <button type="submit" name="newsSubmit">Versturen</button>
                 </form>
             
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="php/uploadEvent.php" method="POST" enctype="multipart/form-data">
                     <label for="title">Titel</label>
                     <input type="text" name="title" id="title">
-                    <label for="date">Datum en tijd</label>
-                    <input type="text" name="date" id="date">
+                    <label for="eventDate">Datum en tijd</label>
+                    <input type="datetime-local" name="eventDate" id="eventDate">
+                    <label for="place">Plaats</label>
+                    <input type="text" name="place" id="place">
                     <label for="link">Link</label>
                     <input type="text" name="link" id="link">
-                    <label for="date">Plaats</label>
-                    <input type="text" name="place" id="place">
                     <label for="maintext">Tekst</label>
                     <textarea name="maintext" id="maintext" cols="40" rows="10"></textarea>
-                    <label for="image">Voeg een foto toe</label>
-                    <input type="file" name="image" id="image">
-                    <button type="submit">Versturen</button>
+                    <label for="eventImage">Voeg een foto toe</label>
+                    <input type="file" name="eventImage" id="eventImage">
+                    <button type="submit" name="eventSubmit">Versturen</button>
                 </form>
             
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="php/uploadTestimonial.php" method="POST" enctype="multipart/form-data">
                     <label for="title">Naam/Titel</label>
                     <input type="text" name="title" id="title">
                     <label for="link">Link</label>
                     <input type="text" name="link" id="link">
                     <label for="maintext">Tekst</label>
                     <textarea name="maintext" id="maintext" cols="40" rows="10"></textarea>
-                    <label for="image">Voeg een foto toe</label>
-                    <input type="file" name="image" id="image">
-                    <button type="submit">Versturen</button>
+                    <label for="testimonialImage">Voeg een foto toe</label>
+                    <input type="file" name="testimonialImage" id="testimonialImage">
+                    <button type="submit" name="testimonialSubmit">Versturen</button>
                 </form>
             </div>
             

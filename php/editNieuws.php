@@ -9,6 +9,7 @@ if(isset($_POST['newsSubmit'])){
 	$date = date('Y-m-d H:i:s');
 	$link = $_POST['link'];
 	$maintext = $_POST['maintext'];
+	$fileNameExisting = mysqli_query($connect, "SELECT fileName FROM nieuwsItems WHERE "$title"");
 
 	$file = $_FILES['nieuwsImage'];
 	//get all the fileatributes
@@ -38,7 +39,7 @@ if(isset($_POST['newsSubmit'])){
 			header("Location: ../profile.php?file-error");
 		}
 	}else {
-		$sql = "INSERT INTO nieuwsItems (uid, title, date, link, bericht, fileName) VALUES ('$uid', '$title', '$date', '$link', '$maintext', 'nieuwsImage_default.jpg')";
+		$sql = "INSERT INTO nieuwsItems (uid, title, date, link, bericht, fileName) VALUES ('$uid', '$title', '$date', '$link', '$maintext', '$fileNameExisting')";
 		$result = mysqli_query($connect, $sql);
 		header("Location: ../nieuws.php?upload=default");
 	}

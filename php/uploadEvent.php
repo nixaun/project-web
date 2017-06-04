@@ -3,14 +3,16 @@ include "../includes/connect.php";
 session_start();
 
 
-if(isset($_POST['newsSubmit'])){
+if(isset($_POST['eventSubmit'])){
 	$uid = $_SESSION['name'];
 	$title = $_POST['title'];
+	$eventDate = date_format($_POST['eventDate'], 'Y-m-d H:i:s');
+	$location = $_POST['place'];
 	$date = date('Y-m-d H:i:s');
 	$link = $_POST['link'];
 	$maintext = $_POST['maintext'];
 
-	$file = $_FILES['nieuwsImage'];
+	$file = $_FILES['eventImage'];
 	//get all the fileatributes
 	$fileName = $file['name'];
 	$fileTmpName = $file['tmp_name'];
@@ -25,12 +27,12 @@ if(isset($_POST['newsSubmit'])){
 	if(in_array($fileActualExt, $allowed)){
 		if($fileError === 0){
 			if($fileSize < 1000000){
-				$fileNameNew = "nieuwsImage_".$title.".".$fileActualExt;
-				$fileDestination = '../nieuwsImages/'.$fileNameNew;
+				$fileNameNew = "eventImage_".$title.".".$fileActualExt;
+				$fileDestination = '../eventImages/'.$fileNameNew;
 				move_uploaded_file($fileTmpName, $fileDestination);
-				$sql = "INSERT INTO nieuwsItems (uid, title, date, link, bericht, fileName) VALUES ('$uid', '$title', '$date', '$link', '$maintext', '$fileNameNew')";
+				$sql = "INSERT INTO eventItems (uid, title, eventDate, place, date, link, bericht, fileName) VALUES ('$uid', '$title', '$eventDate', '$location', '$date', '$link', '$maintext', '$fileNameNew')";
 				$result = mysqli_query($connect, $sql);
-					header("Location: ../nieuws.php?upload=succes");
+					header("Location: ../evenementen.php?upload=succes");
 			} else {
 				header("Location: ../profile.php?filesize_too_big");
 			}
@@ -38,9 +40,9 @@ if(isset($_POST['newsSubmit'])){
 			header("Location: ../profile.php?file-error");
 		}
 	}else {
-		$sql = "INSERT INTO nieuwsItems (uid, title, date, link, bericht, fileName) VALUES ('$uid', '$title', '$date', '$link', '$maintext', 'nieuwsImage_default.jpg')";
+		$sql = "INSERT INTO eventItems (uid, title, eventDate, place, date, link, bericht, fileName) VALUES ('$uid', '$title', '$eventDate', '$location', '$date', '$link', '$maintext', 'eventImage_default.jpg')";
 		$result = mysqli_query($connect, $sql);
-		header("Location: ../nieuws.php?upload=default");
+		header("Location: ../evenementen.php?upload=default");
 	}
 	
 }

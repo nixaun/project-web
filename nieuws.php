@@ -1,8 +1,9 @@
 <?php 
     session_start();
-    include_once "includes/connect.php";
+    include "includes/connect.php";
     include "php/session_timeout.php";
-
+    include "php/getNieuws.php";
+//VZkpV2UmR
     $username = "";
     $userurl = "";
 
@@ -42,46 +43,25 @@
                 <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
                 <li><a href="nieuws.php" class="activenav">Nieuws</a></li>
                 <li><a href="evenementen.php">Evenementen</a></li>
-                <li><a href="testimonials1.php">Testimonials</a></li>
+                <li><a href="testimonials.php">Testimonials</a></li>
                 <li><a href="<?php echo $userurl ?>"><?php echo $username ?></a></li>
             </ul>
         </nav>
             
         <div class="bars"><i class="fa fa-bars fa-2x"></i></div>
-        
+
         <div class="heroimage">
             <img src="images/news.png" alt="">
             <h1>Nieuws</h1>
         </div>        
         <h1>Nieuws</h1>            
         <main>
-            <?php
-                //counter voor clearfix
-                $articleCounter = 0;
-                //selecteerd info van database
-                $sql ="SELECT * FROM nieuwsItems";
-                $result = mysqli_query($connect, $sql);
-                if(mysqli_num_rows($result) > 0){
-                    while($row = mysqli_fetch_assoc($result)){
-                        ++$articleCounter;
-                        if($articleCounter === 1 OR $articleCounter%4 === 0){
-                            echo "<div class='news clearfix'>";
-                        }
-                        echo "<div>"
-                        if($row['imgStatus'] == ''){
-                            echo "<img src='images/openAvatar.jpg'";
-                        } else{
-                            echo "<img src='nieuwsImages/nieuwsImage".$nieuwsID.".jpg'>";
-                        }
-                        echo "<a href='".
-                        echo "</div>"
-                        if($articleCounter === 1 OR $articleCounter%4 === 0){
-                            echo "</div>";
-                        }
-                    }
-                }
-            ?>
-            <div class="news clearfix">                
+        <?php
+            getNieuws($connect);
+        ?>
+        <!--
+            <div class="news clearfix">
+                            
                 <div>
                     <a href=""><img src="images/news1.png" alt=""></a>
                     <a href=""><h1>The Ten Miles are best accessible by foot or by bike</h1></a>
@@ -105,7 +85,8 @@
                     <a href="">read more</a>
                 </div>
             </div>
-            <div class="news clearfix">                
+            <div class="news clearfix">
+
                 <div>
                     <a href=""><img src="images/event1.png" alt=""></a>
                     <a href=""><h1>Colin Stetson Solo</h1></a>
@@ -130,6 +111,7 @@
                     <a href="https://www.gate15.be/nl/events/kick-off-voor-antwerpse-presidia-6" target="_blank">read more</a>
                 </div>
             </div>
+            -->
         </main>
         <footer class="clearfix">
             <div class="wrapper">

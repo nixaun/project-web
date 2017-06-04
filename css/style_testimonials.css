@@ -8,7 +8,7 @@ main div {
 }
 
 main div img {
-    width: 150px;
+    width: 200px;
     height: auto;
     float: left;
     margin-right: 30px;
@@ -38,26 +38,13 @@ main div p {
 main div p:hover{
     color: #000;
 }
-
-
-
-.numNav{
-    text-align: center;
-    margin: 2% 0;
-    font-size: 150%;
-    color: #007ad3;
-    
-    font-family: Antwerpen-regular;
+main div a {          
+    margin: 10px 0;
+    color: #f2c400;         /*   old #007ad3 new #f2c400   */
+    font-weight: bold;
 }
 
-.numNav a{
-    padding: 0 1%;
-}
-
-.numNav a:hover{
-    color: #0064B4;
+main div a:hover {     
+    color: #8c00c7;         /* old #0093ff new 8c00c7 */
     transition: 0.1s;
-}
-.numNavActive{
-    color: #598bb5;
 }

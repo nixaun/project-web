@@ -2,17 +2,7 @@
 .news  i {
     margin-right: 20px;
 }
-.news h1{
-    color: #41b99d;
-}
 
-.news > a > h1 {
-    color: #41b99d;      /*old  007ad3    ? f37200 gate 15 #41b99d */
-    margin: 30px 20px;
-}
-.news > a > h1:hover{
-    color: #8c00c7;
-}
 .news div {
     background-image: url("../images/paper.jpg");
     width: 30%;
@@ -27,6 +17,7 @@
     width: 100%;
     height: auto;
     margin-bottom: 20px;
+    margin-left: -10px;
 }
 
 .news div h1 {
@@ -56,34 +47,22 @@
     color: #000;
 }
 
-.news div a+h2+p+a {
+.news div a {          
     margin: 10px;
     color: #f2c400;         /*   old #007ad3 new #f2c400   */
     font-weight: bold;
 }
 
-.news div a+h2+p+a:hover {
+.news div a:hover {     
     color: #8c00c7;         /* old #0093ff new 8c00c7 */
     transition: 0.1s;
 }
-
-.numNav{
-    text-align: center;
-    margin: 2% 0;
-    font-size: 150%;
-    color: #007ad3;
-    
-    font-family: Antwerpen-regular;
+.edit-form{
+    float: right;
+    display: none;
+    width: 40px;
+    height: 20px;
 }
-
-.numNav a{
-    padding: 0 1%;
-}
-
-.numNav a:hover{
-    color: #0064B4;
-    transition: 0.1s;
-}
-.numNavActive{
-    color: #598bb5;
+.edit-form button{
+    background-color: transparent;
 }

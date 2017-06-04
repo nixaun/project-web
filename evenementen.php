@@ -1,6 +1,8 @@
 <?php 
     session_start();
+    include "includes/connect.php";
     include "php/session_timeout.php";
+    include "php/getEvent.php";
 
     $username = "";
     $userurl = "";
@@ -41,7 +43,7 @@
                 <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
                 <li><a href="nieuws.php">Nieuws</a></li>
                 <li><a href="evenementen.php" class="activenav">Evenementen</a></li>
-                <li><a href="testimonials1.php">Testimonials</a></li>
+                <li><a href="testimonials.php">Testimonials</a></li>
                 <li><a href="<?php echo $userurl ?>"><?php echo $username ?></a></li>
             </ul>
         </nav>            
@@ -51,6 +53,10 @@
             <h1>Evenementen</h1>
         </div>        
         <main class="clearfix">
+            <?php
+                getEvent($connect);
+            ?>
+            <!--
             <div class="news clearfix">
                 <h1>Evenementen deze week</h1>                
                 <div>
@@ -100,7 +106,8 @@
                     <p>De kiesweek zit erop, tijd om vooruit te blikken. Hoe verloopt zo'n subsidie- of evenementenaanvraag? Wat als er iets verkeerd gaat? Hoe zet je social media optimaal in om een event te promoten? Zak op donderdag 11 mei met je hele presidium af naar het Zuiderpershuis en start volgend academiejaar volledig voorbereid.</p>
                     <a href="https://www.gate15.be/nl/events/kick-off-voor-antwerpse-presidia-6" target="_blank">read more</a>
                 </div>
-            </div>            
+            </div>
+            -->            
         </main>
         <footer class="clearfix">
             <div class="wrapper">
