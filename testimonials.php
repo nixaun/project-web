@@ -1,22 +1,10 @@
 <?php 
     session_start();
     include "includes/connect.php";
-    include "php/session_timeout.php";
+    include "includes/session_timeout.php";
+    include "includes/cookie_check.php";
+    include "includes/username_handler.php";
     include "php/getTestimonial.php";
-
-    $username = "";
-    $userurl = "";
-
-    if (isset($_SESSION['name']))
-    {
-        $username = $_SESSION['name'];
-        $userurl = "profile.php";
-    }
-    else
-    {
-        $username = "Log In";
-        $userurl = "login.php";
-    }
 
 ?>
 

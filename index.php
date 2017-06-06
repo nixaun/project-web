@@ -39,7 +39,7 @@
         </div>           
         <h2>Welkom in Antwerpen, de Atypische studentenstad!</h2>
         <a href="atypisch.php"><p>LEER MEER</p></a>            
-        <div class="bars indexbars"><i class="fa fa-bars fa-2x"></i></div>             
+        <div class="bars"><i class="fa fa-bars fa-2x"></i></div>             
         <main>
             <div class="news clearfix">
                 <a href="nieuws.php"><h1><i class="fa fa-bullhorn"></i>Nieuws</h1></a>                

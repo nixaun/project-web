@@ -108,10 +108,10 @@ nav .activenav {
 .bars {
     display: none;
     position: absolute;
-    padding: 20px;
+    padding: 24px;
     top: 0;
     right: 0;
-    color: #fff;
+    color: #282020;
 }
 
 
