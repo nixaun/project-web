@@ -85,7 +85,8 @@
         position: static;
         float: left;
         color: inherit;
-        margin: 25px;
+        margin: 23px;
+        margin-bottom: 0;
     }
     
     .heroimage + h1 {
@@ -145,23 +146,6 @@
     .gameBannerSmall{
         display: block;
     }
-    .downloadbuttons {
-        width: 300px;
-        margin-left: 35.5%;
-        margin-top: 7%;
-    }
-    .downloadbuttons2{
-        width: 300px;
-        margin-left: 35%;
-        margin-top: 7%;
-    }
-
-    .downloadbuttons a{
-        font-size: 100%;
-    }
-    .downloadbuttons2 a{
-        font-size: 100%;
-    }
     iframe{
         width: 420px;
         height: 236.25px;
@@ -173,6 +157,7 @@
     header a h1 {
         font-size: 1.2em;
         margin: 15px;
+        margin-bottom: 0;
     }
     
     
@@ -219,15 +204,9 @@
     form input[type="email"], form input[type="password"], form input[type="text"] {
         width: 100%;
     }
-    .downloadbuttons {
-        width: 300px;
-        margin-left: 16%;
-        margin-top: 11%;
-    }
-    .downloadbuttons2{
-        width: 300px;
-        margin-left: 15%;
-        margin-top: 11%;
+    .downloadbuttons a{
+        font-size: 1em;
+        width: 200px;
     }
     iframe{
         width: 280px;
