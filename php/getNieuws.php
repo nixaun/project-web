@@ -17,7 +17,7 @@ function getNieuws($connect){
 		echo "<a href='".$row['link']."'><img src='nieuwsImages/".$row['fileName']."' alt=''></a>";
 		echo "<a href='".$row['link']." target='_blank'><h1>".$row['title']."</h1></a>";
     	echo "<h2>".$row['uID']."</h2>";
-    	echo "<h2>".$row['date']."</h2>";
+    	echo "<h2>".date('d-m-Y H:i:s', strtotime($row['date']))."</h2>";
     	echo "<p>".nl2br($row['bericht'])."</p>";
     	echo "<a href='".$row['link']."'>read more</a>";
     	if($_SESSION['role'] == 1 OR $_SESSION['role'] == 2){

@@ -6,9 +6,9 @@ session_start();
 if(isset($_POST['eventSubmit'])){
 	$uid = $_SESSION['name'];
 	$title = $_POST['title'];
-	$eventDate = date_format($_POST['eventDate'], 'Y-m-d H:i:s');
+	$eventDate = $_POST['eventDate'];
 	$location = $_POST['place'];
-	$date = date('Y-m-d H:i:s');
+	$date = date('d-m-Y H:i');
 	$link = $_POST['link'];
 	$maintext = $_POST['maintext'];
 

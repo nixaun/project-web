@@ -6,7 +6,7 @@ session_start();
 if(isset($_POST['newsSubmit'])){
 	$uid = $_SESSION['name'];
 	$title = $_POST['title'];
-	$date = date('Y-m-d H:i:s');
+	$date = date('d-m-Y H:i');
 	$link = $_POST['link'];
 	$maintext = $_POST['maintext'];
 
