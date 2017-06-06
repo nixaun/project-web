@@ -6,17 +6,11 @@ function getTestimonial($connect){
 	$sql = "SELECT * FROM testimonialItems";
 	$result = mysqli_query($connect, $sql);
 	while($row = mysqli_fetch_assoc($result)){
-        $days_between = ceil(abs(time(), strtotime($row['date']))/86400);
 		echo "<div>";
 		echo "<a href='".$row['link']."'><img src='testimonialImages/".$row['fileName']."' alt=''></a>";
 		echo "<a href='".$row['link']." target='_blank'><h1>".$row['title']."</h1></a>";
     	echo "<h2>".$row['uid']."</h2>";
-        //if($days_between < 86400){
-            //echo "<h2>vandaag</h2>";
-        //}
-        //else{
-            echo "<h2>".$days_between." dagen geleden</h2>";
-        //}
+            echo "<h2>".$row['date']." dagen geleden</h2>";
     	echo "<p>".nl2br($row['bericht'])."</p>";
     	echo "<a href='".$row['link']."'>read more</a>";
     	if($_SESSION['role'] == 1 OR $_SESSION['role'] == 2){
