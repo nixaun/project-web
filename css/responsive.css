@@ -1,8 +1,20 @@
 @media only screen and (max-width: 1500px){
+    header h1 {
+        font-size: 2em;
+        left: 100px;
+    }
+    
+    header img {
+        width: 80px;
+    }
+    
     footer img{
         display: none;
     }
     
+}
+
+@media only screen and (max-width: 1270px) {
     nav {
         display: none;
         overflow: hidden;
@@ -29,7 +41,7 @@
         width: 100%;
         padding: 20px 10px;
         text-align: center;
-        background-color: #282020;
+        background-color: rgba(40, 32, 32, 1);
         color: #fff;
     }
     
@@ -52,9 +64,7 @@
         background-color: #282020;
         color: #fff;
     }
-}
-
-@media only screen and (max-width: 1300px) {
+    
     footer div a{
         position: relative;
     }
