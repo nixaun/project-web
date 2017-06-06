@@ -16,12 +16,13 @@
 
 @media only screen and (max-width: 1270px) {
     nav {
-        display: none;
         overflow: hidden;
         position: absolute;
-        top: 70px;
+        top: 80px;
         right: 0px;
         width: 300px;
+        height: 0;
+        transition: 0.3s;
     }
     
     nav ul {
@@ -29,7 +30,8 @@
     }
     
     nav.active {
-        display: block;
+        height: 350px;
+        transition: 0.5s;
     }
     
     nav li {
@@ -53,11 +55,6 @@
     
     .bars {
         display: block;
-        color: #282020;
-    }
-    
-    .indexbars {
-        color: #fff;
     }
     
     .bars.active {
@@ -80,17 +77,15 @@
     }
     
     header a img {
-        width: 13%;
         position: static;
         float: left;
     }
     
     header a h1 {
-        font-size: 200%;
         position: static;
         float: left;
         color: inherit;
-        margin: 4%;
+        margin: 25px;
     }
     
     .heroimage + h1 {
@@ -121,10 +116,14 @@
     }
     
     nav {
-        position: static;
+        position: absolute;
         float: right;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
+    }
+    
+    nav li a {
+        background-color: rgba(40, 32, 32, 0.9);
     }
     
     
@@ -170,13 +169,19 @@
 
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 520px){
     header a h1 {
-        font-size: 120%;
+        font-size: 1.2em;
+        margin: 15px;
     }
+    
     
     header a img {
         width: 50px;
+    }
+    
+    .bars {
+        padding: 13px;
     }
     
     .bars i {
@@ -187,8 +192,16 @@
         font-size: 150%;
     }
     
+    nav {
+        top: 50px;
+    }
+    
     nav li a {
         padding: 15px;
+    }
+    
+    nav.active {
+        height: 285px;
     }
     
     .heroimage + h1 {
