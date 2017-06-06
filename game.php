@@ -51,7 +51,7 @@
             <h1>PlezAntwerpen de Game</h1>
             <p>Leer meer over Antwerpen en ontdek de stad met deze nieuwe gratis game</p>            
             <div class="downloadbuttons">
-                <a href=""><i class="fa fa-apple"></i>Download voor iPhone</a>
+                <a href=""><i class="fa fa-apple"></i>Download voor iOS</a>
             </div>
             <div class="downloadbuttons2">
                 <a href=""><i class="fa fa-android"></i>Download voor Android</a>
