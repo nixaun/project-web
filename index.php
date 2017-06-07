@@ -48,72 +48,13 @@
                 <?php
                     getIndexNieuws($connect);
                 ?>
-                <!--                
-                <div>
-                    <div>
-                        <a href=""><img src="images/news1.png" alt=""></a>
-                    </div>
-                    <a href=""><h1>The Ten Miles are best accessible by foot or by bike</h1></a>
-                    <h2>15:03 20/04/2017</h2>
-                    <p>Are you coming to the Ten Miles on sunday 23th of april? Or do you have to transport through the city? Better go by foot or take a bike. We'd like to give some tips on how the event is best reached.</p>
-                    <a href="">read more</a>
-                </div>
-                <div>
-                    <div>
-                        <a href=""><img src="images/news2.jpg" alt=""></a>
-                    </div>
-                    <a href=""><h1>10 reasons why you should study at KdG</h1></a>
-                    <h2>03:15 19/04/2017</h2>
-                    <p>Choosing a college is hard, to help you with your search we compiled a list of 10 reasons why Karel de Grote Hogeschool is a valid choice.</p>
-                    <a href="">read more</a>
-                </div>
-                <div>
-                    <div>
-                        <a href=""><img src="images/news3.png" alt=""></a>
-                    </div>
-                    <a href=""><h1>Gate 15 will be closed today</h1></a>
-                    <h2>7:00 16/04/2017</h2>
-                    <p>Gate 15 will be closed on the 16th of april. Tomorrow we'll be back.</p>
-                    <a href="">read more</a>
-                </div>
-                -->
             </div>            
             <div class="news clearfix">
                 <a href="evenementen.php"><h1><i class="fa fa-calendar"></i>Evenementen</h1></a> 
                 <?php
                     getIndexEvents($connect);
                 ?>
-                <!--               
-                <div>
-                    <div>
-                        <a href=""><img src="images/event1.png" alt=""></a>
-                    </div>
-                    <a href=""><h1>Colin Stetson Solo</h1></a>
-                    <h2>20:30 20/04/2017 <br />
-                    De Roma</h2>
-                    <p>Jazzsaxophonist Colin Stetson's solo concerts are a unique experience where he lets his saxophone sounds like an orchestra including the percussion.</p>
-                    <a href="">read more</a>
-                </div>
-                <div>
-                    <div>
-                        <a href=""><img src="images/event2.png" alt=""></a>
-                    </div>
-                    <a href=""><h1>Byr + Emil Landman</h1></a>
-                    <h2>20:30 25/04/2017 <br />
-                    De Roma</h2>
-                    <p>The young, Irish singer/songwriter Bry started his career in the pubs and clubs of Dublin, but decided he wanted to see the world. To keep family and friends up to date he uploaded his adventures to his ...</p>
-                    <a href="">read more</a>
-                </div>
-                <div>
-                    <div>
-                        <a href="https://www.gate15.be/nl/events/kick-off-voor-antwerpse-presidia-6" target="_blank"><img src="images/event3.png" alt=""></a>
-                    </div>
-                    <a href="https://www.gate15.be/nl/events/kick-off-voor-antwerpse-presidia-6" target="_blank"><h1>Kick-off voor Antwerpse presidia</h1></a>
-                    <h2>12:30-20:00 11/05/2017</h2>
-                    <p>De kiesweek zit erop, tijd om vooruit te blikken. Hoe verloopt zo'n subsidie- of evenementenaanvraag? Wat als er iets verkeerd gaat? Hoe zet je social media optimaal in om een event te promoten?</p>
-                    <a href="https://www.gate15.be/nl/events/kick-off-voor-antwerpse-presidia-6" target="_blank">read more</a>
-                </div>
-                -->
+
             </div>            
         </main>
         <div class="gameBanner">
