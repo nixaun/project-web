@@ -15,7 +15,8 @@ main div img {
 }
 
 main div h1 {
-    margin: 15px 10px;
+    display: inline-block;
+    margin: 20px 0px;
     font-family: Antwerpen-regular;
     font-weight: 500;
 }
@@ -35,12 +36,13 @@ main div p {
 
 }
 
-main div a {          
+main div p+a {          
     color: #0055c9;
     font-weight: bold;
     position: absolute;
     bottom: 10px;
-    left: 210px;
+    left: 230px;
+    float: left;
 }
 
 main div a:hover {     
