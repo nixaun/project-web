@@ -1,6 +1,6 @@
 main iframe {
-    float: right;
-    padding-left: 5%;
+    display: block;
+    margin: 0 auto;
 }
 
 main img {
@@ -24,12 +24,8 @@ main ul {
     padding-left: 20px;
 }
 
-main div{ 
-    background-image: url("../images/paper.jpg");       
-    background-color: #E5E5E6;
-    border: 1px solid #d3d3d3;
+main div{        
     padding: 15px;
-    margin-bottom: 20px;
 } 
 
 
