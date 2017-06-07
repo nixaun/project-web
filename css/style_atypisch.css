@@ -1,22 +1,57 @@
-main iframe {
-    display: block;
-    margin: 0 auto;
+main iframe:first-child {
+    float: left;
+    box-shadow: 0px 1px 3px #888;
+}
+
+main iframe:nth-child(5) {
+    float: right;
+    box-shadow: 0px 1px 3px #888;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+main div:nth-child(2) {
+    background-color: #fff;
+    box-shadow: 0px 1px 3px #888;
+    float: right;
+    width: 35%;
+    min-height: 365px;
+}
+
+main div:nth-child(4) {
+    background-color: #fff;
+    box-shadow: 0px 1px 3px #888;
+    float: left;
+    width: 40%;
+    min-height: 365px;
+    margin-top: 70px;
+    margin-right: 30px;
+}
+
+main div:nth-child(6) {
+    background-color: #fff;
+    box-shadow: 0px 1px 3px #888;
+    float: left;
+    width: 40%;
+    min-height: 335px;
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
 main img {
     float: left;
-    width: 50%;
-    padding-right: 5%;
+    width: 100%;
+    margin-top: 70px;
+    box-shadow: 0px 1px 3px #888;
 }
 
 main h1 {
-    color: #41b99d;  /* old #282020 new #41b99d*/
+    color: #0055c9;
     margin: 5px;
 }
 
 main p {
     font-size: 100%;
-    
 }
 
 main ul {
@@ -30,9 +65,9 @@ main div{
 
 
 main a {
-	color: #f2c400;        /* old #0190f8 new #f2c400 */
+	color: #0055c9;
 }
 
 main a:hover {
-	color: #8c00c7;        /* old #6aa8d4 new #8c00c7 */
+	color: #006cff;
 }

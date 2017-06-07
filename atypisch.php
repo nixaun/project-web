@@ -41,15 +41,15 @@
         </div>        
         <h1>Atypisch Antwerpen</h1>
         <main class="clearfix">
-            <iframe width="840" height="472" src="https://www.youtube.com/embed/Q0nLdnB_Ezw" frameborder="0" allowfullscreen></iframe>
+            <iframe width="700" height="394" src="https://www.youtube.com/embed/Q0nLdnB_Ezw" frameborder="0" allowfullscreen></iframe>
             <div class="clearfix">
                 <h1 class="title">Atypische studentenstad</h1>
                 <p>Antwerpen is niet zomaar een doorsnee studentenstad. In tegenstelling tot andere studentensteden is Antwerpen vrij uniek, het percentage studenten is veel lager. Dit zorgt voor een leuke dynamiek in de stad. Als student leef je tussen het dagelijkse volk en zelfs op de verlof dagen is de stad nog steeds bruisend.</p>
                 <p>De verschillende campussen zijn verspreid over de volledige stad, hierdoor is er in overal wel iets te beleven. Dit is uniek aan Antwerpen en vindt je in geen enkele andere studentenstad.</p>
                 <a href="http://www.antwerpen.be/dossier/atypisch/" target="_blank">Leer hier meer over Atypisch Antwerpen</a>
             </div>
+            <img src="images/gate15.jpg" alt="">
             <div class="clearfix">
-                <img src="images/gate15.jpg" alt="">
                 <h1 class="title">GATE15</h1>
                 <p>GATE15 is een aftakking van de non-profit organisatie Antwerpen Studentenstad. Ze werken samen met de stad en onderwijs maar zijn toch onafhankelijk en kunnen zelf initiatieven nemen. Het is niet enkel een fysieke locatie maar ook een groep van enthousiaste mensen die je doorheen het studentenleven in Antwerpen willen gidsen.</p>
                 <h3>Wat doet GATE15?</h3>
@@ -64,25 +64,10 @@
                 </ul>
 
                 <p>Voor alle informatie bezoek de site <a href="https://www.gate15.be" target="_blank">GATE15.be</a></p>
-                <!--
-                <h3>Projecten van GATE15</h3>
-                <ul>
-                    <li><a href="https://www.gate15.be/nl/nieuws/onze-student-guide-antwerp-app-al-gedownload" target="_blank">De GATE15 app</a>, een gidsing app die je de beste plekjes toont in de stad</li>
-                    <li><a href="https://www.study360.be/" target="_blank">Study 360</a>, zoek een plek om te studeren</li>
-                    <li><a href="https://www.studentkotweb.be/" target="_blank">Kotweb</a>, zoek je kot in Antwerpen</li>
-                </ul>
-                <h3>Praktische informatie</h3>
-
-                <ul>
-                    <li>Website: <a href="https://www.gate15.be" target="_blank">https://www.gate15.be/nl/home</a></li>
-                    <li>Kleine Kauwenberg 15, Antwerpen</li>
-                    <li>+32 3 292 31 70</li>
-                    <li>info@gate15.be</li>
-                </ul>
-                -->
             </div>
+            
+            <iframe width="650" height="366" src="https://www.youtube.com/embed/73wfuYU0gaE" frameborder="0" allowfullscreen></iframe>
             <div class="clearfix">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/73wfuYU0gaE" frameborder="0" allowfullscreen></iframe>
                 <h1>Student Life</h1>
                 <h3>Geïnteresseerd in projecten van onze studenten?</h3>
                 <p>Bekijk dan zeker eens onze trots-pagina. Hier vind u de interessantste projecten die onze studenten te bieden hebben.</p>
