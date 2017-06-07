@@ -18,7 +18,7 @@ function getEvent($connect){
 		echo "<a href='".$row['link']." target='_blank'><h1>".$row['title']."</h1></a>";
         echo "<h2>Locatie   ".$row['place']."</h2>";
         echo "<h2>start   ".date('d-m-Y H:i', strtotime($row['eventDate']))."</h2>";
-    	echo "<h2>".$row['uID']."</h2>";
+    	echo "<h2>".$row['uid']."</h2>";
     	echo "<h2>".date('d-m-Y H:i', strtotime($row['date']))."</h2>";
     	echo "<p>".nl2br($row['bericht'])."</p>";
     	echo "<a href='".$row['link']."'>read more</a>";

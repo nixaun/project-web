@@ -1,5 +1,7 @@
 <?php 
     session_start();
+    include "includes/connect.php";
+    include "php/getIndexContent.php";
     include "includes/session_timeout.php";
     include "includes/cookie_check.php";
     include "includes/username_handler.php";
@@ -42,7 +44,11 @@
         <div class="bars"><i class="fa fa-bars fa-2x"></i></div>             
         <main>
             <div class="news clearfix">
-                <a href="nieuws.php"><h1><i class="fa fa-bullhorn"></i>Nieuws</h1></a>                
+                <a href="nieuws.php"><h1><i class="fa fa-bullhorn"></i>Nieuws</h1></a>
+                <?php
+                    getIndexNieuws($connect);
+                ?>
+                <!--                
                 <div>
                     <div>
                         <a href=""><img src="images/news1.png" alt=""></a>
@@ -70,9 +76,14 @@
                     <p>Gate 15 will be closed on the 16th of april. Tomorrow we'll be back.</p>
                     <a href="">read more</a>
                 </div>
+                -->
             </div>            
             <div class="news clearfix">
-                <a href="evenementen.php"><h1><i class="fa fa-calendar"></i>Evenementen</h1></a>                
+                <a href="evenementen.php"><h1><i class="fa fa-calendar"></i>Evenementen</h1></a> 
+                <?php
+                    getIndexEvents($connect);
+                ?>
+                <!--               
                 <div>
                     <div>
                         <a href=""><img src="images/event1.png" alt=""></a>
@@ -102,6 +113,7 @@
                     <p>De kiesweek zit erop, tijd om vooruit te blikken. Hoe verloopt zo'n subsidie- of evenementenaanvraag? Wat als er iets verkeerd gaat? Hoe zet je social media optimaal in om een event te promoten?</p>
                     <a href="https://www.gate15.be/nl/events/kick-off-voor-antwerpse-presidia-6" target="_blank">read more</a>
                 </div>
+                -->
             </div>            
         </main>
         <div class="gameBanner">
