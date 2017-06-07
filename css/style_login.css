@@ -2,7 +2,7 @@ main div {
     display: block;
     width: 46%;
     float: left;
-    margin: 20px 10px 100px 10px;
+    margin: 20px 10px;
     overflow: hidden;
 }
 

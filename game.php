@@ -42,7 +42,7 @@
                 <a href=""><i class="fa fa-apple"></i>Download voor iOS</a>
             </div>
             <div class="downloadbuttons">
-                <a href=""><i class="fa fa-android"></i>Download voor Android</a>
+                <a href="apk/plezAntwerpen.apk"><i class="fa fa-android"></i>Download voor Android</a>
             </div>
         </main>        
         <img src="images/gameBannerZT2.png" alt="">        
