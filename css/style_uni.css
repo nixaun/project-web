@@ -1,3 +1,7 @@
+main {
+    min-height: 83vh;
+}
+
 main a {
     color: #007ad3;     /* old #007ad3 new  */
 }
@@ -11,7 +15,6 @@ main h2 {
 }
 
 .unilist {
-    background-color: #fff;
     float: left;
     width: 40%;
     font-size: 150%;
@@ -24,10 +27,12 @@ main h2 {
 }
 
 .unilist a {
+    background-color: #f4f4f4;
     float: left;
     width: 100%;
     padding: 15px;
-    border: 1px #d9d9d9 solid;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 3px #888;
     
     color: #9f9f9f; /* #9f9f9f */
 }
@@ -40,8 +45,7 @@ main h2 {
 }
 
 .unilist a.active {
-        /* old #007ad3 new #8c00c7 */
-    border-right: none;
+    color: #cf0339 !important;
 }
 
 .unilist a.active i {
@@ -67,13 +71,10 @@ ul {
 
 .uniinfo {
     background-color: #fff;
-    border-top: 1px #d9d9d9 solid;
-    border-right: 1px #d9d9d9 solid;
-    border-bottom: 1px #d9d9d9 solid;
-    border-left: none;
+    box-shadow: 0px 1px 3px #888;
     width: 50%;
     float: left;
-    margin: 0 0 50px 32px;
+    margin: 0 0 50px 60px;
     padding: 0 20px 20px 20px;
     min-height: 450px;
 }
@@ -128,5 +129,6 @@ select {
 #kul.ua_kul, #kul.kdg_ap_kul_ams, #kul.default,
 #tm.tm, #tm.ua_ap_tm, #tm.default,
 #itg.default {
+    background-color: #fff;
     color: inherit;
 }
