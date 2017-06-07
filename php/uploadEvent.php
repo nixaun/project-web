@@ -2,13 +2,12 @@
 include "../includes/connect.php";
 session_start();
 
-
 if(isset($_POST['eventSubmit'])){
 	$uid = $_SESSION['name'];
 	$title = $_POST['title'];
 	$eventDate = $_POST['eventDate'];
 	$location = $_POST['place'];
-	$date = date('d-m-Y H:i');
+	$date = date('Y-m-d H:i');
 	$link = $_POST['link'];
 	$maintext = $_POST['maintext'];
 

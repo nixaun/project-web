@@ -3,14 +3,14 @@ session_start();
 
 function getTestimonial($connect){
 	//enter database
-	$sql = "SELECT * FROM testimonialItems";
+	$sql = "SELECT * FROM testimonialItems ORDER BY date DESC";
 	$result = mysqli_query($connect, $sql);
 	while($row = mysqli_fetch_assoc($result)){
-		echo "<div>";
+		echo "<div class='clearfix'>";
 		echo "<a href='".$row['link']."'><img src='testimonialImages/".$row['fileName']."' alt=''></a>";
 		echo "<a href='".$row['link']." target='_blank'><h1>".$row['title']."</h1></a>";
     	echo "<h2>".$row['uid']."</h2>";
-            echo "<h2>".$row['date']." dagen geleden</h2>";
+            echo "<h2>".date('d-m-Y H:i', strtotime($row['date']))."</h2>";
     	echo "<p>".nl2br($row['bericht'])."</p>";
     	echo "<a href='".$row['link']."'>read more</a>";
     	if($_SESSION['role'] == 1 OR $_SESSION['role'] == 2){

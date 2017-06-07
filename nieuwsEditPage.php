@@ -46,8 +46,8 @@
         <h1>Nieuws</h1>            
         <main>
         <?php
-            $nieuwsID = 
-            $uid = $_SESSION['name'];
+            $nieuwsID = $_POST['nieuwsID'];
+            $uid = $_POST['uID'];
             $title = $_POST['title'];
             $link = $_POST['link'];
             $maintext = $_POST['maintext'];
@@ -62,7 +62,7 @@
                     <textarea name='maintext' id='maintext' cols='40' rows='10' value='>".$maintext."</textarea>
                     <label for='image'>Voeg een foto toe</label>
                     <input type='file' name='nieuwsImage' id='image' value=''>
-                    <button type='submit' name='newsSubmit'>Pas aan</button>
+                    <button type='submit' name='newsEdit'>Pas aan</button>
                 </form>"
 
             /*

@@ -3,7 +3,7 @@ include "../includes/connect.php";
 session_start();
 
 
-if(isset($_POST['newsSubmit'])){
+if(isset($_POST['newsEdit'])){
 	$uid = $_SESSION['name'];
 	$title = $_POST['title'];
 	$date = date('Y-m-d H:i:s');

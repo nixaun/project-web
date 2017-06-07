@@ -6,7 +6,7 @@ function getEvent($connect){
 	//counter voor clearfix
 	$articleCounter = 0;
 	//enter database
-	$sql = "SELECT * FROM eventItems";
+	$sql = "SELECT * FROM eventItems ORDER BY eventDate ASC";
 	$result = mysqli_query($connect, $sql);
 	while($row = mysqli_fetch_assoc($result)){
 		$articleCounter++;
@@ -17,9 +17,9 @@ function getEvent($connect){
 		echo "<a href='".$row['link']."'><img src='eventImages/".$row['fileName']."' alt=''></a>";
 		echo "<a href='".$row['link']." target='_blank'><h1>".$row['title']."</h1></a>";
         echo "<h2>Locatie   ".$row['place']."</h2>";
-        echo "<h2>start   ".$row['eventDate']."</h2>";
+        echo "<h2>start   ".date('d-m-Y H:i', strtotime($row['eventDate']))."</h2>";
     	echo "<h2>".$row['uID']."</h2>";
-    	echo "<h2>".$row['date']."</h2>";
+    	echo "<h2>".date('d-m-Y H:i', strtotime($row['date']))."</h2>";
     	echo "<p>".nl2br($row['bericht'])."</p>";
     	echo "<a href='".$row['link']."'>read more</a>";
         /*
