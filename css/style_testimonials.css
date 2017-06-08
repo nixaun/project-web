@@ -52,15 +52,16 @@ main div a:hover {
     transition: 0.1s;
 }
 .delete-testi{
-    float: right;
-    margin-right: 40px;
-    width: 40px;
-    height: 20px;
+    
 }
+
 .delete-testi button{
+    position: absolute;
     background-color: transparent;
     border: none;
     font-weight: bold;
     color: crimson;
     cursor: pointer;
+    bottom: 10px;
+    right: 10px;
 }
