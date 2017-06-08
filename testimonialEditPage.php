@@ -4,8 +4,7 @@
     include "includes/session_timeout.php";
     include "includes/cookie_check.php";
     include "includes/username_handler.php";
-    include "php/getNieuws.php";
-//VZkpV2UmR
+    include "php/getTestimonial.php";
 
 ?>
 
@@ -13,9 +12,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Studeren In Antwerpen - Nieuws</title>
+        <title>Studeren In Antwerpen - Atypisch Antwerpen</title>
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/style_news.css">
+        <link rel="stylesheet" href="css/style_testimonials.css">
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -30,30 +29,28 @@
             <ul>
                 <li><a href="atypisch.php">Atypisch Antwerpen</a></li>
                 <li><a href="uni.php">Hogescholen en Universiteiten</a></li>
-                <li><a href="nieuws.php" class="activenav">Nieuws</a></li>
+                <li><a href="nieuws.php">Nieuws</a></li>
                 <li><a href="evenementen.php">Evenementen</a></li>
-                <li><a href="testimonials1.php">Testimonials</a></li>
+                <li><a href="testimonials.php" class="activenav">Testimonials</a></li>
                 <li><a href="<?php echo $userurl ?>"><?php echo $username ?></a></li>
             </ul>
         </nav>
-            
-        <div class="bars"><i class="fa fa-bars fa-2x"></i></div>
-
+        <div class="bars"><i class="fa fa-bars fa-2x"></i></div>        
         <div class="heroimage">
-            <img src="images/news.png" alt="">
-            <h1>Nieuws</h1>
+            <img src="images/testimonials.png" alt="">
+            <h1>Testimonials</h1>
         </div>        
-        <h1>Nieuws</h1>            
-        <main>
+        <h1>Testimonials</h1>        
+        <main class="clearfix">
         <?php
-            $nieuwsID = $_POST['nieuwsID'];
+            $testimonialID = $_POST['testimonialID'];
             $uid = $_POST['uid'];
             $title = $_POST['title'];
             $link = $_POST['link'];
             $maintext = $_POST['message'];
 
-            echo "<form action='editNieuws.php' class='active' method='POST' enctype='multipart/form-data'>
-                    <input type='hidden' name='nieuwsID' value='".$nieuwsID."'>
+            echo "<form action='php/editTestimonial.php' method='POST'>
+                    <input type='hidden' name='nieuwsID' value='".$testimonialID."'>
                     <h2>post van ".$uid."</h2>
                     <label for='title'>Titel</label>
                     <input type='text' name='title' id='title' value='".$title."'>
@@ -61,10 +58,9 @@
                     <input type='text' name='link' id='link' value='".$link."'>
                     <label for='maintext'>Tekst</label>
                     <textarea name='maintext' id='maintext' cols='40' rows='10'>".$maintext."</textarea>
-                    <button type='submit' name='newsEdit'>Pas aan</button>
-                </form>"
+                    <button type='submit' name='testimonialEdit'>Pas aan</button>
+                </form>";
         ?>
-        
         </main>
         <footer class="clearfix">
             <div class="wrapper">
