@@ -69,11 +69,11 @@
                 <?php header("Location: login.php"); ?>
             
             <?php endif ?>
+            
+            <h1>Mijn Profiel - <?php echo $username ?></h1>    
                 
             <?php if($_SESSION['role'] == 2 || $_SESSION['role'] == 1) : ?>
             <p><?php echo $confirmmessage ?></p>
-            
-            <h1>Mijn Profiel - <?php echo $username ?></h1>
             
             <div class="tab clearfix">
                 <a href="#" class="active">Voeg nieuwsartikel toe</a>
