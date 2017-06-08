@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
         <script src="css/script.js"></script>
+        <link rel="icon" type="image/jpg" href="images/logo.jpg"/>
     </head>
     <body>
         <header class="clearfix">
@@ -48,13 +49,13 @@
                 <?php
                     getIndexNieuws($connect);
                 ?>
+
             </div>            
             <div class="news clearfix">
                 <a href="evenementen.php"><h1><i class="fa fa-calendar"></i>Evenementen</h1></a> 
                 <?php
                     getIndexEvents($connect);
                 ?>
-
             </div>            
         </main>
         <div class="gameBanner">

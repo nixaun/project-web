@@ -1,62 +1,79 @@
-
 .news  i {
     margin-right: 20px;
 }
 
-.news div {
-    background-image: url("../images/paper.jpg");
+.news > a > h1 {
+    color: #0055c9;      /*old  007ad3    ? f37200 gate 15 #41b99d */
+    margin: 30px 20px;
+}
+
+.news > a > h1:hover{
+    color: #006cff;
+}
+
+.news > div {
+    position: relative;
     width: 30%;
+    min-height: 400px;
     margin: 0 1.5% 50px 1.5%;
     float: left;
-    background-color: #E5E5E6;   /*old E5E5E6   ?   a2d7c9 ? 1fb58d  */
-    border: 1px solid #d3d3d3;
-    padding-bottom: 20px;
+    background-color: #fff;   /*old E5E5E6   ?   a2d7c9 ? 1fb58d  */
+    box-shadow: 0px 1px 3px #888;
 }
 
-.news img {
+.news > div img {
     width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    margin-left: -10px;
 }
 
-.news div h1 {
-    margin: 10px;
+.news > div h1 {
+    margin: 15px;
     font-family: Antwerpen-regular;
     font-weight: 100;
-    color: #41b99d;
+    font-size: 1.7em;
 }
 
-.news div h1:hover {
-    color: #8c00c7;         /* old #007ad3 new 8c00c7 */
+.news > div h1:hover {
+    color: #6c6c6c;
     transition: 0.1s;
 }
 
-.news div h2 {
+.news > div h2 {
     margin: 10px;
     color: #888888;
-    font-size: 100%;
+    font-size: 90%;
 }
 
-.news div p {
+.news > div p {
     margin: 10px;
-    color: #585858;
+    margin-bottom: 35px;
 }
 
-.news div p:hover{
-    color: #000;
-}
-
-.news div a {          
-    margin: 10px;
-    color: #f2c400;         /*   old #007ad3 new #f2c400   */
+.news > div a+h2+h2+p+a {
+    color: #0055c9;
     font-weight: bold;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
 }
 
-.news div a:hover {     
-    color: #8c00c7;         /* old #0093ff new 8c00c7 */
+.news > div a+h2+h2+h2+h2+p+a {
+    color: #0055c9;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.news > div a+h2+h2+p+a:hover {
+    color: #006cff;         /* old #0093ff new 8c00c7 */
     transition: 0.1s;
 }
+
+.news > div a+h2+h2+h2+h2+p+a:hover {
+    color: #006cff;         /* old #0093ff new 8c00c7 */
+    transition: 0.1s;
+}
+
 .edit-form{
     float: right;
     display: none;
