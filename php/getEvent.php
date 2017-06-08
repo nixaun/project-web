@@ -22,21 +22,12 @@ function getEvent($connect){
     	echo "<h2>".date('d-m-Y H:i', strtotime($row['date']))."</h2>";
     	echo "<p>".nl2br($row['bericht'])."</p>";
     	echo "<a href='".$row['link']."'>read more</a>";
-        /*
     	if($_SESSION['role'] == 1 OR $_SESSION['role'] == 2){
-    		echo "<form class='edit-form' method='POST' action='editNieuws.php'>
-    				<input type='hidden' name='nieuwsID' value='".$row['eventID']."'>
-    				<input type='hidden' name='uid' value='".$row['uID']."'>
-    				<input type='hidden' name='title' value='".$row['title']."'>
-                    <input type='hidden' name='place' value='".$row['place']."'>
-                    <input type='hidden' name='eventDate' value='".$row['eventDate']."'>
-    				<input type='hidden' name='link' value='".$row['link']."'>
-    				<input type='hidden' name='message' value='".$row['bericht']."'>
-    				<input type='hidden' name='fileName' value='".$row['fileName']."'>
-					<button>Edit</button>
-			  	  </form>";
+    		echo "<form class='delete-nieuws' method='POST' action='php/deleteEvent.php'>
+                    <input type='hidden' name='eventID' value='".$row['eventID']."'>
+                    <button>verwijder</button>
+                  </form>";  
     	}
-        */
     	echo "</div>";
     	if($articleCounter%3 === 0 OR $articleCounter === mysqli_num_rows($result)){
     		echo "</div>";

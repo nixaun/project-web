@@ -21,14 +21,10 @@ function getNieuws($connect){
     	echo "<p>".nl2br($row['bericht'])."</p>";
     	echo "<a href='".$row['link']."'>read more</a>";
     	if($_SESSION['role'] != 0){
-    		echo "<form class='edit-form' method='POST' action='nieuwsEditPage.php'>
-    				<input type='hidden' name='nieuwsID' value='".$row['nieuwsID']."'>
-    				<input type='hidden' name='uid' value='".$row['uID']."'>
-    				<input type='hidden' name='title' value='".$row['title']."'>
-    				<input type='hidden' name='link' value='".$row['link']."'>
-    				<input type='hidden' name='message' value='".$row['bericht']."'>
-					<button>Edit</button>
-			  	  </form>";
+    		echo "<form class='delete-nieuws' method='POST' action='php/deleteNieuws.php'>
+                    <input type='hidden' name='nieuwsID' value='".$row['nieuwsID']."'>
+                    <button>verwijder</button>
+                  </form>";     
     	}
     	echo "</div>";
     	if($articleCounter%3 === 0 OR $articleCounter === mysqli_num_rows($result)){

@@ -74,12 +74,17 @@
     transition: 0.1s;
 }
 
-.edit-form{
+.delete-nieuws{
     float: right;
-    display: none;
+    margin-right: 40px;
     width: 40px;
     height: 20px;
 }
-.edit-form button{
+.delete-nieuws button{
     background-color: transparent;
+    border: none;
+    font-weight: bold;
+    margin-bottom: -30px;
+    color: crimson;
+    cursor: pointer;
 }
