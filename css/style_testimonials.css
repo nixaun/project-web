@@ -12,11 +12,13 @@ main div img {
     height: auto;
     margin-right: 30px;
     float: left;
+    margin-bottom: 40px;
 }
 
 main div h1 {
     display: inline-block;
-    margin: 20px 0px;
+    margin-top: 20px;
+    margin-bottom: 0;
     font-family: Antwerpen-regular;
     font-weight: 500;
 }
@@ -33,7 +35,7 @@ main div h2 {
 }
 
 main div p {
-
+    margin-bottom: 40px;
 }
 
 main div p+a {          
