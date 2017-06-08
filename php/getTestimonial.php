@@ -14,6 +14,7 @@ function getTestimonial($connect){
     	echo "<p>".nl2br($row['bericht'])."</p>";
     	echo "<a href='".$row['link']."'>read more</a>";
     	if($_SESSION['role'] == 1 OR $_SESSION['role'] == 2){
+            echo "<div class='editButtons'>";
     		echo "<form class='edit-form' method='POST' action='testimonialEditPage.php'>
     				<input type='hidden' name='testimonialID' value='".$row['testimonialID']."'>
     				<input type='hidden' name='uid' value='".$row['uid']."'>
@@ -25,7 +26,8 @@ function getTestimonial($connect){
             echo "<form class='delete-testi' method='POST' action='php/deleteTestimonial.php'>
                     <input type='hidden' name='testimonialID' value='".$row['testimonialID']."'>
                     <button>verwijder</button>
-                  </form>";      
+                  </form>"; 
+            echo "</div>";     
     	}
     	echo "</div>";
 	}
