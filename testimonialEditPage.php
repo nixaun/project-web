@@ -5,7 +5,6 @@
     include "includes/cookie_check.php";
     include "includes/username_handler.php";
     include "php/getTestimonial.php";
-
 ?>
 
 <html>
@@ -50,14 +49,14 @@
             $maintext = $_POST['message'];
 
             echo "<form action='php/editTestimonial.php' method='POST'>
-                    <input type='hidden' name='nieuwsID' value='".$testimonialID."'>
+                    <input type='hidden' name='testimonialID2' value='".$testimonialID."'>
                     <h2>post van ".$uid."</h2>
                     <label for='title'>Titel</label>
-                    <input type='text' name='title' id='title' value='".$title."'>
+                    <input type='text' name='title2' id='title' value='".$title."'>
                     <label for='link'>Link</label>
-                    <input type='text' name='link' id='link' value='".$link."'>
+                    <input type='text' name='link2' id='link' value='".$link."'>
                     <label for='maintext'>Tekst</label>
-                    <textarea name='maintext' id='maintext' cols='40' rows='10'>".$maintext."</textarea>
+                    <textarea name='maintext2' id='maintext' cols='40' rows='10'>".$maintext."</textarea>
                     <button type='submit' name='testimonialEdit'>Pas aan</button>
                 </form>";
         ?>
