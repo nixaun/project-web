@@ -68,13 +68,16 @@
             
             <iframe width="650" height="366" src="https://www.youtube.com/embed/73wfuYU0gaE" frameborder="0" allowfullscreen></iframe>
             <div class="clearfix">
-                <h1>Student Life</h1>
-                <h3>Geïnteresseerd in projecten van onze studenten?</h3>
-                <p>Bekijk dan zeker eens onze trots-pagina. Hier vind u de interessantste projecten die onze studenten te bieden hebben.</p>
-                <p><a href="https://www.gate15.be/nl/trots" target="_blank">GATE15 trots</a></p>
-                <h3>Wilt u meer te weten komen over het studentenleven in Antwerpen?</h3>
-                <p>Krijg het dan rechtstreeks te horen van de studenten zelf, op de GATE15 blog-pagina.</p>
-                <p><a href="https://www.gate15.be/nl/blog" target="_blank">GATE15 blog</a></p>
+                <div>
+                    <h3>Geïnteresseerd in projecten van onze studenten?</h3>
+                    <p>Bekijk dan zeker eens onze trots-pagina. Hier vind u de interessantste projecten die onze studenten te bieden hebben.</p>
+                    <p><a href="https://www.gate15.be/nl/trots" target="_blank">GATE15 trots</a></p>
+                </div>
+                <div>
+                    <h3>Wilt u meer te weten komen over het studentenleven in Antwerpen?</h3>
+                    <p>Krijg het dan rechtstreeks te horen van de studenten zelf, op de GATE15 blog-pagina.</p>
+                    <p><a href="https://www.gate15.be/nl/blog" target="_blank">GATE15 blog</a></p>
+                </div>
             </div>
         </main>
         <footer class="clearfix">

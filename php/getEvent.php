@@ -14,8 +14,8 @@ function getEvent($connect){
 			echo "<div class='news clearfix'>";
 		}
 		echo "<div>";
-		echo "<a href='".$row['link']."'><img src='eventImages/".$row['fileName']."' alt=''></a>";
-		echo "<a href='".$row['link']." target='_blank'><h1>".$row['title']."</h1></a>";
+		echo "<a href='".$row['link']."' target='_blank'><img src='eventImages/".$row['fileName']."' alt=''></a>";
+		echo "<a href='".$row['link']."' target='_blank'><h1>".$row['title']."</h1></a>";
         echo "<h2>Locatie   ".$row['place']."</h2>";
         echo "<h2>start   ".date('d-m-Y H:i', strtotime($row['eventDate']))."</h2>";
     	echo "<h2>".$row['uid']."</h2>";

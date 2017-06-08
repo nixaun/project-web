@@ -40,7 +40,8 @@
         <div class="heroimage">
             <img src="images/events.png" alt="">
             <h1>Evenementen</h1>
-        </div>        
+        </div>
+        <h1>Evenementen</h1>
         <main class="clearfix">
             <?php
                 getEvent($connect);

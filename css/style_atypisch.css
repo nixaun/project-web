@@ -1,16 +1,16 @@
-main iframe:first-child {
+main > iframe:first-child {
     float: left;
     box-shadow: 0px 1px 3px #888;
 }
 
-main iframe:nth-child(5) {
+main > iframe:nth-child(5) {
     float: right;
     box-shadow: 0px 1px 3px #888;
     margin-top: 70px;
     margin-bottom: 50px;
 }
 
-main div:nth-child(2) {
+main > div:nth-child(2) {
     background-color: #fff;
     box-shadow: 0px 1px 3px #888;
     float: right;
@@ -18,7 +18,7 @@ main div:nth-child(2) {
     min-height: 365px;
 }
 
-main div:nth-child(4) {
+main > div:nth-child(4) {
     background-color: #fff;
     box-shadow: 0px 1px 3px #888;
     float: left;
@@ -28,13 +28,12 @@ main div:nth-child(4) {
     margin-right: 30px;
 }
 
-main div:nth-child(6) {
+main > div:nth-child(6) {
     background-color: #fff;
     box-shadow: 0px 1px 3px #888;
     float: left;
-    width: 40%;
-    min-height: 335px;
-    margin-top: 70px;
+    width: 70%;
+    margin-top: 30px;
     margin-bottom: 70px;
 }
 
@@ -59,9 +58,15 @@ main ul {
     padding-left: 20px;
 }
 
-main div{        
+main > div{        
     padding: 15px;
-} 
+}
+
+main > div > div {
+    float: left;
+    width: 42%;
+    margin-right: 50px;
+}
 
 
 main a {
