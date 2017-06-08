@@ -39,4 +39,5 @@ table i[class="fa fa-check"] {
     padding: 11.5px 12px;
     border-radius: 5px;
     margin-left: -5px;
+    cursor: pointer;
 }
