@@ -57,7 +57,7 @@
                     <input type='text' name='link2' id='link' value='".$link."'>
                     <label for='maintext'>Tekst</label>
                     <textarea name='maintext2' id='maintext' cols='40' rows='10'>".$maintext."</textarea>
-                    <button type='submit' name='testimonialEdit'>Pas aan</button>
+                    <button class='editTestimonialSubmit' type='submit' name='testimonialEdit'>Pas aan</button>
                 </form>";
         ?>
         </main>

@@ -23,6 +23,17 @@ function getEvent($connect){
     	echo "<p>".nl2br($row['bericht'])."</p>";
     	echo "<a href='".$row['link']."'>read more</a>";
     	if($_SESSION['role'] == 1 OR $_SESSION['role'] == 2){
+            
+            echo "<form class='edit-form' method='POST' action='eventEditPage.php'>
+                    <input type='hidden' name='eventID' value='".$row['eventID']."'>
+                    <input type='hidden' name='uid' value='".$row['uid']."'>
+                    <input type='hidden' name='title' value='".$row['title']."'>
+                    <input type='hidden' name='link' value='".$row['link']."'>
+                    <input type='hidden' name='place' value='".$row['place']."'>
+                    <input type='hidden' name='eventDate' value='".$row['eventDate']."'>
+                    <input type='hidden' name='message' value='".$row['bericht']."'>
+                    <button type='submit'>pas aan</button>
+                  </form>";
     		echo "<form class='delete-nieuws' method='POST' action='php/deleteEvent.php'>
                     <input type='hidden' name='eventID' value='".$row['eventID']."'>
                     <button>verwijder</button>

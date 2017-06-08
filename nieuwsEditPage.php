@@ -53,15 +53,15 @@
             $link = $_POST['link'];
             $maintext = $_POST['message'];
 
-            echo "<form action='editNieuws.php' class='active' method='POST' enctype='multipart/form-data'>
-                    <input type='hidden' name='nieuwsID' value='".$nieuwsID."'>
+            echo "<form action='php/editNieuws.php' class='active' method='POST' enctype='multipart/form-data'>
+                    <input type='hidden' name='nieuwsID2' value='".$nieuwsID."'>
                     <h2>post van ".$uid."</h2>
                     <label for='title'>Titel</label>
-                    <input type='text' name='title' id='title' value='".$title."'>
+                    <input type='text' name='title2' id='title' value='".$title."'>
                     <label for='link'>Link</label>
-                    <input type='text' name='link' id='link' value='".$link."'>
+                    <input type='text' name='link2' id='link' value='".$link."'>
                     <label for='maintext'>Tekst</label>
-                    <textarea name='maintext' id='maintext' cols='40' rows='10'>".$maintext."</textarea>
+                    <textarea name='maintext2' id='maintext' cols='40' rows='10'>".$maintext."</textarea>
                     <button type='submit' name='newsEdit'>Pas aan</button>
                 </form>"
         ?>
